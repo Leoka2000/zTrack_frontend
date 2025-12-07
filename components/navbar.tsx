@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { ArrowBigRight, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { TransitionLink } from "./utils/TransitionLink";
 
 export default function Navbar() {
   return (
@@ -56,18 +57,19 @@ export default function Navbar() {
               Blog
             </Link>
           </div>
+          <TransitionLink href="/contact">
+            <Button className="group text-lg text-slate-900 h-10 w-32 font-semibold rounded-full transition-colors">
+              <span className="mx-1.5">Contact</span>
 
-          <Button className="group text-lg text-slate-900 h-10 w-32 font-semibold rounded-full transition-colors">
-            <span className="mx-1.5">Contact</span>
-
-            <span className="p-1 rounded-full bg-neutral-900 flex items-center justify-center">
-              <ArrowRight
-                size={48}
-                strokeWidth={1.75}
-                className="w-3 h-4 text-neutral-200 transition-transform duration-300 group-hover:-rotate-45"
-              />
-            </span>
-          </Button>
+              <span className="p-1 rounded-full bg-neutral-900 flex items-center justify-center">
+                <ArrowRight
+                  size={48}
+                  strokeWidth={1.75}
+                  className="w-3 h-4 text-neutral-200 transition-transform duration-300 group-hover:-rotate-45"
+                />
+              </span>
+            </Button>
+          </TransitionLink>
         </div>
       </div>
     </nav>

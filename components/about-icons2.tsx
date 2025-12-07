@@ -38,7 +38,7 @@ export function AboutIcons2() {
           </p>
           <div className="mt-auto">
             <Image
-              src="/farm-tractor-bro.svg"
+              src="/3dmodel.png"
               alt="Sustainable Energy Icon"
               width={170}
               height={170}
