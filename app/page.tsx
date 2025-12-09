@@ -6,6 +6,9 @@ import { AboutIcons2 } from "@/components/about-icons2";
 import { ProductShowcase } from "@/components/product-showcase";
 import Image from "next/image";
 import TabsComponent from "@/components/tabs-component";
+import AgrosentinelsFeatures from "@/components/feature-cards";
+import ProductBlog from "@/components/product-blog";
+import ProductBlogTop from "@/components/product-blog-top";
 
 export default function Home() {
   return (
@@ -18,12 +21,17 @@ export default function Home() {
           <AboutIcons />
 
           <AboutIcons2 />
+          <ProductBlogTop />
+          <ProductBlog />
         </div>
         <main className="bg-neutral-950 relative   mt-[15rem] py-44 ">
           <div className="h-[40vh]">
             <ProductShowcase />
           </div>
-          <TabsComponent />
+          <div className="md:px-12">
+            <TabsComponent />
+            <AgrosentinelsFeatures />
+          </div>
         </main>
       </div>
     </>

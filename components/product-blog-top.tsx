@@ -1,16 +1,16 @@
 import * as React from "react";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
-export default function AboutTop() {
+export default function ProductBlogTop() {
   return (
     <div className="w-full py-24">
       <div className=" mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
   
         <div className="flex-1">
           <h1 className="text-4xl md:text-6xl  font-medium leading-16">
-            <span className="text-green-950 ">Smart Tech</span>
+            <span className="text-green-950 ">Introducing</span>
             <br />
-            <span className="text-[#7fa008] ">Faster Charging</span>
+            <span className="text-[#7fa008] ">AS-3086 Sensor</span>
           </h1>
         </div>
 
@@ -25,7 +25,7 @@ export default function AboutTop() {
             variant={"outline"}
             className=" text-lg   h-12 font-semibold rounded-full transition-colors"
           >
-            <span className="mx-6 ">Contact</span>
+            <span className="mx-6 ">Get quotation</span>
 
             <span className="p-1 rounded-full bg-neutral-900  flex items-center justify-center">
               <ArrowRight
