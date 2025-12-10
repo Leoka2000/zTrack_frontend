@@ -147,6 +147,18 @@ export default function DarkTabs() {
         />
 
         <div className="relative min-h-[420px] z-10">
+               
+          <div className="absolute inset-0 z-0" style={{
+            backgroundImage: 'linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
+            backgroundSize: '100px 100px'
+          }} />
+          
+         
+          <div className="absolute inset-0 z-0" style={{
+            backgroundImage: 'linear-gradient(0deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
+            backgroundSize: '100px 100px'
+          }} />
+         
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="flex justify-center gap-2 p-2 border rounded-full border-gray-700">

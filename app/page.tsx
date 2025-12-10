@@ -9,6 +9,7 @@ import TabsComponent from "@/components/tabs-component";
 import AgrosentinelsFeatures from "@/components/feature-cards";
 import ProductBlog from "@/components/product-blog";
 import ProductBlogTop from "@/components/product-blog-top";
+import HowItWorksSteps from "@/components/how-it-works-steps";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
           <div className="md:px-12">
             <TabsComponent />
             <AgrosentinelsFeatures />
+            <HowItWorksSteps />
           </div>
         </main>
       </div>
