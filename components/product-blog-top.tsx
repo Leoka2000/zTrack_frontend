@@ -7,10 +7,10 @@ export default function ProductBlogTop() {
       <div className=" mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
   
         <div className="flex-1">
-          <h1 className="text-4xl md:text-6xl  font-medium leading-16">
-            <span className="text-green-950 ">Introducing</span>
+          <h1 className="text-4xl md:text-6xl   font-medium leading-16">
+            <span className="text-green-950 grotesk">Introducing</span>
             <br />
-            <span className="text-[#7fa008] ">AS-3086 Sensor</span>
+            <span className="text-[#7fa008] grotesk">AS-3086 Sensor</span>
           </h1>
         </div>
 

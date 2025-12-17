@@ -8,7 +8,8 @@ import { ArrowRight } from "lucide-react";
 
 export default function ProductBlog() {
   return (
-    <div className="bg-gray-50 flex items-center justify-center mt-3">
+
+    <div className="bg-gray-50 flex items-center justify-center mt-3 ">
       <div className=" w-full bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row">
    
         <div className="md:w-5/6 relative">
@@ -52,10 +53,10 @@ export default function ProductBlog() {
 
   
           <div className="flex-grow">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+            <h1 className="text-3xl grotesk md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
               How does Agrosentinels Diagnostic Measuring System help?
             </h1>
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-gray-600 text-sm leading-relaxed ">
               The element of the Agrosentinels Diagnostic Measuring System is a
               smart sensor that continuously monitors the critical points of the
               machines. If it detects abnormal operation, it will immediately

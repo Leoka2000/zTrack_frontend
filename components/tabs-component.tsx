@@ -1,39 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo, memo } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ShieldCheck, Flame, Cog, Helicopter } from "lucide-react";
-
-function AnimatedText({ text }: { text: string }) {
-  const letters = text.split("");
-
-  return (
-    <motion.span
-      initial="hidden"
-      animate="visible"
-      variants={{
-        hidden: {},
-        visible: { transition: { staggerChildren: 0.015 } },
-      }}
-      style={{ display: "inline-block", whiteSpace: "pre-wrap" }}
-    >
-      {letters.map((char, i) => (
-        <motion.span
-          key={i}
-          variants={{
-            hidden: { opacity: 0, y: `0.4em` },
-            visible: { opacity: 1, y: 0 },
-          }}
-          transition={{ duration: 0.25, ease: "easeOut" }}
-          style={{ display: "inline-block" }}
-        >
-          {char}
-        </motion.span>
-      ))}
-    </motion.span>
-  );
-}
 
 const tabs = [
   {
@@ -41,15 +11,15 @@ const tabs = [
     label: "Problem",
     title: "Machines Fail Without Warning",
     description: `
-      Agricultural and industrial machinery frequently overheats without any visible
-      external signs. Bearings, belts, pulleys, and mechanical connections can reach
-      dangerous temperatures long before operators notice anything is wrong.
-      
-      When a critical component overheats unnoticed, the consequences can be severe:
-      expensive machine damage, downtime, halted production, and even complete fires.
-      Companies lose millions every year due to preventable overheating incidents.
-      
-      Without early detection, you are reacting after damage happens — not preventing it.
+Agricultural and industrial machinery frequently overheats without any visible
+external signs. Bearings, belts, pulleys, and mechanical connections can reach
+dangerous temperatures long before operators notice anything is wrong.
+
+When a critical component overheats unnoticed, the consequences can be severe:
+expensive machine damage, downtime, halted production, and even complete fires.
+Companies lose millions every year due to preventable overheating incidents.
+
+Without early detection, you are reacting after damage happens — not preventing it.
     `,
     image: "/card-img1.jpg",
   },
@@ -58,14 +28,14 @@ const tabs = [
     label: "Solution",
     title: "Smart Monitoring in Real Time",
     description: `
-      Agrosentinels is a smart, real-time diagnostic sensor system that continuously
-      monitors the heat signatures of critical machine components. It provides
-      immediate visual and digital alerts when temperatures reach dangerous thresholds.
-      
-      Using wireless BLE communication, the sensors send instant alerts to the main
-      unit, giving operators time to react before failures occur.
-      
-      The system transforms traditional machinery into intelligent, self-monitoring equipment.
+Agrosentinels is a smart, real-time diagnostic sensor system that continuously
+monitors the heat signatures of critical machine components. It provides
+immediate visual and digital alerts when temperatures reach dangerous thresholds.
+
+Using wireless BLE communication, the sensors send instant alerts to the main
+unit, giving operators time to react before failures occur.
+
+The system transforms traditional machinery into intelligent, self-monitoring equipment.
     `,
     image: "/card-img2.jpg",
   },
@@ -74,17 +44,17 @@ const tabs = [
     label: "Functioning",
     title: "Smart Monitoring in Real Time",
     description: `
-      Each Agrosentinels sensor monitors a specific machine component. When heat
-      rises beyond safe parameters, it sends an alert via Bluetooth Low Energy
-      directly to the master controller.
-      
-      The master unit can:
-      • warn the operator instantly  
-      • log the event in the cloud  
-      • automatically shut down the machine if required  
-      
-      This provides a seamless, automated protection layer that prevents mechanical
-      failure and fire risk before they escalate.
+Each Agrosentinels sensor monitors a specific machine component. When heat
+rises beyond safe parameters, it sends an alert via Bluetooth Low Energy
+directly to the master controller.
+
+The master unit can:
+• warn the operator instantly  
+• log the event in the cloud  
+• automatically shut down the machine if required  
+
+This provides a seamless, automated protection layer that prevents mechanical
+failure and fire risk before they escalate.
     `,
     image: "/card-img3.jpg",
   },
@@ -93,16 +63,16 @@ const tabs = [
     label: "Why",
     title: "Protection That Pays Off",
     description: `
-      Agrosentinels delivers measurable savings by preventing damage that could cost
-      millions. It protects your equipment, workers, and operations.
-      
-      • Saves money by preventing mechanical failures  
-      • Reduces downtime and production loss  
-      • Easy magnetic installation — no special tools needed  
-      • Cloud-based history and incident tracking  
-      • Makes your machinery safer and more reliable  
-      
-      It's a simple, effective upgrade that pays for itself many times over.
+Agrosentinels delivers measurable savings by preventing damage that could cost
+millions. It protects your equipment, workers, and operations.
+
+• Saves money by preventing mechanical failures  
+• Reduces downtime and production loss  
+• Easy magnetic installation — no special tools needed  
+• Cloud-based history and incident tracking  
+• Makes your machinery safer and more reliable  
+
+It's a simple, effective upgrade that pays for itself many times over.
     `,
     image: "/card-img4.jpg",
   },
@@ -110,16 +80,32 @@ const tabs = [
 
 const iconPatterns = [[Cog], [Flame], [Helicopter], [ShieldCheck]];
 
+const AnimatedText = memo(({ text }: { text: string }) => (
+  <motion.p
+    initial={{ opacity: 0, y: 8 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    className="text-lg text-gray-300 leading-relaxed"
+  >
+    {text}
+  </motion.p>
+));
+
 export default function DarkTabs() {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
-  const activeContent = tabs.find((tab) => tab.id === activeTab);
-  const activeIndex = tabs.findIndex((tab) => tab.id === activeTab);
 
+  // Memoized active tab content for performance
+  const activeContent = useMemo(
+    () => tabs.find((tab) => tab.id === activeTab),
+    [activeTab]
+  );
+  const activeIndex = tabs.findIndex((tab) => tab.id === activeTab);
   const iconsToShow = iconPatterns[activeIndex % iconPatterns.length];
 
   return (
     <div className="min-h-screen bg-neural-950 text-white p-8 flex items-center justify-center">
       <div className="w-full border rounded-4xl p-24 border-neutral-950 relative overflow-hidden">
+        {/* Background overlays */}
         <div
           className="absolute inset-0 z-0 pointer-events-none"
           style={{
@@ -147,26 +133,15 @@ export default function DarkTabs() {
         />
 
         <div className="relative min-h-[420px] z-10">
-               
-          <div className="absolute inset-0 z-0" style={{
-            backgroundImage: 'linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
-            backgroundSize: '100px 100px'
-          }} />
-          
-         
-          <div className="absolute inset-0 z-0" style={{
-            backgroundImage: 'linear-gradient(0deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
-            backgroundSize: '100px 100px'
-          }} />
-         
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left panel */}
             <div className="space-y-8">
               <div className="flex justify-center gap-2 p-2 border rounded-full border-gray-700">
                 {tabs.map((tab) => (
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={` w-full py-2 rounded-full border transition-all duration-300 ${
+                    className={`w-full py-2 rounded-full border transition-all duration-300 ${
                       activeTab === tab.id
                         ? "border-[#d7f448] bg-[#d7f448]/10 text-[#d7f448]"
                         : "border-gray-700 bg-gray-900/50 text-gray-400 hover:border-gray-600 hover:text-gray-300"
@@ -177,25 +152,20 @@ export default function DarkTabs() {
                 ))}
               </div>
 
-              <div
-                className="space-y-6 min-h-[420px] transition-all duration-300"
-                key={activeTab}
+              <motion.div
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="space-y-6 min-h-[420px]"
               >
-                <h1 className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#d7f448] to-[#b8d636] animate-fadeInUp">
+                <h1 className="text-6xl font-bold grotesk text-transparent bg-clip-text bg-gradient-to-r from-[#d7f448] to-[#b8d636] animate-fadeInUp">
                   {activeContent?.title}
                 </h1>
-                <motion.p
-                  key={activeTab}
-                  className="text-lg text-gray-300 leading-relaxed"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <AnimatedText text={activeContent?.description || ""} />
-                </motion.p>
-              </div>
+                <AnimatedText text={activeContent?.description || ""} />
+              </motion.div>
             </div>
 
+            {/* Right panel */}
             <div className="relative">
               <div className="relative p-8 border border-gray-950 bg-neutral-950 rounded-2xl shadow-2xl overflow-hidden">
                 <div
@@ -222,7 +192,7 @@ export default function DarkTabs() {
                     <div className="absolute inset-0 bg-black/30" />
                   </div>
 
-                  <div className="w-0.5 h-5 animate-glow-top rounded-full"></div>
+                  <div className="w-0.5 h-5 animate-glow-top rounded-full" />
 
                   <div className="flex gap-2">
                     {iconsToShow.map((IconComponent, i) => (
@@ -235,11 +205,9 @@ export default function DarkTabs() {
                     ))}
                   </div>
 
-                  <div className="w-0.5 h-6 animate-glow-bottom rounded-full"></div>
-                  <div
-                    key={activeTab}
-                    className="relative aspect-video w-full rounded-2xl overflow-hidden border border-neutral-950 shadow-xl animate-scaleIn"
-                  >
+                  <div className="w-0.5 h-6 animate-glow-bottom rounded-full" />
+
+                  <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-neutral-950 shadow-xl animate-scaleIn mt-4">
                     <Image
                       src={activeContent?.image || "/placeholder.jpg"}
                       alt="Generated thumbnail"
@@ -322,10 +290,6 @@ export default function DarkTabs() {
         }
         .animate-glow-bottom {
           animation: glowPulseBottom 4s ease-in-out infinite;
-        }
-        .animation-delay-100 {
-          animation-delay: 0.1s;
-          opacity: 0;
         }
       `}</style>
     </div>

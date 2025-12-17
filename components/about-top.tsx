@@ -8,9 +8,9 @@ export default function AboutTop() {
   
         <div className="flex-1">
           <h1 className="text-4xl md:text-6xl  font-medium leading-16">
-            <span className="text-green-950 ">Smart Tech</span>
+            <span className="text-green-950 grotesk">Smart Tech</span>
             <br />
-            <span className="text-[#7fa008] ">Faster Charging</span>
+            <span className="text-[#7fa008] grotesk ">Faster Charging</span>
           </h1>
         </div>
 

@@ -20,25 +20,25 @@ export default function Navbar() {
                 priority
               />
             </div>
-            <span className="text-neutral-200 text-2xl font-semibold">
+            <span className="text-neutral-50 text-2xl font-semibold">
               Agrosentinels
             </span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-neutral-300 hover:text-[#d7f448] transition-colors">
+            <Link href="/" className="text-neutral-50 hover:text-[#d7f448] transition-colors">
               Home
             </Link>
-            <Link href="/about" className="text-neutral-300 hover:text-[#d7f448] transition-colors">
+            <Link href="/about" className="text-neutral-50 hover:text-[#d7f448] transition-colors">
               About Us
             </Link>
-            <Link href="/stations" className="text-neutral-300 hover:text-[#d7f448] transition-colors">
+            <Link href="/stations" className="text-neutral-50 hover:text-[#d7f448] transition-colors">
               Stations
             </Link>
-            <Link href="/products" className="text-neutral-300 hover:text-[#d7f448] transition-colors">
+            <Link href="/products" className="text-neutral-50 hover:text-[#d7f448] transition-colors">
               Products
             </Link>
-            <Link href="/blog" className="text-neutral-300 hover:text-[#d7f448] transition-colors">
+            <Link href="/blog" className="text-neutral-50 hover:text-[#d7f448] transition-colors">
               Blog
             </Link>
           </div>

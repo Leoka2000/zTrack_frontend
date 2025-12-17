@@ -10,6 +10,15 @@ import AgrosentinelsFeatures from "@/components/feature-cards";
 import ProductBlog from "@/components/product-blog";
 import ProductBlogTop from "@/components/product-blog-top";
 import HowItWorksSteps from "@/components/how-it-works-steps";
+import GreenFutureHero from "@/components/eco-card";
+import DotPatternBackground from "@/components/utils/dot-pattern";
+import InnovationChargeHero from "@/components/innovation-charge-hero";
+import FAQ from "@/components/faq";
+import Index from "@/components/footer/footer";
+import Footer from "@/components/footer/footer-bottom";
+import GoalsSection from "@/components/lime-cards";
+import ContactForm from "@/components/contact-form";
+import LetsConnect from "@/components/lets-connect";
 
 export default function Home() {
   return (
@@ -33,8 +42,28 @@ export default function Home() {
             <TabsComponent />
             <AgrosentinelsFeatures />
             <HowItWorksSteps />
+         
           </div>
         </main>
+        <div className="md:px-12 relative">
+ 
+          <GreenFutureHero />
+          <InnovationChargeHero />
+              <GoalsSection />
+             <FAQ/>
+             <DotPatternBackground />
+                 <LetsConnect />
+          <ContactForm />
+
+          <Index/>
+      
+        </div>
+           
+        <footer className="relative">
+                
+    
+        </footer>
+        
       </div>
     </>
   );

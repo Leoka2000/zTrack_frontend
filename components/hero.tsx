@@ -20,7 +20,7 @@ export default function Hero() {
 
       <div className="container  py-12 px-6 md:px-12 relative z-10">
         <div className="max-w-3xl">
-          <div className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-24">
+          <div className="text-6xl md:text-7xl grotesk lg:text-8xl font-bold text-white mb-6 leading-24">
             POWER UP
             <br />
             WITH SMART
@@ -52,7 +52,7 @@ export default function Hero() {
                   />
                 </div>
               </div>
-              <span className="text-[#d7f448] ">ENERGY</span>
+              <span className="text-[#d7f448] grotesk ">ENERGY</span>
             </div>
           </div>
 

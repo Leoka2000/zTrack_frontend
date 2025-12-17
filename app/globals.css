@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+.grotesk {
+  font-family: 'Space Grotesk', sans-serif!important;
+  font-optical-sizing: auto;
+}
 @custom-variant dark (&:is(.dark *));
 
 html,

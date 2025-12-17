@@ -57,7 +57,7 @@ const FeatureCard = ({ icon: Icon, title, description, iconColor = '#d7f448', vi
 
   
         <div className="text-center space-y-4">
-          <h2 className="text-3xl font-bold text-white tracking-tight">
+          <h2 className="text-3xl grotesk font-bold text-white tracking-tight">
             {title}
           </h2>
           <p className="text-base text-slate-400 leading-relaxed">

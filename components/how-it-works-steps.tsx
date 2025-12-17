@@ -53,7 +53,7 @@ export default function HowItWorksSteps() {
   }, []);
 
   return (
-    <div className="min-h-screen relative  py-16 px-4">
+    <div className="min-h-screen relative  py-16">
       {/*   Dots end*/}
 
       {/*   GRID LINES begin*/}
@@ -73,7 +73,7 @@ export default function HowItWorksSteps() {
 
       {/*   GRID LINES end*/}
 
-      <div className="max-w-7xl mx-auto">
+      <div className=" mx-auto">
 
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 shadow-sm border border-[#d7f448]">
@@ -84,11 +84,11 @@ export default function HowItWorksSteps() {
 
    
         <div className="text-center  mb-6">
-          <h1 className="text-5xl md:text-6xl t font-bold text-neutral-100 mb-4">
+          <h1 className="text-5xl grotesk md:text-6xl t font-bold text-neutral-100 mb-4">
             Simple Process,
           </h1>
-          <span className="text-[#d7f448] text-5xl md:text-6xl t font-bold ">Beautiful Results</span>
-          <p className="text-gray-400  text-lg p-12 md:text-xl max-w-3xl mx-auto">
+          <span className="text-[#d7f448] text-5xl md:text-6xl grotesk font-bold ">Beautiful Results</span>
+          <p className="text-gray-400   text-lg p-12 md:text-xl max-w-3xl mx-auto">
             Customize your shadcn/ui components in just a few simple steps.
           </p>
         </div>
