@@ -36,7 +36,7 @@ export default function Home() {
         </div>
         <main className="bg-neutral-950 relative   mt-[15rem] py-44 ">
           <div className="h-[40vh]">
-            <ProductShowcase />
+          
           </div>
           <div className="md:px-12">
             <TabsComponent />
