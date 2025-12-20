@@ -1,137 +1,136 @@
-import React from "react";
+import Image from "next/image";
 
-export default function Footer() {
+export default function ZtrackmapLanding() {
   return (
-    <footer className="bg-zinc-900 text-gray-400 py-16 px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Logo Section */}
-        <div className="mb-12">
-          <img 
-            src="https://via.placeholder.com/180x50/c8e66d/000000?text=Your+Logo" 
-            alt="Company Logo" 
-            className="h-12"
-          />
-        </div>
-
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          {/* Navigation Column */}
+    <main className="bg-neutral-950 text-neutral-100">
+      <section className="relative overflow-hidden">
+        <div className="mx-auto max-w-7xl px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <h3 className="text-white text-lg font-semibold mb-6">Navigation</h3>
-            <ul className="space-y-4">
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Products
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Dashboard
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Blog
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal & Policies Column */}
-          <div>
-            <h3 className="text-white text-lg font-semibold mb-6">Legal & Policies</h3>
-            <ul className="space-y-4">
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Terms & Conditions
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Social Column */}
-          <div>
-            <h3 className="text-white text-lg font-semibold mb-6">Social</h3>
-            <ul className="space-y-4">
-              <li>
-                <a href="#" className="hover:text-white transition-colors flex items-center gap-3">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                  </svg>
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors flex items-center gap-3">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors flex items-center gap-3">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                  </svg>
-                  YouTube
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-gray-500">
-              2025 © All rights reserved
+            <p className="text-sm uppercase tracking-widest text-lime-400">
+              smart grazing · gps · iot
             </p>
-            
-            {/* Payment Options */}
-            <div className="flex items-center gap-4">
-              <span className="text-gray-500 text-sm">We accept:</span>
-              <div className="flex gap-3">
-                <img 
-                  src="https://via.placeholder.com/50x32/ffffff/000000?text=VISA" 
-                  alt="Visa" 
-                  className="h-8 rounded border border-gray-700"
-                />
-                <img 
-                  src="https://via.placeholder.com/50x32/ffffff/000000?text=MC" 
-                  alt="Mastercard" 
-                  className="h-8 rounded border border-gray-700"
-                />
-                <img 
-                  src="https://via.placeholder.com/50x32/ffffff/000000?text=AMEX" 
-                  alt="American Express" 
-                  className="h-8 rounded border border-gray-700"
-                />
-                <img 
-                  src="https://via.placeholder.com/50x32/ffffff/000000?text=PayPal" 
-                  alt="PayPal" 
-                  className="h-8 rounded border border-gray-700"
+
+            <h1 className="mt-4 text-4xl sm:text-5xl xl:text-6xl font-semibold leading-tight">
+              ztrackmap
+            </h1>
+
+            <p className="mt-6 text-lg text-neutral-300 max-w-xl">
+              Making grazing easier with smart activity sensors and GPS tracking —
+              so animals, land, and people can stay in harmony.
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#solution"
+                className="rounded-full bg-lime-400 px-8 py-3 text-neutral-900 font-medium hover:bg-lime-300 transition"
+              >
+                see the solution
+              </a>
+
+              <a
+                href="#map"
+                className="rounded-full border border-neutral-700 px-8 py-3 font-medium hover:border-neutral-500 transition"
+              >
+                map application
+              </a>
+            </div>
+          </div>
+
+          <div className="relative flex justify-center">
+            <div className="relative w-[280px] sm:w-[320px] aspect-[9/19] rounded-[2.5rem] border border-neutral-800 bg-neutral-900 shadow-2xl overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-8 bg-neutral-900 z-10" />
+              <div className="absolute inset-0">
+                <Image
+                  src="/phoneapp.avif"
+                  alt="ztrackmap mobile map interface"
+                  fill
+                  className="object-cover"
+                  priority
                 />
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </section>
+
+      <section id="vision" className="border-t border-neutral-900">
+        <div className="mx-auto max-w-4xl px-6 py-24">
+          <h2 className="text-3xl font-semibold">vision & mission</h2>
+
+          <p className="mt-6 text-neutral-300 leading-relaxed">
+            Grazing is hard and exhausting work — and often monotonous, too.
+            Keeping an eye on animals is not easy, especially across large areas.
+            With smart sensors and GPS tracking, we aim to make grazing simpler,
+            safer, and more humane.
+          </p>
+
+          <blockquote className="mt-10 border-l-2 border-lime-400 pl-6 text-neutral-400 italic">
+            “Technology should not pull us away from nature,
+            but gently guide us back to it.”
+          </blockquote>
+
+          <p className="mt-6 text-neutral-300 leading-relaxed">
+            This is our <span className="text-lime-400">yakamoz</span> —
+            a quiet light reflected from the past into the future,
+            reminding us why we build what we build.
+          </p>
+        </div>
+      </section>
+
+      <section id="solution" className="bg-neutral-900/40">
+        <div className="mx-auto max-w-7xl px-6 py-24">
+          <h2 className="text-3xl font-semibold">the solution</h2>
+
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "real-time location",
+                desc: "Track herds and flocks on a live map with flexible update intervals.",
+              },
+              {
+                title: "theft & escape alerts",
+                desc: "Instant notification if animals scatter, stop moving, or leave a zone.",
+              },
+              {
+                title: "long battery life",
+                desc: "NB-IoT + low-power design with solar assistance for months of operation.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-neutral-800 bg-neutral-950 p-8"
+              >
+                <h3 className="text-xl font-medium">{item.title}</h3>
+                <p className="mt-4 text-neutral-400">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="map" className="border-t border-neutral-900">
+        <div className="mx-auto max-w-7xl px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 className="text-3xl font-semibold">map application</h2>
+            <p className="mt-6 text-neutral-300">
+              A clear, herd-level overview matters more than tracking every
+              individual animal. ztrackmap visualizes groups, anomalies,
+              and grazing patterns — not noise.
+            </p>
+          </div>
+
+          <div className="rounded-3xl border border-neutral-800 bg-neutral-900 aspect-video flex items-center justify-center text-neutral-500">
+            map preview placeholder
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-neutral-900">
+        <div className="mx-auto max-w-7xl px-6 py-12 flex flex-col sm:flex-row justify-between gap-6 text-sm text-neutral-500">
+          <span>© {new Date().getFullYear()} ztrackmap</span>
+          <span>built for grazing, free-range farming & harmony with nature</span>
+        </div>
+      </footer>
+    </main>
   );
 }

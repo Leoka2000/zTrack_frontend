@@ -4,7 +4,6 @@ import React from "react"
 const DotPatternBackground = () => {
   return (
     <div className="absolute inset-0 -z-10 pointer-events-none">
-      {/* Dots */}
       <div
         className="absolute inset-0"
         style={{
@@ -16,8 +15,6 @@ const DotPatternBackground = () => {
           backgroundSize: "10px 10px",
         }}
       />
-
-      {/* Vertical grid */}
       <div
         className="absolute inset-0"
         style={{
@@ -26,8 +23,6 @@ const DotPatternBackground = () => {
           backgroundSize: "100px 100px",
         }}
       />
-
-      {/* Horizontal grid */}
       <div
         className="absolute inset-0"
         style={{

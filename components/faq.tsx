@@ -13,7 +13,7 @@ export default function FAQ() {
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-start gap-20">
         
-        {/* Left side */}
+     
         <div className="space-y-6 md:w-[45%]">
           <h1 className="text-5xl grotesk font-bold text-lime-800 leading-tight">
             EV Charging
@@ -29,7 +29,7 @@ export default function FAQ() {
           </p>
         </div>
 
-        {/* Right side */}
+     
         <div className="md:w-[50%] w-full">
           <Accordion type="single" collapsible className="w-full space-y-4">
             

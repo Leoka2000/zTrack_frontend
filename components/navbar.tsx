@@ -10,18 +10,18 @@ export default function Navbar() {
       <div className="container mx-auto p-2">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-[#d7f448] text-neutral-900 hover:bg-[#c3e13f] rounded-full flex items-center justify-center">
+            <div className="w-14 h-10  bg-[#d7f448] text-neutral-900 hover:bg-[#c3e13f]   rounded-full  flex items-center justify-center">
               <Image
-                src="/as-logo-small.png"
+                src="/zanelogo.png"
                 alt="Logo"
-                width={32}
-                height={32}
-                className="mr-0.5"
+                width={50}
+                height={50}
+             className="mr-0.5 brightness-0" 
                 priority
               />
             </div>
             <span className="text-neutral-50 text-2xl font-semibold">
-              Agrosentinels
+           ZtrackMap
             </span>
           </Link>
 

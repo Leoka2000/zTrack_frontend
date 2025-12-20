@@ -14,11 +14,13 @@ import GreenFutureHero from "@/components/eco-card";
 import DotPatternBackground from "@/components/utils/dot-pattern";
 import InnovationChargeHero from "@/components/innovation-charge-hero";
 import FAQ from "@/components/faq";
-import Index from "@/components/footer/footer";
+import FooterTop from "@/components/footer/footer";
 import Footer from "@/components/footer/footer-bottom";
 import GoalsSection from "@/components/lime-cards";
 import ContactForm from "@/components/contact-form";
 import LetsConnect from "@/components/lets-connect";
+import Team from "@/components/team";
+import BlogCards from "@/components/blog-cards";
 
 export default function Home() {
   return (
@@ -50,12 +52,14 @@ export default function Home() {
           <GreenFutureHero />
           <InnovationChargeHero />
               <GoalsSection />
+              <Team/>
              <FAQ/>
+             <BlogCards />
              <DotPatternBackground />
                  <LetsConnect />
           <ContactForm />
 
-          <Index/>
+          <FooterTop/>
       
         </div>
            

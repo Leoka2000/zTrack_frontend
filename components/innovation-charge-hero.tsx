@@ -4,8 +4,9 @@ import React from 'react'
 
 export default function InnovationChargeHero() {
   return (
-    <div className="relative bg-traparent py-16">
+    <div className="relative isolate overflow-clip bg-traparent py-16">
 
+<DotPatternBackground />
       <div className="w-full mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
