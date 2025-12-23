@@ -13,85 +13,62 @@ export default function FAQ() {
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-start gap-20">
         
-     
-        <div className="space-y-6 md:w-[45%]">
-          <h1 className="text-5xl grotesk font-bold text-lime-800 leading-tight">
-            EV Charging
+        <div className="space-y-6 text-4xl md:text-6xl md:w-[45%]">
+          <h1 className="grotesk text-lime-950 font-medium leading-16">
+            Smart Grazing
             <br />
-            <span className="text-[#8b9d3a] grotesk">
+            <span className="text-[#7fa008] font-medium grotesk">
               Basics: FAQs
             </span>
           </h1>
 
           <p className="text-gray-600 max-w-md text-lg">
-            Explore our FAQs to discover how we power your drive with speed,
-            smarts, and sustainability. Find the spark to your questions below!
+            Explore our FAQs to discover how we secure your herd with precision, 
+            rugged durability, and real-time intelligence. Find the answers for your pasture below!
           </p>
         </div>
 
-     
         <div className="md:w-[50%] w-full">
           <Accordion type="single" collapsible className="w-full space-y-4">
-            
             {[
               {
                 value: "item-1",
-                title:
-                  "What makes Volthaus chargers different from other EV chargers?",
+                title: "How does the ZTrack G-100 maintain power in remote areas?",
                 content:
-                  "Volthaus chargers stand out with their intelligent charging technology, seamless app integration, and energy management features.",
+                  "The G-100 features high-efficiency solar harvesting. With just 3 hours of direct daily sunlight, the device stays fully charged, ensuring continuous monitoring without manual intervention.",
               },
               {
                 value: "item-2",
-                title:
-                  "Are Volthaus chargers compatible with all electric vehicles?",
+                title: "What happens if an animal moves out of cellular range?",
                 content:
-                  "Yes, Volthaus chargers are designed to be universally compatible with all electric vehicles.",
+                  "Our devices utilize NB-IoT and LTE-M for deep rural penetration. If cellular signals fail, the G-100 can store location data internally and sync once a connection is re-established.",
               },
               {
                 value: "item-3",
-                title:
-                  "How long does it take to fully charge an EV with a Volthaus charger?",
+                title: "How accurate is the GPS tracking for individual animals?",
                 content:
-                  "Charging time depends on your vehicle and charger model.",
+                  "The ZTrack G-100 uses a multi-constellation GNSS receiver (GPS, GLONASS, Galileo) providing pinpoint accuracy within 2.5 meters under clear sky conditions.",
               },
               {
                 value: "item-4",
-                title: "Can I install a Volthaus charger at home?",
+                title: "Can I set up virtual boundaries for my herd?",
                 content:
-                  "Absolutely! Volthaus chargers are designed for easy home installation.",
+                  "Yes! Through our mobile app, you can create custom Geofences. If any animal crosses these boundaries, you will receive an instant push notification or SMS alert.",
               },
               {
                 value: "item-5",
-                title:
-                  "Do Volthaus chargers support renewable energy sources?",
+                title: "Is the hardware durable enough for harsh weather?",
                 content:
-                  "Yes! Volthaus chargers are fully compatible with renewable energy systems.",
+                  "Absolutely. The G-100 is IP67-rated, making it fully waterproof and dustproof. It is tested to operate in extreme temperatures ranging from -20°C to +60°C.",
               },
             ].map((item) => (
               <div
                 key={item.value}
-                className="
-                border-2
-                shadow-md
-                  group rounded-xl p-[1px]
-                  bg-gradient-to-b
-                  from-[#f1f9b6]
-                  via-[#d7f448]
-                  to-[#c2dd3a]
-                  transition-all duration-300
-                  hover:from-[#f6fbd2]
-                  hover:via-[#d7f448]
-                  hover:to-[#b9d830]
-                "
+                className="border-1 shadow-md group rounded-xl p-[2px]"
               >
                 <AccordionItem
                   value={item.value}
-                  className="
-                    rounded-[11px]
-                    bg-white
-                    border-none
-                  "
+                  className="rounded-[11px] bg-white border-none"
                 >
                   <AccordionTrigger className="text-left cursor-pointer font-semibold text-lime-900 hover:no-underline py-6 px-6">
                     {item.title}

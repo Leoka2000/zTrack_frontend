@@ -3,82 +3,85 @@
 import { useState, useMemo, memo } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ShieldCheck, Flame, Cog, Helicopter } from "lucide-react";
+import { ShieldCheck, Map, Sun, Activity } from "lucide-react";
 
 const tabs = [
   {
     id: "problem",
     label: "Problem",
-    title: "Machines Fail Without Warning",
+    title: "Grazing is Exhausting and Risky",
     description: `
-Agricultural and industrial machinery frequently overheats without any visible
-external signs. Bearings, belts, pulleys, and mechanical connections can reach
-dangerous temperatures long before operators notice anything is wrong.
+Grazing is hard and monotonous work. Keeping an eye on animals across vast 
+pastures is difficult, leading to animals wandering off or being stolen. 
 
-When a critical component overheats unnoticed, the consequences can be severe:
-expensive machine damage, downtime, halted production, and even complete fires.
-Companies lose millions every year due to preventable overheating incidents.
+Every lost calf or sheep is a direct hit to a farmer's livelihood. Without 
+constant visibility, the risk of theft and the challenge of managing 
+large herds often lead to time and labor inefficiency.
 
-Without early detection, you are reacting after damage happens — not preventing it.
+Without smart monitoring, you are reacting after the loss happens — not 
+securing your herd's future.
     `,
-    image: "/card-img1.jpg",
+    image: "/sheep-pasture.jpg",
   },
   {
     id: "solution",
     label: "Solution",
-    title: "Smart Monitoring in Real Time",
+    title: "Harmony Through Smart Sensors",
     description: `
-Agrosentinels is a smart, real-time diagnostic sensor system that continuously
-monitors the heat signatures of critical machine components. It provides
-immediate visual and digital alerts when temperatures reach dangerous thresholds.
+ZTrack is a smart, real-time GPS and activity sensor system designed to 
+make grazing easier and more secure. We believe technology should lead 
+us back to the rhythm of the land and the animals.
 
-Using wireless BLE communication, the sensors send instant alerts to the main
-unit, giving operators time to react before failures occur.
+Using advanced tracking, our devices monitor the location and health 
+signatures of your livestock, giving you peace of mind whether they 
+are on the pasture or in the mountains.
 
-The system transforms traditional machinery into intelligent, self-monitoring equipment.
+The system transforms traditional herding into a modern, harmonious 
+relationship between nature and data.
     `,
-    image: "/card-img2.jpg",
+    image: "/herd-view.jpg",
   },
   {
-    id: "how-it-works",
-    label: "Functioning",
-    title: "Smart Monitoring in Real Time",
+    id: "technology",
+    label: "Tech",
+    title: "Low Power, Maximum Reach",
     description: `
-Each Agrosentinels sensor monitors a specific machine component. When heat
-rises beyond safe parameters, it sends an alert via Bluetooth Low Energy
-directly to the master controller.
+Each ZTrack sensor monitors an animal's specific behavior. Using 
+ultra-low power NB-IoT communication, the device sends updates 
+directly to your dashboard every 15 minutes.
 
-The master unit can:
-• warn the operator instantly  
-• log the event in the cloud  
-• automatically shut down the machine if required  
+The system features:
+• Solar-assisted charging for 2+ months of battery life  
+• Real-time alerts for theft or abnormal inactivity  
+• Robust IP6X casing for harsh field conditions  
 
-This provides a seamless, automated protection layer that prevents mechanical
-failure and fire risk before they escalate.
+This provides a seamless, automated protection layer that helps 
+you reconnect with the natural life of your animals.
     `,
-    image: "/card-img3.jpg",
+    image: "/smart-sensor.jpg",
   },
   {
-    id: "why-buy",
-    label: "Why",
-    title: "Protection That Pays Off",
+    id: "value",
+    label: "Value",
+    title: "The Light of Yakamoz",
     description: `
-Agrosentinels delivers measurable savings by preventing damage that could cost
-millions. It protects your equipment, workers, and operations.
+ZTrack delivers measurable savings by preventing theft and loss that 
+could cost your business thousands. It protects your livestock and 
+your legacy.
 
-• Saves money by preventing mechanical failures  
-• Reduces downtime and production loss  
-• Easy magnetic installation — no special tools needed  
-• Cloud-based history and incident tracking  
-• Makes your machinery safer and more reliable  
+• Pays for itself by preventing the loss of even one animal  
+• Solar endurance ensures maintenance-free operation  
+• Group-level visualization for entire herd oversight  
+• Rugged hardware built for long grazing seasons  
+• Bridging the past and future through smart electronics  
 
-It's a simple, effective upgrade that pays for itself many times over.
+It is a quiet, pure reminder of why we build: to guide you back to the land.
     `,
-    image: "/card-img4.jpg",
+    image: "/grazing-bg.webp",
   },
 ];
 
-const iconPatterns = [[Cog], [Flame], [Helicopter], [ShieldCheck]];
+const iconPatterns = [[Sun], [Map], [Activity], [ShieldCheck]];
 
 const AnimatedText = memo(({ text }: { text: string }) => (
   <motion.p
@@ -94,7 +97,6 @@ const AnimatedText = memo(({ text }: { text: string }) => (
 export default function DarkTabs() {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
 
-  // Memoized active tab content for performance
   const activeContent = useMemo(
     () => tabs.find((tab) => tab.id === activeTab),
     [activeTab]
@@ -105,7 +107,6 @@ export default function DarkTabs() {
   return (
     <div className="min-h-screen bg-neural-950 text-white p-8 flex items-center justify-center">
       <div className="w-full border rounded-4xl p-24 border-neutral-950 relative overflow-hidden">
-        {/* Background overlays */}
         <div
           className="absolute inset-0 z-0 pointer-events-none"
           style={{
@@ -134,7 +135,6 @@ export default function DarkTabs() {
 
         <div className="relative min-h-[420px] z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left panel */}
             <div className="space-y-8">
               <div className="flex justify-center gap-2 p-2 border rounded-full border-gray-700">
                 {tabs.map((tab) => (
@@ -158,14 +158,13 @@ export default function DarkTabs() {
                 transition={{ duration: 0.5 }}
                 className="space-y-6 min-h-[420px]"
               >
-                <h1 className="text-6xl font-bold grotesk text-transparent bg-clip-text bg-gradient-to-r from-[#d7f448] to-[#b8d636] animate-fadeInUp">
+                <h1 className="text-4xl font-bold grotesk text-transparent bg-clip-text bg-gradient-to-r from-[#d7f448] to-[#b8d636] animate-fadeInUp">
                   {activeContent?.title}
                 </h1>
                 <AnimatedText text={activeContent?.description || ""} />
               </motion.div>
             </div>
 
-            {/* Right panel */}
             <div className="relative">
               <div className="relative p-8 border border-gray-950 bg-neutral-950 rounded-2xl shadow-2xl overflow-hidden">
                 <div
@@ -184,8 +183,8 @@ export default function DarkTabs() {
                 <div className="flex flex-col items-center mb-8 relative">
                   <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-neutral-950 shadow-xl animate-scaleIn">
                     <Image
-                      src="/zane-partner.jpg"
-                      alt="Generated thumbnail"
+                      src="/pasture-wide.jpg"
+                      alt="Pasture overview"
                       fill
                       className="object-cover"
                     />
@@ -210,7 +209,7 @@ export default function DarkTabs() {
                   <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-neutral-950 shadow-xl animate-scaleIn mt-4">
                     <Image
                       src={activeContent?.image || "/placeholder.jpg"}
-                      alt="Generated thumbnail"
+                      alt="Livestock management"
                       fill
                       className="object-cover"
                     />
@@ -223,7 +222,6 @@ export default function DarkTabs() {
         </div>
       </div>
 
-      {/* Global Styles */}
       <style jsx global>{`
         @keyframes fadeInUp {
           from {

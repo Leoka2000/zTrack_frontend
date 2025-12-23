@@ -13,46 +13,23 @@ const Team = () => {
     },
     {
       id: 2,
-      name: "James Carter",
+      name: "Leo Reus",
       title: "Chief Technology Officer (CTO)",
-      image: "/zoltan-erdei.jpg"
+      image: "/leo.jpeg"
     },
-    {
-      id: 3,
-      name: "Sophia Martinez",
-      title: "Head of Sustainability & ESG",
-      image: "/zoltan-erdei.jpg"
-    },
-    {
-      id: 4,
-      name: "Michael Chen",
-      title: "VP of Engineering",
-      image: "/zoltan-erdei.jpg"
-    },
-    {
-      id: 5,
-      name: "Isabella Torres",
-      title: "Director of Product Design",
-      image: "/zoltan-erdei.jpg"
-    },
-    {
-      id: 6,
-      name: "David Williams",
-      title: "Chief Financial Officer (CFO)",
-      image: "/zoltan-erdei.jpg"
-    }
+    
   ];
 
   return (
     <div className="min-h-screen  px-8 py-16">
-      <div className="max-w-7xl mx-auto">
+      <div className=" mx-auto">
    
         <div className="flex justify-between items-start mb-16">
-          <div>
-            <h1 className="text-6xl font-bold text-gray-900 mb-2">
+          <div className='text-4xl md:text-6xl'>
+            <h1 className="grotesk font-medium text-green-950 mb-2">
               The Team Behind
             </h1>
-            <h1 className="text-6xl font-bold text-lime-500">
+            <h1 className=" grotesk font-medium text-[#7fa008]">
               Smarter Charging
             </h1>
           </div>
@@ -78,7 +55,7 @@ const Team = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500  group-hover:scale-105"
                 />
               </div>
               

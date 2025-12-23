@@ -14,12 +14,12 @@ export default function ProductBlog() {
    
         <div className="md:w-5/6 relative">
           <div className="absolute top-6 z-10 left-6 bg-black/70 text-white px-4 py-2 rounded-lg text-sm font-medium">
-            Feb 13, 2025
+            Dec 20, 2025
           </div>
           <Image
             fill
             src="/sensor.jpg"
-            alt="EV Charging"
+            alt="ZTrack Smart Grazing Sensor"
             className="w-full h-full object-left object-cover min-h-[300px]"
           />
         </div>
@@ -29,20 +29,20 @@ export default function ProductBlog() {
        
           <div className="flex items-start justify-between mb-8">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
+              
                 <Image
-                  src="/as-logo-small.png"
-                  alt="Logo"
-                  width={32}
-                  height={32}
-                  className="mr-0.5"
+                  src="/zanelogo.png"
+                  alt="ZTrack Logo"
+                  width={90}
+                height={90}
+                  className="mr-0.5m brightness-0 "
                   priority
                 />
-              </div>
+       
               <div>
-                <h3 className="font-semibold text-gray-900"> AS-3086</h3>
+                <h3 className="font-semibold text-gray-900"> ZTrack G-100</h3>
                 <p className="text-sm text-gray-500">
-                  Mounted on strong neodymium magnets
+                  Solar-powered with rugged mounting
                 </p>
               </div>
             </div>
@@ -54,20 +54,19 @@ export default function ProductBlog() {
   
           <div className="flex-grow">
             <h1 className="text-3xl grotesk md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-              How does Agrosentinels Diagnostic Measuring System help?
+              How does the ZTrack Smart Monitoring System help?
             </h1>
             <p className="text-gray-600 text-sm leading-relaxed ">
-              The element of the Agrosentinels Diagnostic Measuring System is a
-              smart sensor that continuously monitors the critical points of the
-              machines. If it detects abnormal operation, it will immediately
-              send you an alert and/or perform immediate automatic intervention
-              on the machine. The sensor communicates with the master unit via a
-              BLE connection, which can even intervene in the control of the
-              agricultural machine in the event of a problem. The sensor not
-              only sends the data to the phone, but also saves them immediately
-              in the cloud, so they can be reviewed and evaluated at any time
-              later. Thanks to the magnetic fastening, the installation of the
-              sensors is extremely easy.
+              The core of the ZTrack system is a smart activity sensor designed to
+              bring harmony to modern grazing. It continuously monitors the location
+              and behavior of your livestock, sending immediate alerts if it detects
+              theft, straying, or abnormal inactivity. Using ultra-low power NB-IoT 
+              technology and integrated solar charging, the sensor operates for 
+              months without maintenance. Every data point is saved to the cloud, 
+              allowing you to review herd movements and pasture pressure through our 
+              dedicated map application. Housed in a robust IP6X casing, it withstands 
+              the harshest field conditions while keeping you connected to the rhythm 
+              of your land.
             </p>
           </div>
 
@@ -88,7 +87,7 @@ export default function ProductBlog() {
               <div className="  rounded-full flex items-center justify-center">
                 <Image
                   src="/megosz.jpg"
-                  alt="Logo"
+                  alt="Farming Association Partner"
                   width={130}
                   height={135}
                   className="mr-0.5"

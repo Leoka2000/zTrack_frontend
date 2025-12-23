@@ -63,11 +63,11 @@ export default function ContactForm() {
 
   
           <div>
-            <h1 className="text-5xl md:text-6xl font-bold grotesk text-gray-800 mb-2">
+            <h1 className="text-4xl md:text-6xl font-medium grotesk text-gray-800 mb-2">
               Send Us
             </h1>
             <h2
-              className="text-5xl md:text-6xl grotesk font-bold mb-6"
+              className="text-3xl md:text-6xl grotesk font-medium mb-6"
               style={{ color: "#82a816" }}
             >
               A Message

@@ -81,13 +81,13 @@ const Index = () => {
       </div>
 
       <footer className="px-4 md:px-8 py-12 md:py-16">
-        <div className="w-full h-52">
+        <div className=" flex justify-around w-full h-auto mb-20">
           <Image
-            src="/as-logo.png"
+            src="/zanelogo.png"
             alt="Logo"
-            width={600}
-            height={650}
-            className="mr-0.5 object-cover filter ml-96 invert"
+            width={300}
+            height={350}
+            className="mr-0.5 object-cover filter  invert brightness-0"
             priority
           />
         </div>

@@ -15,7 +15,7 @@ export function AboutIcons() {
           <div className="relative w-full  h-52">
             <Image
               src="/about-card-img1.avif"
-              alt="agrosentinels-icon"
+              alt="solar-charging-icon"
               fill
               className="w-full px-32"
             />
@@ -23,13 +23,14 @@ export function AboutIcons() {
         </CardHeader>
         <CardContent className="text-start flex flex-col items-start">
        <div className="space-y-2 text-start">
-            <div className="text-7xl font-bold text-neutral-900">+50%</div>
+            <div className="text-7xl font-bold text-neutral-900">+2 MO</div>
             <CardTitle className="text-4xl text-neutral-900">
-              AI CHARGING ADOPTION
+              SOLAR ENDURANCE
             </CardTitle>
           </div>
           <CardDescription className=" text-lg w-[25rem]">
-            Pioneering intelligent systems for faster, smarter power delivery.   smarter power delivery.
+            Advanced NB-IoT communication coupled with solar charging for 
+            extended, worry-free pasture seasons.
           </CardDescription>
         </CardContent>
       </Card>
@@ -39,7 +40,7 @@ export function AboutIcons() {
           <div className="relative w-full  h-52">
             <Image
               src="/about-card-img2.avif"
-              alt="agrosentinels-icon"
+              alt="herd-safety-icon"
               fill
               className="w-full px-32"
             />
@@ -47,19 +48,17 @@ export function AboutIcons() {
         </CardHeader>
         <CardContent className="text-start flex flex-col mb-6 ml-6 items-start">
           <div className="space-y-2 text-start">
-            
-            <div className="text-7xl font-bold text-neutral-900">+16,211</div>
+            <div className="text-7xl font-bold text-neutral-900">100%</div>
             <CardTitle className="text-4xl text-neutral-900">
-              AI CHARGING ADOPTION
+              FLOCK SECURITY
             </CardTitle>
           </div>
           <CardDescription className=" text-lg w-[25rem]">
-            Pioneering intelligent systems for faster, smarter power delivery.   smarter power delivery.
+            Real-time alerts for straying or theft, ensuring every cow, sheep, 
+            and goat is exactly where they belong.
           </CardDescription>
         </CardContent>
       </Card>
-
-      
     </div>
   );
 }

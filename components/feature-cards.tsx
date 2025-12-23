@@ -14,7 +14,7 @@ const FeatureCard = ({ icon: Icon, title, description, iconColor = '#d7f448', vi
     >
       <div className="absolute inset-0 bg-neutral-950 rounded-3xl blur-3xl" />
 
-      <div className="relative bg-neutral-950 h-[65vh] rounded-3xl p-8 backdrop-blur-xl border border-neutral-900 shadow-2xl">
+      <div className="relative bg-neutral-950 h-[80vh] rounded-3xl p-8 backdrop-blur-xl border border-neutral-900 shadow-2xl">
         
         <div className="relative rounded-2xl mb-12 overflow-hidden" style={{ height: '300px' }}>
           

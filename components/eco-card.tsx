@@ -12,8 +12,8 @@ export default function GreenFutureHero() {
           <div className="relative">
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800&h=900&fit=crop"
-                alt="Wind turbines on green hills"
+                src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=800&h=900&fit=crop"
+                alt="Herd of sheep grazing on green hills"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -21,14 +21,15 @@ export default function GreenFutureHero() {
 
           <div className="space-y-8">
             <div className="mb-10">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-2  grotesk text-neutral-100 ">
-                <span className="text-lime-900 grotesk font-bold">Advancing Green</span>
+              <h1 className=" text-4xl md:text-6xl font-medium  leading-tight mb-2 grotesk ">
+                <span className="text-lime-950 grotesk font-medium">Preserving Nature</span>
               </h1>
+            
               <h2
-                className="text-5xl md:text-6xl lg:text-7xl leading-12 grotesk font-bold"
+                className="text-4xl md:text-6xl font-medium  leading-12 grotesk "
                 style={{ color: "#7fa008" }}
               >
-                For Our Future
+                With Precision
               </h2>
             </div>
 
@@ -53,7 +54,7 @@ export default function GreenFutureHero() {
                   </svg>
                 </div>
                 <p className="text-gray-600 text-lg">
-                  Expanding smart EV infrastructure.
+                  Real-time livestock location and health monitoring.
                 </p>
               </div>
 
@@ -77,7 +78,7 @@ export default function GreenFutureHero() {
                   </svg>
                 </div>
                 <p className="text-gray-600 text-lg">
-                  Lowering emissions with clean energy.
+                  Advanced geofencing to protect against theft and straying.
                 </p>
               </div>
 
@@ -101,16 +102,16 @@ export default function GreenFutureHero() {
                   </svg>
                 </div>
                 <p className="text-gray-600 text-lg">
-                  Solutions that serve both people and planet.
+                  Eco-friendly hardware powered by smart solar charging.
                 </p>
               </div>
             </div>
 
             <p className="text-gray-600 text-base leading-relaxed">
-              We aim to create a world where electric vehicles are seamlessly
-              integrated into everyday life paving the way for a cleaner,
-              smarter, and more efficient future driven by sustainable energy
-              and innovation.
+              Our dream is that technology does not pull us away from the earth, 
+              but gently guides us back to it. Through ztrack, we help farmers 
+              reconnect with the rhythm of the land and the natural life of 
+              their animals, ensuring a harmonious future for free-range farming.
             </p>
           </div>
         </div>

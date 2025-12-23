@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
+
 export default function ProductBlogTop() {
   return (
     <div className="w-full py-24">
@@ -10,22 +11,23 @@ export default function ProductBlogTop() {
           <h1 className="text-4xl md:text-6xl   font-medium leading-16">
             <span className="text-green-950 grotesk">Introducing</span>
             <br />
-            <span className="text-[#7fa008] grotesk">AS-3086 Sensor</span>
+            <span className="text-[#7fa008] grotesk">ZTrack G-100</span>
           </h1>
         </div>
 
 
         <div className="flex-1 flex flex-col items-end gap-6">
           <p className="text-gray-600 text-right max-w-md leading-relaxed">
-            Intelligent EV charging systems powered by AI and renewables
-            building a cleaner, more connected future with every charge.
+            Smart grazing hardware designed to bridge the gap between tradition 
+            and technology, ensuring herd safety while reconnecting us with the 
+            natural rhythm of the land.
           </p>
 
           <Button
             variant={"outline"}
             className=" text-lg   h-12 font-semibold rounded-full transition-colors"
           >
-            <span className="mx-6 ">Get quotation</span>
+            <span className="mx-6 ">Get a quote</span>
 
             <span className="p-1 rounded-full bg-neutral-900  flex items-center justify-center">
               <ArrowRight

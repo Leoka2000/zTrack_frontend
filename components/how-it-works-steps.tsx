@@ -74,7 +74,6 @@ export default function HowItWorksSteps() {
       {/*   GRID LINES end*/}
 
       <div className=" mx-auto">
-
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 shadow-sm border border-[#d7f448]">
             <span className="text-2xl" style={{ color: "#c3e13f" }}></span>
@@ -82,18 +81,20 @@ export default function HowItWorksSteps() {
           </div>
         </div>
 
-   
-        <div className="text-center  mb-6">
-          <h1 className="text-5xl grotesk md:text-6xl t font-bold text-neutral-100 mb-4">
-            Simple Process,
-          </h1>
-          <span className="text-[#d7f448] text-5xl md:text-6xl grotesk font-bold ">Beautiful Results</span>
-          <p className="text-gray-400   text-lg p-12 md:text-xl max-w-3xl mx-auto">
+        <div className="text-center   mb-6">
+        
+            <h1 className="text-4xl grotesk md:text-6xl font-medium text-neutral-300 ">
+              Simple Process,
+            </h1>
+            <span className="text-[#d7f448] text-4xl md:text-6xl grotesk font-medium ">
+              Beautiful Results
+            </span>
+     
+          <p className="text-gray-400 text-lg p-12 md:text-xl max-w-3xl mx-auto">
             Customize your shadcn/ui components in just a few simple steps.
           </p>
         </div>
 
- 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
           {steps.map((step, index) => (
             <div
@@ -107,7 +108,6 @@ export default function HowItWorksSteps() {
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-      
               <div className="relative py-28  px-32 rounded-4xl w-32 h-32 flex items-center justify-center mb-6">
                 <div
                   className="absolute rounded-3xl  inset-0 z-0 pointer-events-none" //rounded important
@@ -171,11 +171,9 @@ export default function HowItWorksSteps() {
                 </div>
               </div>
 
-
               <h3 className="text-2xl font-bold text-neutral-100 mb-3 ">
                 {step.title}
               </h3>
-
 
               <p className="text-gray-400 text-sm leading-relaxed">
                 {step.description}

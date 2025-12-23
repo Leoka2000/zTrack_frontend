@@ -7,56 +7,29 @@ const BlogCards = () => {
     {
       id: 1,
       date: "Feb 11, 2025",
-      title: "Collaboration with AutoVax: Fast Chargers for Dealerships",
-      category: "Industry",
-      image: "/zoltan-erdei.jpg",
+      title: "Modernizing Tradition: GPS Tracking for Carpathian Sheep Herds",
+      category: "Technology",
+      image: "/elveszett-borju.png",
     },
-    {
-      id: 2,
-      date: "Feb 7, 2025",
-      title: "EV Charging Rates Drop Thanks to Renewable Energy Surge",
-      category: "Partnership",
-      image: "/zoltan-erdei.jpg",
-    },
-    {
-      id: 3,
-      date: "Feb 1, 2025",
-      title:
-        "The Rise of Bidirectional Charging: Powering Your Home with Your EV",
-      category: "Partnership",
-      image: "/zoltan-erdei.jpg",
-    },
-    {
-      id: 4,
-      date: "Jan 28, 2025",
-      title: "Smart Grid Integration: The Future of EV Charging",
-      category: "Industry",
-      image: "/zoltan-erdei.jpg",
-    },
-    {
-      id: 5,
-      date: "Jan 22, 2025",
-      title: "Expanding Our Network: 500 New Charging Stations",
-      category: "Partnership",
-      image: "/zoltan-erdei.jpg",
-    },
-    {
-      id: 6,
-      date: "Jan 15, 2025",
-      title: "Sustainable Charging Solutions for Urban Areas",
-      category: "Industry",
-      image: "/zoltan-erdei.jpg",
-    },
+    
   ];
 
   return (
-    <div className="min-h-screen  px-8 py-16">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen px-8 py-16">
+      <div className="mx-auto">
+         <div className="space-y-6 text-4xl md:text-6xl md:w-[45%]">
+          <h1 className="grotesk text-lime-950 font-medium mb-4">
+           Visit our blog
+            <br />
+            
+          </h1>
 
+        
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles.map((article) => (
-            <div key={article.id} className="group cursor-pointer relative">
-              <span className="bg-white/20 backdrop-blur-md text-white p-2 rounded-full z-20 absolute top-3 right-3 border border-white/30">
+            <div key={article.id} className="group p-4 bg-neutral-50 shadow-sm rounded-2xl cursor-pointer relative ">
+              <span className="bg-white/20 backdrop-blur-md text-white p-2 rounded-full z-20 absolute top-6 right-6 border border-white/30">
                 <Plus size={15} />
               </span>
         
@@ -81,7 +54,6 @@ const BlogCards = () => {
                   {article.title}
                 </h3>
 
-         
                 <div className="inline-block">
                   <div className="border border-gray-300 rounded-full px-4 py-1.5">
                     <span className="text-gray-700 text-sm">
