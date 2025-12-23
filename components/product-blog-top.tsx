@@ -11,8 +11,12 @@ export default function ProductBlogTop() {
           <h1 className="text-4xl md:text-6xl   font-medium leading-16">
             <span className="text-green-950 grotesk">Introducing</span>
             <br />
-            <span className="text-[#7fa008] grotesk">ZTrack G-100</span>
+            {/* Updated gradient: from a darker #3f4d04 to #d7f448 */}
+            <span className="grotesk bg-gradient-to-r from-[#45ae89] to-[#d7f448] bg-clip-text text-transparent">
+              ZTrack G-100
+            </span>
           </h1>
+           
         </div>
 
 

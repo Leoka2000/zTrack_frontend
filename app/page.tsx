@@ -52,7 +52,7 @@ export default function Home() {
               <GoalsSection />
               <Team/>
              <FAQ/>
-             <BlogCards />
+             <ProductBlog />
              <DotPatternBackground />
                  <LetsConnect />
           <ContactForm />

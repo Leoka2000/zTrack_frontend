@@ -3,6 +3,7 @@
 import React from "react";
 import { Atom, UserCircle, MapPin } from "lucide-react";
 import DotPatternBackground from "./utils/dot-pattern";
+import BackgroundShades from "./utils/background-shades";
 
 const GoalsSection: React.FC = () => {
   const cardContainerStyle = "relative rounded-3xl p-8 flex flex-col items-center text-center shadow-md overflow-hidden bg-[#CDFF4D]";
@@ -32,23 +33,23 @@ const GoalsSection: React.FC = () => {
   );
 
   return (
-    <section className="min-h-screen relative bg-gray-50 flex items-center">
+    <section className="min-h-screen relative flex items-center">
       <DotPatternBackground />
       <div className="max-w-7xl mx-auto w-full px-4 md:px-8">
         
-        <div className="mb-16 flex flex-col leading-14 items-center justify-center text-center text-4xl md:text-6xl">
+        <div className="mb-16 relative isolate  flex flex-col leading-14 items-center justify-center text-center text-4xl md:text-6xl">
+          <BackgroundShades/>
           <h2 className=" font-medium leading-10 text-lime-950 mb-4 grotesk">
             Core Of Everything
           </h2>
 
-          <h3
-            className="font-medium mb-6 grotesk"
-            style={{ color: "#7fa008" }}
-          >
+               <h3 className="grotesk bg-gradient-to-r from-[#45ae89] to-[#d7f448] bg-clip-text font-medium text-transparent mb-2 md:text-6xl text-4xl">
+
+          
             Our Goals
           </h3>
 
-          <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto">
+          <p className="text-muted-foreground  text-lg md:text-xl max-w-3xl mx-auto">
             ZTrack integrates rugged electronics with a land-first mindset
             to deliver livestock tracking that's precise, reliable, and built to 
             endure the toughest grazing seasons.

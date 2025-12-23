@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Card } from "./ui/card";
+import BackgroundShades from "./utils/background-shades";
 
 export default function GreenFutureHero() {
   return (
@@ -19,15 +20,17 @@ export default function GreenFutureHero() {
             </div>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-8  isolate relative">
+            <BackgroundShades/>
+
             <div className="mb-10">
               <h1 className=" text-4xl md:text-6xl font-medium  leading-tight mb-2 grotesk ">
                 <span className="text-lime-950 grotesk font-medium">Preserving Nature</span>
               </h1>
             
               <h2
-                className="text-4xl md:text-6xl font-medium  leading-12 grotesk "
-                style={{ color: "#7fa008" }}
+                className="grotesk bg-gradient-to-r from-[#45ae89] to-[#d7f448] bg-clip-text font-medium text-transparent md:text-6xl text-4xl "
+             
               >
                 With Precision
               </h2>
@@ -36,7 +39,7 @@ export default function GreenFutureHero() {
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <div
-                  className="flex-shrink-0 w-6 h-6 rounded flex items-center justify-center mt-1"
+                  className="flex-shrink-0 w-6 h-6 rounded flex items-center justify-center mt-1 grotesk bg-gradient-to-r from-[#45ae89] to-[#d7f448]"
                   style={{ backgroundColor: "#7fa008" }}
                 >
                   <svg
@@ -60,8 +63,8 @@ export default function GreenFutureHero() {
 
               <div className="flex items-start gap-3">
                 <div
-                  className="flex-shrink-0 w-6 h-6 rounded flex items-center justify-center mt-1"
-                  style={{ backgroundColor: "#7fa008" }}
+                  className="flex-shrink-0 w-6 h-6 rounded flex items-center justify-center mt-1 grotesk bg-gradient-to-r from-[#45ae89] to-[#d7f448]
+"
                 >
                   <svg
                     className="w-4 h-4 text-white"
@@ -84,7 +87,7 @@ export default function GreenFutureHero() {
 
               <div className="flex items-start gap-3">
                 <div
-                  className="flex-shrink-0 w-6 h-6 rounded flex items-center justify-center mt-1"
+                  className="flex-shrink-0 w-6 h-6 rounded flex items-center justify-center mt-1 grotesk bg-gradient-to-r from-[#45ae89] to-[#d7f448]"
                   style={{ backgroundColor: "#7a9b2e" }}
                 >
                   <svg
@@ -107,7 +110,7 @@ export default function GreenFutureHero() {
               </div>
             </div>
 
-            <p className="text-gray-600 text-base leading-relaxed">
+            <p className=" text-base text-muted-foreground leading-relaxed">
               Our dream is that technology does not pull us away from the earth, 
               but gently guides us back to it. Through ztrack, we help farmers 
               reconnect with the rhythm of the land and the natural life of 

@@ -8,8 +8,10 @@ export default function LetsConnect() {
      
         <div className="text-center mb-20">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium flex flex-col ">
-            <span className="text-gray-900 grotesk ">Let's Connect And</span>
-            <span style={{ color: '#82a816' }} className="grotesk font-medium">Map Your Herd</span>
+            <span className="text-gray-700 text-medium grotesk md:text-6xl text-4xl ">Let's Connect And</span>
+            <h3 className="grotesk bg-gradient-to-r leading-16 from-[#45ae89] to-[#d7f448] bg-clip-text font-medium text-transparent pb-5 md:text-6xl text-4xl">
+            Map Your Herd
+              </h3> 
           </h1>
           <p className="text-gray-500 text-lg md:text-xl mt-8 max-w-3xl mx-auto leading-relaxed">
             Our team is here to help you deploy the ZTrackMap ecosystem. Reach out 

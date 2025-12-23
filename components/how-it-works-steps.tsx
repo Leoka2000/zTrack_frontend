@@ -77,16 +77,16 @@ export default function HowItWorksSteps() {
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 shadow-sm border border-[#d7f448]">
             <span className="text-2xl" style={{ color: "#c3e13f" }}></span>
-            <span className="text-[#d7f448] font-medium">How It Works</span>
+            <span className="grotesk bg-gradient-to-r from-[#45ae89] to-[#d7f448] bg-clip-text text-transparent">How It Works</span>
           </div>
         </div>
 
         <div className="text-center   mb-6">
         
-            <h1 className="text-4xl grotesk md:text-6xl font-medium text-neutral-300 ">
+            <h1 className="text-4xl grotesk md:text-6xl font-medium text-neutral-300  ">
               Simple Process,
             </h1>
-            <span className="text-[#d7f448] text-4xl md:text-6xl grotesk font-medium ">
+            <span className="text-[#d7f448] text-4xl md:text-6xl grotesk font-medium grotesk bg-gradient-to-r from-[#45ae89] to-[#d7f448] bg-clip-text text-transparent ">
               Beautiful Results
             </span>
      

@@ -14,7 +14,7 @@ const FeatureCard = ({ icon: Icon, title, description, iconColor = '#d7f448', vi
     >
       <div className="absolute inset-0 bg-neutral-950 rounded-3xl blur-3xl" />
 
-      <div className="relative bg-neutral-950 h-[80vh] rounded-3xl p-8 backdrop-blur-xl border border-neutral-900 shadow-2xl">
+      <div className="relative bg-neutral-950 md:h-[80vh] md-[60rem] text- rounded-3xl p-8 backdrop-blur-xl border border-neutral-900 shadow-2xl">
         
         <div className="relative rounded-2xl mb-12 overflow-hidden" style={{ height: '300px' }}>
           
@@ -57,10 +57,10 @@ const FeatureCard = ({ icon: Icon, title, description, iconColor = '#d7f448', vi
 
   
         <div className="text-center space-y-4">
-          <h2 className="text-3xl grotesk font-bold text-white tracking-tight">
+          <h2 className="text-3xl grotesk font-bold text-neutral-300 tracking-tight">
             {title}
           </h2>
-          <p className="text-base text-slate-400 leading-relaxed">
+          <p className=" text-slate-400 leading-relaxed">
             {description}
           </p>
         </div>

@@ -63,15 +63,12 @@ export default function ContactForm() {
 
   
           <div>
-            <h1 className="text-4xl md:text-6xl font-medium grotesk text-gray-800 mb-2">
+            <h1 className="text-4xl md:text-6xl font-medium grotesk text-neutral-700 mb-2">
               Send Us
             </h1>
-            <h2
-              className="text-3xl md:text-6xl grotesk font-medium mb-6"
-              style={{ color: "#82a816" }}
-            >
+            <h3 className="grotesk bg-gradient-to-r leading-16 from-[#45ae89] to-[#d7f448] bg-clip-text font-medium text-transparent pb-5 md:text-6xl text-4xl">
               A Message
-            </h2>
+            </h3>
             <p className="text-gray-600 text-lg">
               Fill out the form below and our team will<br />
               get back to you as soon as possible.

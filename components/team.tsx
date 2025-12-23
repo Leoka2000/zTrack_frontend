@@ -29,9 +29,9 @@ const Team = () => {
             <h1 className="grotesk font-medium text-green-950 mb-2">
               The Team Behind
             </h1>
-            <h1 className=" grotesk font-medium text-[#7fa008]">
+   <h3 className="grotesk bg-gradient-to-r leading-12 from-[#45ae89] to-[#d7f448] bg-clip-text font-medium text-transparent pb-5 md:text-6xl text-4xl">
               Smarter Charging
-            </h1>
+            </h3>
           </div>
           <div className="max-w-md text-right">
             <p className="text-gray-600 leading-relaxed">

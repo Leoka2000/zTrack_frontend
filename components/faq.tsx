@@ -17,12 +17,12 @@ export default function FAQ() {
           <h1 className="grotesk text-lime-950 font-medium leading-16">
             Smart Grazing
             <br />
-            <span className="text-[#7fa008] font-medium grotesk">
+             <h3 className="grotesk bg-gradient-to-r leading-16 from-[#45ae89] to-[#d7f448] bg-clip-text font-medium text-transparent pb-5 md:text-6xl text-4xl">
               Basics: FAQs
-            </span>
+            </h3>
           </h1>
 
-          <p className="text-gray-600 max-w-md text-lg">
+          <p className="text-muted-foreground max-w-md text-lg">
             Explore our FAQs to discover how we secure your herd with precision, 
             rugged durability, and real-time intelligence. Find the answers for your pasture below!
           </p>
@@ -70,11 +70,11 @@ export default function FAQ() {
                   value={item.value}
                   className="rounded-[11px] bg-white border-none"
                 >
-                  <AccordionTrigger className="text-left cursor-pointer font-semibold text-lime-900 hover:no-underline py-6 px-6">
+                  <AccordionTrigger className="text-left cursor-pointer font-semibold text-neutral-700 hover:no-underline py-6 px-6">
                     {item.title}
                   </AccordionTrigger>
 
-                  <AccordionContent className="text-gray-600 pb-6 pt-2 px-6">
+                  <AccordionContent className="text-muted-foreground pb-6 pt-2 px-6">
                     {item.content}
                   </AccordionContent>
                 </AccordionItem>

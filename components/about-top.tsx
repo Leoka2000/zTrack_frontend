@@ -11,7 +11,9 @@ export default function AboutTop() {
           <h1 className="text-4xl md:text-6xl  font-medium leading-16">
             <span className="text-green-950 grotesk">Nature's Rhythm</span>
             <br />
-            <span className="text-[#7fa008] grotesk ">Smart Tracking</span>
+            <span className="grotesk bg-gradient-to-r from-[#45ae89] to-[#d7f448] bg-clip-text text-transparent">
+              Smart Tracking
+            </span>
           </h1>
         </div>
 
@@ -112,7 +114,9 @@ export function AboutIcons() {
         </CardHeader>
         <CardContent className="text-start flex flex-col items-start">
        <div className="space-y-2 text-start">
-            <div className="text-7xl font-bold text-neutral-900">+2 MO</div>
+            <div className="text-7xl font-bold bg-gradient-to-r from-[#45ae89] to-[#d7f448] bg-clip-text text-transparent">
+                +2 MO
+            </div>
             <CardTitle className="text-4xl text-neutral-900">
               SOLAR ENDURANCE
             </CardTitle>
@@ -137,7 +141,9 @@ export function AboutIcons() {
         </CardHeader>
         <CardContent className="text-start flex flex-col mb-6 ml-6 items-start">
           <div className="space-y-2 text-start">
-            <div className="text-7xl font-bold text-neutral-900">100%</div>
+            <div className="text-7xl font-bold bg-gradient-to-r from-[#45ae89] to-[#d7f448] bg-clip-text text-transparent">
+                100%
+            </div>
             <CardTitle className="text-4xl text-neutral-900">
               FLOCK SECURITY
             </CardTitle>

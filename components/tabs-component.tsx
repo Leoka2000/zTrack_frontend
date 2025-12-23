@@ -143,8 +143,8 @@ export default function DarkTabs() {
                     onClick={() => setActiveTab(tab.id)}
                     className={`w-full py-2 rounded-full border transition-all duration-300 ${
                       activeTab === tab.id
-                        ? "border-[#d7f448] bg-[#d7f448]/10 text-[#d7f448]"
-                        : "border-gray-700 bg-gray-900/50 text-gray-400 hover:border-gray-600 hover:text-gray-300"
+                        ? "border-[#d7f448] cursor-pointer bg-[#d7f448]/10 grotesk bg-gradient-to-r  from-[#45ae89] to-[#d7f448] bg-clip-text font-medium text-transparent p-6  px-20 "
+                        : "border-gray-700   bg-gray-900/50 text-gray-400 hover:border-gray-600 hover:text-gray-300"
                     }`}
                   >
                     {tab.label}
@@ -158,7 +158,7 @@ export default function DarkTabs() {
                 transition={{ duration: 0.5 }}
                 className="space-y-6 min-h-[420px]"
               >
-                <h1 className="text-4xl font-bold grotesk text-transparent bg-clip-text bg-gradient-to-r from-[#d7f448] to-[#b8d636] animate-fadeInUp">
+                <h1 className="grotesk font-medium bg-gradient-to-r from-[#45ae89] to-[#d7f448] bg-clip-text text-transparent md:text-6xl text-4xl ">
                   {activeContent?.title}
                 </h1>
                 <AnimatedText text={activeContent?.description || ""} />

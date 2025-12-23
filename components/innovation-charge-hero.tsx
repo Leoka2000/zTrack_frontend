@@ -3,22 +3,25 @@ import React from "react";
 import PhoneMockup from "./PhoneMockup";
 import DotPatternBackground from "./utils/dot-pattern";
 import Image from "next/image";
+import BackgroundShades from "./utils/background-shades";
 
 export default function InnovationChargeHero() {
   return (
-    <div className="relative isolate overflow-clip bg-transparent py-16">
+    <div className="relative isolate bg-transparent  py-16">
       <DotPatternBackground />
 
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 z-20">
+      <div className="container overflow-visible mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 isolate overflow-visible relative gap-12 items-center">
+          <div className="space-y-8 z-20 ">
+            <BackgroundShades/>
             <div className="mb-12 ">
               <h1 className="text-lime-950 text-4xl md:text-6xl font-medium leading-tight mb-2">
                 <span className="text-lime-950 grotesk">Innovation Fuels</span>
+          
               </h1>
               <h2
-                className="  text-4xl md:text-6xl font-medium grotesk leading-10"
-                style={{ color: "#7fa008" }}
+                className="   grotesk leading-12 pb-4 grotesk bg-gradient-to-r from-[#45ae89] to-[#d7f448] bg-clip-text font-medium text-transparent md:text-6xl text-4xl"
+     
               >
                 Every Herd
               </h2>
@@ -33,9 +36,9 @@ export default function InnovationChargeHero() {
 
             <div className="pt-6">
               <p
-                className="text-4xl md:text-5xl font-['Dancing_Script',cursive] mb-2"
-                style={{ color: "#8b9d3a" }}
-              >
+                   className="grotesk bg-gradient-to-r from-[#45ae89] to-[#d7f448] bg-clip-text font-medium text-transparent md:text-4xl text-2xl mb-2" >
+             
+              
                 Erdei Zoltán
               </p>
               <p className="text-gray-500 text-base font-medium uppercase tracking-wider">

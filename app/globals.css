@@ -11,7 +11,7 @@ html,
 body,
 * {
 
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito", sans-serif!important;
   font-optical-sizing: auto;
    /* Change between 200–1000 depending on your needs */
   font-style: normal;
