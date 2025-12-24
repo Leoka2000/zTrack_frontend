@@ -21,6 +21,7 @@ import ContactForm from "@/components/contact-form";
 import LetsConnect from "@/components/lets-connect";
 import Team from "@/components/team";
 import BlogCards from "@/components/blog-cards";
+import CommandCenterMockup from "@/components/analytics-section";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
           <AboutIcons />
 
           <AboutIcons2 />
+          <CommandCenterMockup />
           <ProductBlogTop />
           <ProductBlog />
         </div>
