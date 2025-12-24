@@ -11,17 +11,40 @@ import {
   MapPin,
   MoreVertical,
   Plus,
+  Globe,
+  Maximize2,
+  RefreshCw
 } from "lucide-react";
 
-const PhoneMockup = () => {
+const WebDashboardMockup = () => {
   return (
-    /* justify-start and ml-20 to keep it positioned left as requested */
+    /* Positioning wrapper: shifted left as per your global layout needs */
     <div className="flex items-center justify-start lg:ml-20 p-4 lg:p-10 bg-transparent w-full overflow-hidden">
-      {/* Reduced the hardware frame padding and rounded corners for a tighter look */}
-      <div className="relative w-[90%] lg:w-full max-w-4xl min-h-[700px] bg-[#1a1a1a] rounded-[2rem] p-3 shadow-2xl border-[10px] border-[#2a2a2a] flex flex-col transform lg:scale-90 origin-left">
+      
+      {/* Hardware Frame: Changed to a wider Max-W to simulate a monitor/laptop screen */}
+      <div className="relative w-full max-w-5xl min-h-[600px] bg-[#1a1a1a] rounded-[1.5rem] p-2 shadow-2xl border-[12px] border-[#2a2a2a] flex flex-col transform lg:scale-90 origin-left">
+        
+        {/* Browser Top Bar Decoration */}
+        <div className="flex items-center justify-between px-4 py-2 bg-[#1a1a1a] border-b border-white/5">
+          <div className="flex gap-1.5">
+            <div className="w-2.5 h-2.5 rounded-full bg-red-500/20 border border-red-500/40" />
+            <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/20 border border-yellow-500/40" />
+            <div className="w-2.5 h-2.5 rounded-full bg-green-500/20 border border-green-500/40" />
+          </div>
+          <div className="flex items-center gap-2 bg-black/20 px-3 py-1 rounded-md border border-white/5 w-1/2 justify-center">
+            <Globe size={10} className="text-gray-500" />
+            <span className="text-[10px] text-gray-500 font-mono tracking-tight">admin.ztrackmap.cloud/dashboard</span>
+          </div>
+          <div className="flex gap-3">
+             <RefreshCw size={12} className="text-gray-600" />
+             <Maximize2 size={12} className="text-gray-600" />
+          </div>
+        </div>
+
         {/* Inner Screen Container */}
-        <div className="w-full flex-1 bg-[#121212] rounded-[1.2rem] overflow-hidden flex flex-col md:flex-row text-white font-sans border border-white/5">
-          {/* SIDEBAR - Reduced width and padding */}
+        <div className="w-full flex-1 bg-[#121212] rounded-b-[0.8rem] overflow-hidden flex flex-col md:flex-row text-white font-sans border border-white/5">
+          
+          {/* SIDEBAR */}
           <aside className="w-16 md:w-52 bg-[#1e1e1e] border-r border-white/5 flex flex-col p-5">
             <div className="flex items-center gap-2 mb-8 px-1">
               <div className="w-7 h-7 bg-[#d7f448] rounded-lg flex items-center justify-center shrink-0">
@@ -48,9 +71,9 @@ const PhoneMockup = () => {
           </aside>
 
           {/* MAIN CONTENT */}
-          <main className="flex-1 flex flex-col">
-            {/* TOP HEADER - Slimmer height */}
-            <header className="h-14 border-b border-white/5 bg-[#121212] flex items-center justify-between px-6">
+          <main className="flex-1 flex flex-col overflow-y-auto max-h-[700px]">
+            {/* TOP HEADER */}
+            <header className="h-14 border-b border-white/5 bg-[#121212] flex items-center justify-between px-6 sticky top-0 z-10">
               <div className="flex items-center gap-3 bg-white/5 px-4 py-1.5 rounded-full border border-white/10 w-56 xl:w-72">
                 <Search size={14} className="text-gray-400" />
                 <span className="text-[11px] text-gray-400 font-medium truncate">
@@ -67,11 +90,11 @@ const PhoneMockup = () => {
               </div>
             </header>
 
-            {/* DASHBOARD GRID - Tighter padding */}
-            <div className="flex-1 p-3 space-y-6 ">
+            {/* DASHBOARD GRID */}
+            <div className="flex-1 p-6 space-y-6">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                {/* MAP AREA - Tighter corners */}
-                <div className="lg:col-span-2 relative bg-[#1e1e1e] rounded-[1.5rem] overflow-hidden min-h-[400px] border border-white/5 shadow-inner">
+                {/* MAP AREA */}
+                <div className="lg:col-span-2 relative bg-[#1e1e1e] rounded-[1.5rem] overflow-hidden min-h-[350px] border border-white/5 shadow-inner">
                   <div
                     className="absolute inset-0 opacity-[0.02]"
                     style={{
@@ -81,7 +104,7 @@ const PhoneMockup = () => {
                     }}
                   ></div>
 
-                  {/* Scaled down Pins */}
+                  {/* Visual Pins */}
                   <div className="absolute top-1/4 left-1/3 group cursor-pointer">
                     <div className="relative">
                       <div className="absolute -inset-4 bg-[#d7f448]/20 rounded-full animate-ping"></div>
@@ -103,39 +126,39 @@ const PhoneMockup = () => {
                   </div>
                 </div>
 
-                {/* RIGHT STATS PANEL - Smaller text and spacing */}
+                {/* RIGHT STATS PANEL */}
                 <div className="flex flex-col gap-6">
-                  <div className="bg-[#d7f448] rounded-[1.5rem] p-6 text-black flex flex-col justify-between flex-1">
+                  <div className="bg-[#d7f448] rounded-[1.5rem] p-5 text-black flex flex-col justify-between flex-1">
                     <span className="text-[10px] font-black uppercase tracking-[0.15em] opacity-60">
                       Total Livestock
                     </span>
-                    <h2 className="text-4xl font-bold tracking-tighter">
+                    <h2 className="text-3xl font-bold tracking-tighter">
                       2,959
                     </h2>
                     <div className="flex justify-between items-center pt-4 border-t border-black/10">
-                      <span className="text-[11px] font-bold">
+                      <span className="text-[10px] font-bold">
                         ↑ 12.4% yield
                       </span>
                     </div>
                   </div>
 
-                  <div className="bg-[#1e1e1e] rounded-[1.5rem] p-6 border border-white/5 flex-1 flex flex-col justify-between">
+                  <div className="bg-[#1e1e1e] rounded-[1.5rem] p-5 border border-white/5 flex-1 flex flex-col justify-between">
                     <span className="text-[10px] font-black uppercase tracking-[0.15em] text-gray-500">
                       Active Alerts
                     </span>
                     <div className="flex items-center justify-between">
-                      <h2 className="text-4xl font-bold tracking-tighter mr-2 text-orange-500">
+                      <h2 className="text-3xl font-bold tracking-tighter mr-2 text-orange-500">
                         08
                       </h2>
-                      <div className="w-14 h-10 px-2 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-500 border border-orange-500/10">
-                        <Bell size={20} />
+                      <div className="w-12 h-9 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-500 border border-orange-500/10">
+                        <Bell size={18} />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* LOWER STATUS ROW - Compact cards */}
+              {/* LOWER STATUS ROW */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <StatusCard
                   label="Solar Charge"
@@ -143,12 +166,12 @@ const PhoneMockup = () => {
                   color="text-[#d7f448]"
                 />
                 <StatusCard
-                  label="Signal"
+                  label="Signal Strength"
                   value="Ultra"
                   color="text-blue-400"
                 />
                 <StatusCard
-                  label="Gateway"
+                  label="Cloud Gateway"
                   value="Online"
                   color="text-green-400"
                 />
@@ -172,7 +195,7 @@ function NavItem({ icon, label, active = false, count = null }) {
     >
       <div className="flex items-center gap-3">
         {icon}
-        <span className="hidden md:block text-[13px] font-bold">{label}</span>
+        <span className="hidden md:block text-[12px] font-bold">{label}</span>
       </div>
       {count && <Plus size={14} className="hidden md:block opacity-40" />}
     </div>
@@ -181,15 +204,15 @@ function NavItem({ icon, label, active = false, count = null }) {
 
 function StatusCard({ label, value, color }) {
   return (
-    <div className="bg-[#1e1e1e] p-5 rounded-[1.5rem] border border-white/5 flex flex-col gap-1">
-      <span className="text-gray-500 text-[9px] font-black uppercase tracking-[0.15em]">
+    <div className="bg-[#1e1e1e] p-5 rounded-[1.2rem] border border-white/5 flex flex-col gap-1">
+      <span className="text-gray-500 text-[8px] font-black uppercase tracking-[0.15em]">
         {label}
       </span>
-      <span className={`text-xl font-bold tracking-tight ${color}`}>
+      <span className={`text-lg font-bold tracking-tight ${color}`}>
         {value}
       </span>
     </div>
   );
 }
 
-export default PhoneMockup;
+export default WebDashboardMockup;

@@ -21,6 +21,9 @@ import ContactForm from "@/components/contact-form";
 import LetsConnect from "@/components/lets-connect";
 import Team from "@/components/team";
 import BlogCards from "@/components/blog-cards";
+import WebDashboardMockup_DualScreen from "@/components/mockups/web-dashboard-mockup2";
+import WebDashboardMockup from "@/components/mockups/web-dashboard-mockup";
+import DashboardWithCardsAndMockup from "@/components/mockups/pages/dashboard-mockup-cards";
 
 export default function Home() {
   return (
@@ -35,6 +38,7 @@ export default function Home() {
           <AboutIcons2 />
           <ProductBlogTop />
           <ProductBlog />
+         <DashboardWithCardsAndMockup />
         </div>
         <main className="bg-neutral-950 relative   ">
           
