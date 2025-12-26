@@ -4,9 +4,10 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 
+
 export default function Hero() {
   return (
-    <section className="relative h-screen flex items-end">
+    <section  className="relative h-screen flex items-end">
       <div className="absolute inset-0 z-0">
         <Image
           src="/harvester.webp"
@@ -20,14 +21,14 @@ export default function Hero() {
 
       <div className="container py-12 px-6 md:px-12 relative z-10">
         <div className="max-w-3xl">
-          <div className="text-6xl md:text-7xl grotesk lg:text-8xl font-bold text-white mb-6 leading-24">
+          <div className="text-6xl md:text-7xl grotesk lg:text-8xl font-bold text-white mb-6 md:leading-24">
             GUIDED BY
             <br />
             NATURE &
             <br />
             <div className="flex items-center ms-5 gap-3">
               <div className="flex gap-2 mt-2">
-                <div className="w-16 h-16 md:w-18 md:h-18 -ms-4 bg-neutral-600 rounded-2xl overflow-hidden relative border-3 border-neutral-200 shadow-lg transform -rotate-8">
+                <div className="w-12 h-12 md:w-18 md:h-18 -ms-4 bg-neutral-600 rounded-2xl overflow-hidden relative border-3 border-neutral-200 shadow-lg transform -rotate-8">
                   <Image
                     src="/cube-photo1.avif"
                     alt="Livestock monitoring"
@@ -35,7 +36,7 @@ export default function Hero() {
                     className="object-cover"
                   />
                 </div>
-                <div className="w-16 h-16 md:w-18 md:h-18 -ms-4 bg-slate-600 rounded-2xl overflow-hidden relative border-3 border-neutral-200 shadow-lg transform rotate-24">
+                <div className="w-12 h-12 md:w-18 md:h-18 -ms-4 bg-slate-600 rounded-2xl overflow-hidden relative border-3 border-neutral-200 shadow-lg transform rotate-24">
                   <Image
                     src="/cube-photo2.avif"
                     alt="Sheep on pasture"
@@ -43,7 +44,7 @@ export default function Hero() {
                     className="object-cover"
                   />
                 </div>
-                <div className="w-16 h-16 md:w-18 md:h-18 -ms-5 bg-slate-600 rounded-2xl overflow-hidden relative border-3 border-neutral-200 shadow-lg transform -rotate-16">
+                <div className="w-12 h-12 md:w-18 md:h-18 -ms-5 bg-slate-600 rounded-2xl overflow-hidden relative border-3 border-neutral-200 shadow-lg transform -rotate-16">
                   <Image
                     src="/cube-photo3.avif"
                     alt="GPS activity sensor"
@@ -52,7 +53,22 @@ export default function Hero() {
                   />
                 </div>
               </div>
-              <span className="text-[#d7f448] grotesk">LIGHT</span>
+
+              <span
+                className="grotesk font-bold inline-block"
+                style={{
+                  background: "linear-gradient(to right, #428354, #defe3e)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  color: "transparent",
+                  display: "inline-block", 
+                  minHeight: "1.1em", 
+                }}
+              >
+                LIGHT
+              </span>
+            
             </div>
           </div>
 
@@ -63,7 +79,7 @@ export default function Hero() {
           </p>
 
           <div className="flex items-center gap-6 flex-wrap">
-            <Button className="text-lg h-11 w-44 font-semibold rounded-full transition-colors">
+            <Button className="text-lg h-12 w-48 font-semibold rounded-full transition-colors">
               <span className="mx-3">Get Started</span>
               <span className="p-1.5 rounded-full bg-neutral-900 flex items-center justify-center">
                 <ArrowRight
@@ -89,7 +105,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 right-8 flex flex-col gap-3 z-10">
+      <div className=" md:absolute hidden bottom-8 right-8 flex flex-col gap-3 z-10">
         <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/20 rounded-full px-6 py-2 transition-colors flex items-center gap-2">
           Live Map
           <div className="w-3 h-3 bg-lime-400 rounded-full" />

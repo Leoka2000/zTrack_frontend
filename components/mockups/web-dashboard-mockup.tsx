@@ -33,7 +33,7 @@ const WebDashboardMockup = () => {
           </div>
           <div className="flex items-center gap-2 bg-black/20 px-3 py-1 rounded-md border border-white/5 w-1/2 justify-center">
             <Globe size={10} className="text-gray-500" />
-            <span className="text-[10px] text-gray-500 font-mono tracking-tight">admin.ztrackmap.cloud/dashboard</span>
+            <span className="text-[10px] text-gray-500 font-mono tracking-tight">ztrackmap.com</span>
           </div>
           <div className="flex gap-3">
              <RefreshCw size={12} className="text-gray-600" />
@@ -45,7 +45,7 @@ const WebDashboardMockup = () => {
         <div className="w-full flex-1 bg-[#121212] rounded-b-[0.8rem] overflow-hidden flex flex-col md:flex-row text-white font-sans border border-white/5">
           
           {/* SIDEBAR */}
-          <aside className="w-16 md:w-52 bg-[#1e1e1e] border-r border-white/5 flex flex-col p-5">
+          <aside className="w-16 hidden md:w-52  bg-[#1e1e1e] border-r border-white/5 md:flex flex-col p-5">
             <div className="flex items-center gap-2 mb-8 px-1">
               <div className="w-7 h-7 bg-[#d7f448] rounded-lg flex items-center justify-center shrink-0">
                 <div className="w-3 h-3 bg-black rounded-sm rotate-45"></div>
@@ -73,15 +73,15 @@ const WebDashboardMockup = () => {
           {/* MAIN CONTENT */}
           <main className="flex-1 flex flex-col overflow-y-auto max-h-[700px]">
             {/* TOP HEADER */}
-            <header className="h-14 border-b border-white/5 bg-[#121212] flex items-center justify-between px-6 sticky top-0 z-10">
-              <div className="flex items-center gap-3 bg-white/5 px-4 py-1.5 rounded-full border border-white/10 w-56 xl:w-72">
+            <header className="h-14 border-b mt-3 md:mt-0 border-white/5 bg-[#121212] flex items-center justify-between px-6 sticky top-0 z-10">
+              <div className="flex items-center mr-4 gap-3 bg-white/5 px-4 py-1.5 rounded-full border border-white/10 w-56 xl:w-72">
                 <Search size={14} className="text-gray-400" />
-                <span className="text-[11px] text-gray-400 font-medium truncate">
+                <span className="text-[11px] text-gray-400 font-medium  truncate">
                   Search ear tag...
                 </span>
               </div>
-              <div className="flex items-center gap-4">
-                <button className="hidden xl:block text-[10px] font-bold px-4 py-1.5 bg-white/5 rounded-full border border-white/5 hover:bg-white/10 transition-colors uppercase tracking-widest text-gray-400">
+              <div className="flex items-center gap-1 mr-2">
+                <button className="hidden xl:block text-[10px] text-xs mx-2 font-bold px-2 py-1.5 bg-white/5 rounded-full border border-white/5 hover:bg-white/10 transition-colors uppercase tracking-widest text-gray-400">
                   Last Sync: 2m ago
                 </button>
                 <div className="w-8 h-8 rounded-full bg-[#2a2a2a] flex items-center justify-center border border-white/10 cursor-pointer">

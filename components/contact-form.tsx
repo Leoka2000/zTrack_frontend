@@ -1,87 +1,100 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { ArrowRight } from "lucide-react"
-import { Button } from "./ui/button"
+import { useState } from "react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import { Button } from "./ui/button";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogDescription,
-} from "./ui/dialog"
+} from "./ui/dialog";
+import BackgroundShades from "./utils/background-shades";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-  })
+  });
 
-  const [errors, setErrors] = useState({})
-  const [open, setOpen] = useState(false)
+  const [errors, setErrors] = useState({});
+  const [open, setOpen] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-    setErrors({ ...errors, [e.target.name]: "" })
-  }
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: "" });
+  };
 
   const validate = () => {
-    const newErrors = {}
+    const newErrors = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = "Name is required"
+      newErrors.name = "Name is required";
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required"
+      newErrors.email = "Email is required";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "Invalid email address"
+      newErrors.email = "Invalid email address";
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = "Message is required"
+      newErrors.message = "Message is required";
     }
 
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = () => {
-    if (!validate()) return
-
-    
-
-    setOpen(true)
-    setFormData({ name: "", email: "", message: "" })
-  }
+    if (!validate()) return;
+    setOpen(true);
+    setFormData({ name: "", email: "", message: "" });
+  };
 
   return (
     <>
-      <div className="min-h-screen bg-neutral-50 p-8 flex items-center justify-center">
+   <div id="contact" className="min-h-screen bg-neutral-50 py-2 flex items-center justify-center">
         <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-  
-          <div>
-            <h1 className="text-4xl md:text-6xl font-medium grotesk text-gray-800 mb-2">
+         
+          <div className="isolate  relative">
+            <BackgroundShades/>
+            <h1 className="text-4xl md:text-6xl  font-medium grotesk text-gray-800">
               Send Us
             </h1>
-            <h2
-              className="text-3xl md:text-6xl grotesk font-medium mb-6"
-              style={{ color: "#82a816" }}
+            <span
+              className="grotesk font-medium md:text-6xl text-4xl
+             text-[#428354]
+             [background-image:linear-gradient(90deg,#428354,#defe3e)]
+             [-webkit-background-clip:text]
+             background-clip:text
+             [-webkit-text-fill-color:transparent]"
             >
-              A Message
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Fill out the form below and our team will<br />
+              a Message
+            </span>  
+            <p className="text-gray-600 mt-4 text-lg mb-6">
+              Fill out the form below and our team will
+              <br />
               get back to you as soon as possible.
             </p>
+
+       
+            <div className="w-72 md:flex hidden h-72">
+              <Image 
+                src="/undraw-email.svg"
+                alt="Send us a message illustration"
+                width={200}
+                height={200}
+                className="w-full "
+                priority
+              />
+            </div>
           </div>
 
-         
-          <div className="bg-white rounded-2xl shadow-lg p-8 space-y-6">
-
-         
+          <div className="bg-white rounded-2xl shadow-sm p-8 space-y-6">
             <div>
               <label className="block font-semibold mb-2">
                 Name <span style={{ color: "#82a816" }}>*</span>
@@ -98,7 +111,6 @@ export default function ContactForm() {
               )}
             </div>
 
-            {/* Email */}
             <div>
               <label className="block font-semibold mb-2">
                 Email <span style={{ color: "#82a816" }}>*</span>
@@ -131,10 +143,9 @@ export default function ContactForm() {
               )}
             </div>
 
-           
             <Button
               onClick={handleSubmit}
-              className="group text-lg text-slate-900 h-10 w-32 font-semibold rounded-full"
+              className="group text-lg text-slate-900 h-12 w-36 font-semibold rounded-full"
             >
               <span className="mx-4.5">Send</span>
               <span className="p-1 rounded-full bg-neutral-900 flex items-center justify-center">
@@ -149,17 +160,14 @@ export default function ContactForm() {
         </div>
       </div>
 
-      
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent>
           <DialogHeader>
             <DialogTitle>Done!</DialogTitle>
-            <DialogDescription>
-              Message successfully sent.
-            </DialogDescription>
+            <DialogDescription>Message successfully sent.</DialogDescription>
           </DialogHeader>
         </DialogContent>
       </Dialog>
     </>
-  )
+  );
 }

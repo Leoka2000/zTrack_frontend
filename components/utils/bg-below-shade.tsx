@@ -40,7 +40,7 @@ export default function BgBelowShade() {
       {/* Blur 2 — Bottom Left */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 left-[-95rem] transform-gpu overflow-hidden blur-3xl sm:bottom-20"
+        className="pointer-events-none absolute inset-x-0 transform-gpu overflow-hidden blur-3xl sm:bottom-20"
       >
         <div
           style={clipPathStyle}
@@ -61,7 +61,7 @@ export default function BgBelowShade() {
           className="relative left-1/2 aspect-[1155/678] w-[36rem]
           -translate-x-1/2 rotate-[30deg]
           bg-gradient-to-tr from-[#f1ff8a] via-[#d7f448] to-[#9dbb1e]
-          opacity-20 sm:w-[60rem]"
+          opacity-20 sm:w-[20rem]"
         />
       </div>
     </>

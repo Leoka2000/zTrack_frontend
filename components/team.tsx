@@ -1,78 +1,136 @@
-'use client'
-import React from 'react';
-import { Card } from './ui/card';
-import { Plus } from 'lucide-react';
+"use client";
+
+import React from "react";
+import { Card } from "./ui/card";
+import { Plus } from "lucide-react";
+import BackgroundShades from "./utils/background-shades";
+
+/**
+ * Team data including LinkedIn profiles.
+ */
+const TEAM_MEMBERS = [
+  {
+    id: "member-1",
+    name: "Emma Richardson",
+    title: "Chief Executive Officer (CEO)",
+    image: "/zoltan-erdei.jpg",
+    linkedin: "https://www.linkedin.com/in/zoltan-erdei-zanesystems/",
+  },
+  {
+    id: "member-2",
+    name: "Leo Reus",
+    title: "Software Developer",
+    image: "/leo.jpeg",
+    linkedin: "https://www.linkedin.com/in/leoreus",
+  },
+  {
+    id: "member-3",
+    name: "Kevin Rácz",
+    title: "Electrical Engineer",
+    image: "/kevin.jpeg",
+    linkedin:
+      "https://www.linkedin.com/in/kevin-archibald-r%C3%A1cz-843021326/",
+  },
+  {
+    id: "member-4",
+    name: "Viktor Ádori",
+    title: "Electrical Engineer",
+    image: "/viktor.png",
+    linkedin: "https://www.linkedin.com/in/viktor-%C3%A1dori-384306391/",
+  },
+  {
+    id: "member-5",
+    name: "Dávid Munkácsi",
+    title: "Electrical Engineer",
+    image: "/david.jpg",
+    linkedin: "https://www.linkedin.com/in/d%C3%A1vid-munk%C3%A1csi-2b6178291/",
+  },
+   
+];
 
 const Team = () => {
-  const teamMembers = [
-    {
-      id: 1,
-      name: "Emma Richardson",
-      title: "Chief Executive Officer (CEO)",
-      image: "/zoltan-erdei.jpg"
-    },
-    {
-      id: 2,
-      name: "Leo Reus",
-      title: "Chief Technology Officer (CTO)",
-      image: "/leo.jpeg"
-    },
-    
-  ];
-
   return (
-    <div className="min-h-screen  px-8 py-16">
-      <div className=" mx-auto">
-   
-        <div className="flex justify-between items-start mb-16">
-          <div className='text-4xl md:text-6xl'>
-            <h1 className="grotesk font-medium text-green-950 mb-2">
+    <section id="team" className="min-h-screen py-16 bg-transparent">
+      <div className="mx-auto ">
+        {/* HEADER SECTION */}
+        <div className="flex flex-col lg:flex-row justify-between isolate relative items-start mb-16 gap-2">
+          <BackgroundShades />
+
+          <div className="text-4xl md:text-6xl">
+            <h1 className="grotesk font-medium text-lime-950 mb-2">
               The Team Behind
             </h1>
-            <h1 className=" grotesk font-medium text-[#7fa008]">
-              Smarter Charging
-            </h1>
+             <span
+              className="grotesk font-medium md:text-6xl text-4xl
+             text-[#428354]
+             [background-image:linear-gradient(90deg,#428354,#defe3e)]
+             [-webkit-background-clip:text]
+             background-clip:text
+             [-webkit-text-fill-color:transparent]"
+            >
+                Smarter Charging
+            </span>  
           </div>
-          <div className="max-w-md text-right">
-            <p className="text-gray-600 leading-relaxed">
-              Meet the minds driving innovation at Volthaus engineers, designers, and visionaries united by a shared mission to redefine the future of electric mobility.
+
+          <div className="max-w-md lg:text-right">
+            <p className="text-neutral-600 leading-relaxed text-lg">
+              Meet the minds driving innovation at ZTrack engineers, agtech
+              specialists, and visionaries united by a shared mission to
+              redefine the future of livestock monitoring and sustainable
+              grazing.
             </p>
           </div>
         </div>
 
-    
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teamMembers.map((member) => (
-            <Card
-              key={member.id} 
-              className="group p-6 relative cursor-pointer"
+        {/* TEAM GRID */}
+        <div className="grid grid-cols-1 gap-24 md:grid-cols-2 relative isolate lg:grid-cols-3 gap-10">
+          {TEAM_MEMBERS.map((member) => (
+            <a
+              key={member.id}
+              href={member.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
             >
-            <span className='bg-white/20 backdrop-blur-md text-white p-2 rounded-full z-20 absolute top-10 right-10 border border-white/30'>
-            <Plus size={15} />
-          </span>
-         
-              <div className="relative overflow-hidden rounded-2xl mb-4 aspect-[3/4]">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-500  group-hover:scale-105"
-                />
-              </div>
-              
-      
-              <div className="space-y-1">
-                <p className="text-gray-500 text-sm">
-                  {member.title}
-                </p>
-                <h3 className="text-2xl font-bold text-gray-900">
-                  {member.name}
-                </h3>
-              </div>
-            </Card>
+              <Card className="border-none  p-8 bg-neutral-100 overflow-visible cursor-pointer isolate relative">
+             
+
+                {/* Image Container with Static Filter */}
+                <div className="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/5] bg-neutral-900 shadow-xl shadow-neutral-200/50">
+                  {/* Stable Plus Item - Fixed position */}
+                  <span className="absolute top-6 right-6 z-20 bg-white/20 backdrop-blur-md text-white p-2 rounded-full border border-white/30">
+                    <Plus size={18} strokeWidth={3} />
+                  </span>
+
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover transition-all duration-700 
+                               brightness-[0.8] grayscale-[0.3] 
+                               group-hover:brightness-100 group-hover:grayscale-0 group-hover:scale-105"
+                  />
+
+                  {/* Subtle Inner Shadow overlay */}
+                  <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_40px_rgba(0,0,0,0.1)]" />
+                </div>
+
+                {/* Member Info */}
+                <div className="px-2 space-y-1">
+                  <p className="text-[#428354] text-xs font-bold grotesk uppercase tracking-[0.15em]">
+                    {member.title}
+                  </p>
+                  <h3 className="text-2xl grotesk font-bold text-lime-950 tracking-tight transition-colors duration-300">
+                    {member.name}
+                  </h3>
+                </div>
+              </Card>
+           
+            </a>
           ))}
+             <div className="relative isolate "><BackgroundShades /></div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

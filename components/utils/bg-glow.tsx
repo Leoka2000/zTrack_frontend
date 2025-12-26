@@ -54,7 +54,7 @@ export default function BackgroundGlow() {
       {/* Blur 3 */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 right-[-95rem] transform-gpu overflow-hidden blur-3xl sm:-top-52"
+        className="pointer-events-none absolute inset-x-0 right-[-25rem] transform-gpu overflow-hidden blur-3xl sm:-top-52"
       >
         <div
           style={clipPathStyle}

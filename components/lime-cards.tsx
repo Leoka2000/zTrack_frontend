@@ -33,7 +33,7 @@ const GoalsSection: React.FC = () => {
 
   return (
     <section className="min-h-screen relative bg-gray-50 flex items-center">
-      <DotPatternBackground />
+ 
       <div className="max-w-7xl mx-auto w-full px-4 md:px-8">
         
         <div className="mb-16 flex flex-col leading-14 items-center justify-center text-center text-4xl md:text-6xl">
