@@ -29,7 +29,7 @@ export default function Home() {
         <div id="about" className="md:px-12 px-4">
           <AboutTop />
           <AboutIcons />
-      <AboutIcons2/>
+      <AboutIcons2 />
         </div>
 
         <div id="products" className="md:px-12 px-4">

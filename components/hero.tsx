@@ -16,18 +16,23 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-screen flex items-end">
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/harvester.webp"
-          alt="Herd grazing in harmony"
-          fill
-          className="object-cover opacity-60"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/80" />
-      </div>
+    <section className="relative w-full h-screen flex items-end overflow-hidden">
+      {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover"
+      >
+        <source src="/hero-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/50" />
+
+      {/* Content */}
       <div className="container py-12 px-6 md:px-12 relative z-10">
         <div className="max-w-3xl">
           <div className="text-5xl md:text-6xl grotesk lg:text-8xl font-bold text-white mb-6 md:leading-24">
@@ -50,14 +55,17 @@ export default function Hero() {
                   )
                 )}
               </div>
+
               <span
                 className="grotesk font-bold inline-block"
                 style={{
-                  background: "linear-gradient(to right, #428354, #defe3e)",
+                  minHeight: "1.1em",
+                  background: "linear-gradient(90deg, #2af78a, #defe3e)",
+                  backgroundSize: "200% 100%",
+                  backgroundClip: "text",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                  minHeight: "1.1em",
+                  animation: "gradientMove 3s ease infinite",
                 }}
               >
                 {t("hero.highlight")}

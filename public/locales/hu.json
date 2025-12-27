@@ -176,7 +176,7 @@
     "copyright": "2025 © Minden jog fenntartva",
     "developedBy": "Fejlesztette: Leo Reus"
   },
-  
+
   "faq": {
     "title_line_1": "Okos legeltetés",
     "title_line_2": "Alapok: GYIK",
@@ -204,7 +204,7 @@
       }
     ]
   },
-   "contactForm": {
+  "contactForm": {
     "title": "Küldjön nekünk",
     "subtitle": "üzenetet",
     "description": "Töltse ki az alábbi űrlapot, és csapatunk a lehető leghamarabb visszajelzést ad.",
@@ -225,9 +225,11 @@
       "title": "Kész!",
       "description": "Az üzenet sikeresen elküldve."
     }
+  },
+  
+  "aboutMission": {
+    "title": "Küldetésünk a ZTracknél",
+    "description": "Hisszük, hogy a technológia a földet és azt szolgálja, aki gondját viseli. A mezőgazdaság létünk alapja, ugyanakkor az egyik legkimerítőbb szakma a világon. Küldetésünk, hogy hidat építsünk a hagyományos tudás és a modern hatékonyság között. Valós idejű adatokkal és intelligens nyomkövetéssel lehetővé tesszük a gazdák számára, hogy ne kelljen folyamatosan manuálisan ellenőrizni a területet, hanem a nagyobb képre koncentrálhassanak. Nem csupán szoftvert fejlesztünk, hanem fenntarthatóbb és kiszámíthatóbb jövőt teremtünk a globális élelmiszertermelés számára. Minden érzékelőnk és térképünk a felhasználó igényeihez igazodik. Egyszerűséget prioritizálunk, mert tudjuk, hogy a terepen az eszközöknek komplikációk nélkül kell működniük. Elkötelezettek vagyunk az őszinteség, az innováció és minden farm hosszú távú sikere iránt. Köszönjük, hogy része vagy ennek az okosabb és harmonikusabb gazdálkodást támogató utazásnak."
   }
+
 }
-
-
-
-

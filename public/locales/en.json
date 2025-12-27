@@ -119,9 +119,8 @@
         "title": "Electrical Engineer"
       }
     }
-    
   },
-  
+
   "socialConnect": {
     "title": "Connect with Us",
     "subtitle": "Stay Updated!",
@@ -130,10 +129,10 @@
     "website": "Zane Systems Website",
     "imageAlt": "Workspace setup"
   },
-   "contactForm": {
+  "contactForm": {
     "title": "Send Us",
     "subtitle": "a Message",
- "description": "Fill out the form below<br/>and our team will get back to you as soon as possible.",
+    "description": "Fill out the form below<br/>and our team will get back to you as soon as possible.",
     "imageAlt": "Send us a message illustration",
     "labels": {
       "name": "Name",
@@ -224,5 +223,32 @@
       "title": "Done!",
       "description": "Message successfully sent."
     }
+  },
+  "contactForm": {
+    "title": "Send us a",
+    "subtitle": "Message",
+    "description": "Fill out the form below and our team will get back to you as soon as possible.",
+    "imageAlt": "Send a message illustration",
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    },
+    "sendButton": "Send",
+    "errors": {
+      "name": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "message": "Message is required"
+    },
+    "dialog": {
+      "title": "Done!",
+      "description": "Your message has been successfully sent."
+    }
+  },
+   "aboutMission": {
+    "title": "Our Mission at ZTrack",
+    "description": "We started with a simple belief that technology should serve the earth and those who tend to it. Agriculture is the backbone of our existence, yet it remains one of the most demanding professions on the planet. Our mission is to bridge the gap between traditional wisdom and modern efficiency. By providing real time insights and intelligent tracking, we allow farmers to step away from constant manual oversight and focus on the bigger picture. We are not just building software, we are creating a more sustainable and predictable future for global food production. Every sensor we deploy and every map we generate is designed with the user in mind. We prioritize simplicity because we know that out in the field, tools need to work without complications. We are committed to honesty, innovation, and the long term success of every farm that joins our network. Thank you for being part of this journey toward a smarter and more harmonious farming experience."
   }
+  
 }
