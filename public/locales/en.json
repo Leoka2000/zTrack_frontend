@@ -202,5 +202,27 @@
         "answer": "Absolutely. The G-100 is IP67-rated, making it fully waterproof and dustproof. It is tested to operate in extreme temperatures ranging from -20°C to +60°C."
       }
     ]
+  },
+  "contactForm": {
+    "title": "Send Us",
+    "subtitle": "a Message",
+    "description": "Fill out the form below and our team will get back to you as soon as possible.",
+    "imageAlt": "Send us a message illustration",
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    },
+    "sendButton": "Send",
+    "errors": {
+      "name": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "message": "Message is required"
+    },
+    "dialog": {
+      "title": "Done!",
+      "description": "Message successfully sent."
+    }
   }
 }

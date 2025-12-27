@@ -59,7 +59,7 @@ export default function ElveszettBorju() {
           </div>
 
           <div className="flex-grow">
-            <h1 className="text-3xl grotesk md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+            <h1 className="text-3xl grotesk md:text-4xl  text-neutral-800 mb-4 leading-tight">
               A Lost Calf, a Farmer's Fear, and the ZTrack Rescue
             </h1>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">

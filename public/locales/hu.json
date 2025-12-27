@@ -203,6 +203,28 @@
         "answer": "Teljesen. A G-100 IP67 besorolású, teljesen víz- és porálló. Tesztelve van szélsőséges hőmérsékleteken, -20°C-tól +60°C-ig."
       }
     ]
+  },
+   "contactForm": {
+    "title": "Küldjön nekünk",
+    "subtitle": "üzenetet",
+    "description": "Töltse ki az alábbi űrlapot, és csapatunk a lehető leghamarabb visszajelzést ad.",
+    "imageAlt": "Küldjön üzenetet illusztráció",
+    "labels": {
+      "name": "Név",
+      "email": "Email",
+      "message": "Üzenet"
+    },
+    "sendButton": "Küldés",
+    "errors": {
+      "name": "A név megadása kötelező",
+      "emailRequired": "Az email megadása kötelező",
+      "emailInvalid": "Érvénytelen email cím",
+      "message": "Az üzenet megadása kötelező"
+    },
+    "dialog": {
+      "title": "Kész!",
+      "description": "Az üzenet sikeresen elküldve."
+    }
   }
 }
 
