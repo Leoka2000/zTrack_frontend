@@ -73,19 +73,19 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 inset-x-0 z-50 w-full flex justify-center">
-      <div className="w-full max-w-7xl md:mx-0 mx-4 mt-4 md:my-4 bg-neutral-950/40 backdrop-blur-lg rounded-full border border-neutral-800/40 overflow-hidden">
+      <div className="w-full max-w-7xl md:mx-0 mx-4 mt-4 md:my-4 bg-neutral-950/40 backdrop-blur-lg rounded-full border border-neutral-600/40 overflow-hidden">
         <div className="flex items-center justify-between p-2">
           {/* Logo */}
           <div
             className="flex items-center gap-2 pl-2 cursor-pointer"
             onClick={() => handleScroll("home")}
           >
-            <div className="w-16 h-10 bg-[#d7f448] text-neutral-900 rounded-full flex items-center justify-center shrink-0">
+            <div className="w-12 h-10 bg-[#d7f448] text-neutral-900 rounded-full flex items-center justify-center shrink-0">
               <Image
-                src="/zanelogo.png"
+                src="/zane-logo-small.png"
                 alt="Logo"
-                width={52}
-                height={52}
+                width={32}
+                height={32}
                 className="brightness-0 object-contain"
                 priority
               />
@@ -93,9 +93,6 @@ export default function Navbar() {
             <span className="text-neutral-50 text-xl font-semibold hidden sm:block">
               ZtrackMap
             </span>
-            <div className="block ml-5" onClick={(e) => e.stopPropagation()}>
-              <LanguageDropdown />
-            </div>
           </div>
 
           {/* Desktop nav items */}
@@ -116,20 +113,26 @@ export default function Navbar() {
           </div>
 
           {/* Contact & Language */}
-          <div className="hidden md:flex gap-2 pr-2">
-            <Button
-              className="group grotesk rounded-full shadow-sm text-neutral-950 bg-gradient-to-r from-[#2af78a] to-[#defe3e] h-10 px-6 font-bold transition-all flex items-center justify-center border-none hover:opacity-90"
-              onClick={() => handleScroll("contact")}
-            >
-              <span className="text-lg">{t("navbar.contact")}</span>
-              <span className="ml-2 p-1 rounded-full bg-neutral-950 flex items-center justify-center shrink-0">
-                <ArrowRight
-                  size={12}
-                  strokeWidth={1.5}
-                  className="text-white transition-transform duration-300 group-hover:-rotate-45"
-                />
-              </span>
-            </Button>
+          <div className="flex justify-center gap-2 items-center">
+            <div className="block ml-5" onClick={(e) => e.stopPropagation()}>
+              <LanguageDropdown />
+            </div>
+
+            <div className="hidden md:flex gap-2 pr-2">
+              <Button
+                className="group grotesk rounded-full shadow-sm text-neutral-950 bg-gradient-to-r from-[#2af78a] to-[#defe3e] h-10 px-6 font-medium transition-all flex items-center justify-center border-none hover:opacity-90"
+                onClick={() => handleScroll("contact")}
+              >
+                <span className="text-lg">{t("navbar.contact")}</span>
+                <span className="ml-2 p-1 rounded-full bg-neutral-950 flex items-center justify-center shrink-0">
+                  <ArrowRight
+                    size={12}
+                    strokeWidth={1.5}
+                    className="text-white transition-transform duration-300 group-hover:-rotate-45"
+                  />
+                </span>
+              </Button>
+            </div>
           </div>
 
           {/* Mobile drawer */}
@@ -158,7 +161,7 @@ export default function Navbar() {
 
                   <DrawerClose asChild>
                     <Button
-                      className="group grotesk rounded-full shadow-sm text-neutral-950 bg-gradient-to-r from-[#2af78a] to-[#defe3e] h-14 w-full font-bold transition-all flex items-center justify-center border-none"
+                      className="group grotesk rounded-full shadow-sm text-neutral-950 bg-gradient-to-r from-[#2af78a] to-[#defe3e] h-14 w-full grotesk font-semibold transition-all flex items-center justify-center border-none"
                       onClick={() => handleScroll("contact")}
                     >
                       <span

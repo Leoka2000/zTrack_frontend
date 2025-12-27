@@ -17,8 +17,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Space+Grotesk:wght@300..700&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/as-logo.png" sizes="any" />
-        <link rel="apple-touch-icon" href="/as-logo-small.png" />
+        <link rel="icon" href="/decoration.png" sizes="any" />
+        <link rel="apple-touch-icon" href="/decoration.png" />
       </head>
 
       <body className="bg-neutral-50">

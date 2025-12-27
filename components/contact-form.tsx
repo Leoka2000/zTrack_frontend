@@ -234,7 +234,7 @@ export default function ContactForm() {
 
             <Button 
               onClick={() => setOpen(false)}
-              className="mt-4 w-full rounded-full h-12 text-lg bg-bla text-neutral-800 bg-neutral-800 border-none transition-colors"
+              className="mt-4 w-full rounded-full h-12 text-lg  text-neutral-800 bg-neutral-800 border-none transition-colors"
             >
               <span className="mx-3 grotesk">Close</span>
               <span className="p-1.5 rounded-full bg-neutral-900 flex items-center justify-center">

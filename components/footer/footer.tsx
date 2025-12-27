@@ -113,12 +113,12 @@ export default function Footer() {
                 {t("footer.legal")}
               </h3>
               <nav className="flex flex-col gap-3">
-                <p className="text-gray-400 hover:text-white transition-colors cursor-pointer">
+                <a href="https://zane.hu/terms-and-conditions/" target="_blank" className="text-gray-400 hover:text-white transition-colors cursor-pointer">
                   {t("footer.terms")}
-                </p>
-                <p className="text-gray-400 hover:text-white transition-colors cursor-pointer">
+                </a>
+                <a href="https://zane.hu/privacy-policy/" target="_blank" className="text-gray-400 hover:text-white transition-colors cursor-pointer">
                   {t("footer.privacy")}
-                </p>
+                </a>
               </nav>
             </div>
 
