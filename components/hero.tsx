@@ -77,18 +77,29 @@ export default function Hero() {
             <br />
             <div className="flex items-center ms-5 gap-3">
               <div className="flex gap-2 mt-2">
-                {["cube-photo1.avif", "cube-photo2.avif", "cube-photo3.avif"].map(
-                  (img, i) => (
-                    <div
-                      key={img}
-                      className={`w-12 h-12 md:w-18 md:h-18 -ms-4 rounded-2xl overflow-hidden relative border-3 border-neutral-200 shadow-lg transform ${
-                        i === 0 ? "-rotate-8" : i === 1 ? "rotate-24" : "-rotate-16"
-                      }`}
-                    >
-                      <Image src={`/${img}`} alt="" fill className="object-cover" />
-                    </div>
-                  )
-                )}
+                {[
+                  "cube-photo1.avif",
+                  "cube-photo2.avif",
+                  "cube-photo3.avif",
+                ].map((img, i) => (
+                  <div
+                    key={img}
+                    className={`w-12 h-12 md:w-18 md:h-18 -ms-4 rounded-2xl overflow-hidden relative border-3 border-neutral-200 shadow-lg transform ${
+                      i === 0
+                        ? "-rotate-8"
+                        : i === 1
+                        ? "rotate-24"
+                        : "-rotate-16"
+                    }`}
+                  >
+                    <Image
+                      src={`/${img}`}
+                      alt=""
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
               </div>
 
               <span
@@ -108,7 +119,9 @@ export default function Hero() {
             </div>
           </div>
 
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl">{t("hero.description")}</p>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl">
+            {t("hero.description")}
+          </p>
 
           <div className="flex items-center gap-6 flex-wrap">
             <Button
@@ -123,9 +136,30 @@ export default function Hero() {
 
             <div className="flex items-center gap-3">
               <div className="flex -space-x-2">
-                <div className="w-10 h-10 rounded-full bg-slate-600 border-2 border-slate-800" />
-                <div className="w-10 h-10 rounded-full bg-slate-500 border-2 border-slate-800" />
-                <div className="w-10 h-10 rounded-full bg-slate-400 border-2 border-slate-800" />
+                <div className="w-10 h-10 rounded-full border-2 border-slate-800 overflow-hidden relative">
+                  <Image
+                    src="/hero-photo1.png"
+                    alt="Hero 1"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="w-10 h-10 rounded-full border-2 border-slate-800 overflow-hidden relative">
+                  <Image
+                    src="/hero-photo2.png"
+                    alt="Hero 2"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="w-10 h-10 rounded-full border-2 border-slate-800 overflow-hidden relative">
+                  <Image
+                    src="/hero-photo3.png"
+                    alt="Hero 3"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
               </div>
               <div className="text-sm text-gray-300">
                 <div className="font-semibold">{t("hero.stats_title")}</div>
