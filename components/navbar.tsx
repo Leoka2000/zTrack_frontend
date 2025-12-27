@@ -93,7 +93,7 @@ export default function Navbar() {
             <span className="text-neutral-50 text-xl font-semibold hidden sm:block">
               ZtrackMap
             </span>
-            <div className="block ml-10" onClick={(e) => e.stopPropagation()}>
+            <div className="block ml-5" onClick={(e) => e.stopPropagation()}>
               <LanguageDropdown />
             </div>
           </div>

@@ -129,7 +129,7 @@
     "website": "Zane Systems Website",
     "imageAlt": "Workspace setup"
   },
-  
+
   "footer": {
     "headline": "Power Up Your Farm Experience with ZTrack",
     "description": "Monitor your agricultural machines, track sensor data in real-time, and access smart diagnostics all in one app. Download now and take control of your farm operations.",
@@ -181,28 +181,7 @@
       }
     ]
   },
-  "contactForm": {
-    "title": "Send Us",
-    "subtitle": "a Message",
-    "description": "Fill out the form below and our team will get back to you as soon as possible.",
-    "imageAlt": "Send us a message illustration",
-    "labels": {
-      "name": "Name",
-      "email": "Email",
-      "message": "Message"
-    },
-    "sendButton": "Send",
-    "errors": {
-      "name": "Name is required",
-      "emailRequired": "Email is required",
-      "emailInvalid": "Invalid email address",
-      "message": "Message is required"
-    },
-    "dialog": {
-      "title": "Done!",
-      "description": "Message successfully sent."
-    }
-  },
+  
   "contactForm": {
     "title": "Send us a",
     "subtitle": "Message",
@@ -225,11 +204,11 @@
       "description": "Your message has been successfully sent."
     }
   },
-   "aboutMission": {
+  "aboutMission": {
     "title": "Our Mission at ZTrack",
     "description": "We started with a simple belief that technology should serve the earth and those who tend to it. Agriculture is the backbone of our existence, yet it remains one of the most demanding professions on the planet. Our mission is to bridge the gap between traditional wisdom and modern efficiency. By providing real time insights and intelligent tracking, we allow farmers to step away from constant manual oversight and focus on the bigger picture. We are not just building software, we are creating a more sustainable and predictable future for global food production. Every sensor we deploy and every map we generate is designed with the user in mind. We prioritize simplicity because we know that out in the field, tools need to work without complications. We are committed to honesty, innovation, and the long term success of every farm that joins our network. Thank you for being part of this journey toward a smarter and more harmonious farming experience."
   },
-  "productBlog": {
+  "productBlog2": {
     "date": "December 2025",
     "image_alt": "ZTrack Smart Ear Tag for Cattle",
     "logo_alt": "ZTrack Logo",
@@ -256,7 +235,25 @@
     "label_notes": "Additional Requirements",
     "notes_placeholder": "Tell us about your terrain or specific monitoring needs...",
     "submit": "Send Quote Request"
+  },
+  "elveszettBorju": {
+    "date_badge": "December 2025",
+    "image_alt": "ZTrack smart ear tag for cattle",
+    "tag_line": "ZTrack G-100",
+    "subtitle": "Smart Livestock Monitoring",
+    "category": "Announcements",
+    "title": "The Future of Grazing Management",
+    "preview": "Our G-100 smart ear tags provide real-time GPS tracking and health monitoring for your herd. Designed for the toughest agricultural conditions.",
+    "cta": "Read More"
+  },
+    "borju-dialog-blog": {
+    "paragraph1": "A few years ago, we started developing GPS-enabled cattle ear tags. After the first few prototypes were completed, we approached some local farmers who helped us implant the smart tags into their animals' ears. This allowed us to collect real data on the animals that we could analyze. We placed the devices in several locations, testing ten on a farm in Hortobágy, for example. Since we didn't know in advance how effective the solar panels would be, we only activated the GPS on half of the devices, while the other half only monitored activity sensor data. However, it turned out that the GPS could have worked on all of the devices. The test ran smoothly throughout the summer.",
+    "paragraph2": "In the fall, our development team was already working on another project and we almost forgot about the whole thing, when a farmer reported a problem. One of their cows had given birth, but they couldn't find the calf. Although the cow had a tracking device on its ear, the GPS function was not activated. Fortunately, we were able to send a command to the device remotely from our server to activate the GPS, and we immediately turned it on. The farmer explained that the cow would probably help us find the calf, as animals kept in confinement tend to hide their offspring by instinct. This was indeed the case, and the cow went to nurse her calf in the reeds several times a day, but very skillfully eluded all her followers. The animal owners were becoming increasingly worried, as the weather was deteriorating and it was time to move back home from the pasture with their animals, so they asked for our help. Thanks to our device, the GPS accurately showed where to search for the animal, and we quickly found the calf.",
+    "paragraph3": "This was one of the very first occasions when our device helped farmers find their lost animals. Fortunately, in most cases, this is not necessary, and GPS ear tags are used to support grazing management. With these tags, it is possible to check whether the animals are really in the designated area and whether everything is fine with them. Grazing methods differ within countries, continents, and animal species, and sometimes they differ greatly from each other. Our partners in other countries report completely different use cases; for example, in some places, they use our sensors to monitor whether there are wolves around the animals. But that's another story."
   }
-  
-  
+   
 }
+  
+  
+  
+

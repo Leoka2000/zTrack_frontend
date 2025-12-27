@@ -80,7 +80,7 @@ export default function Footer() {
           <Image
             src="/zanelogo.png"
             alt="Logo"
-            width={300}
+            width={200}
             height={80}
             className="object-contain invert brightness-0 opacity-50"
             priority

@@ -90,7 +90,7 @@
     "stock_status": "Készleten",
     "heading": "Hogyan segíti a ZTrack okos megfigyelő rendszer?",
     "description": "A ZTrack rendszer magja egy okos aktivitásérzékelő, amely harmóniát teremt a modern legeltetésben. Folyamatosan figyeli az állatok helyzetét és viselkedését, azonnali riasztásokat küldve lopás, kóborlás vagy rendellenes inaktivitás esetén. Ultra alacsony fogyasztású NB-IoT technológiával és integrált napelemes töltéssel hónapokig karbantartás nélkül működik. Minden adatpont a felhőbe kerül, így áttekintheted az állomány mozgását és a legelő terhelését dedikált térkép alkalmazásunkban. Robusztus IP6X házban elhelyezve a legzordabb körülményeknek is ellenáll, miközben kapcsolatban maradsz a föld ritmusával.",
-    "cta": "Kosárba",
+    "cta": "Ajánlatkérés",
     "tooltip": "A termék fejlesztés alatt áll"
   },
 
@@ -204,35 +204,12 @@
       }
     ]
   },
-  "contactForm": {
-    "title": "Küldjön nekünk",
-    "subtitle": "üzenetet",
-    "description": "Töltse ki az alábbi űrlapot, és csapatunk a lehető leghamarabb visszajelzést ad.",
-    "imageAlt": "Küldjön üzenetet illusztráció",
-    "labels": {
-      "name": "Név",
-      "email": "Email",
-      "message": "Üzenet"
-    },
-    "sendButton": "Küldés",
-    "errors": {
-      "name": "A név megadása kötelező",
-      "emailRequired": "Az email megadása kötelező",
-      "emailInvalid": "Érvénytelen email cím",
-      "message": "Az üzenet megadása kötelező"
-    },
-    "dialog": {
-      "title": "Kész!",
-      "description": "Az üzenet sikeresen elküldve."
-    }
-  },
-  
-  
+
   "aboutMission": {
     "title": "Küldetésünk a ZTracknél",
     "description": "Hisszük, hogy a technológia a földet és azt szolgálja, aki gondját viseli. A mezőgazdaság létünk alapja, ugyanakkor az egyik legkimerítőbb szakma a világon. Küldetésünk, hogy hidat építsünk a hagyományos tudás és a modern hatékonyság között. Valós idejű adatokkal és intelligens nyomkövetéssel lehetővé tesszük a gazdák számára, hogy ne kelljen folyamatosan manuálisan ellenőrizni a területet, hanem a nagyobb képre koncentrálhassanak. Nem csupán szoftvert fejlesztünk, hanem fenntarthatóbb és kiszámíthatóbb jövőt teremtünk a globális élelmiszertermelés számára. Minden érzékelőnk és térképünk a felhasználó igényeihez igazodik. Egyszerűséget prioritizálunk, mert tudjuk, hogy a terepen az eszközöknek komplikációk nélkül kell működniük. Elkötelezettek vagyunk az őszinteség, az innováció és minden farm hosszú távú sikere iránt. Köszönjük, hogy része vagy ennek az okosabb és harmonikusabb gazdálkodást támogató utazásnak."
   },
-  "productBlog": {
+  "productBlog2": {
     "date": "2025. December",
     "image_alt": "ZTrack okos füljelző szarvasmarhákhoz",
     "logo_alt": "ZTrack Logó",
@@ -259,6 +236,20 @@
     "label_notes": "További igények",
     "notes_placeholder": "Meséljen a terepviszonyokról vagy speciális igényeiről...",
     "submit": "Ajánlatkérés küldése"
+  },
+  "elveszettBorju": {
+    "date_badge": "2025. December",
+    "image_alt": "ZTrack okos füljelző szarvasmarhákhoz",
+    "tag_line": "ZTrack G-100",
+    "subtitle": "Okos Állatállomány Felügyelet",
+    "category": "Közlemények",
+    "title": "A legeltetéskezelés jövője",
+    "preview": "A G-100 okos füljelzőink valós idejű GPS-követést és egészségügyi felügyeletet biztosítanak állatállománya számára. A legkeményebb mezőgazdasági körülményekre tervezve.",
+    "cta": "Tovább olvasom"
+  },
+   "borju-dialog-blog": {
+    "paragraph1": "Néhány évvel ezelőtt elkezdtünk GPS-sel ellátott tehénfül jelzőket fejleszteni. Miután elkészültek az első prototípusok, megkerestünk néhány helyi gazdát, akik segítettek az okos jelzők beültetésében az állatok fülébe. Ez lehetővé tette számunkra, hogy valós adatokat gyűjtsünk az állatokról, amelyeket elemezhettünk. Több helyen is elhelyeztük az eszközöket, például tízet egy hortobágyi farmon teszteltünk. Mivel előre nem tudtuk, mennyire lesz hatékony a napelem, az eszközök felén csak az aktivitásérzékelőt aktiváltuk, a másik felén a GPS-t is bekapcsoltuk. Kiderült azonban, hogy a GPS az összes eszközön működhetett volna. A teszt zökkenőmentesen zajlott egész nyáron.",
+    "paragraph2": "Ősszel a fejlesztőcsapatunk már egy másik projekten dolgozott, és majdnem elfelejtettük az egészet, amikor egy gazda problémát jelzett. Az egyik tehén megszülte a borját, de nem találták a borjút. Bár a tehénnek volt nyomkövető eszköze a fülén, a GPS funkció nem volt aktiválva. Szerencsére távolról, a szerverünkről tudtunk parancsot küldeni az eszköznek a GPS bekapcsolására, és azonnal aktiváltuk. A gazda elmagyarázta, hogy a tehén valószínűleg segít megtalálni a borjút, mivel a zárt tartású állatok ösztönösen elrejtik utódaikat. Így is történt: a tehén naponta többször elment a nádasba az utódjához, de ügyesen kikerülte minden követőjét. Az állattulajdonosok egyre aggódóbbak lettek, mivel az időjárás romlott, és ideje volt visszatérni a legelőkről, ezért segítséget kértek tőlünk. Az eszközünknek köszönhetően a GPS pontosan megmutatta, hol kell keresni az állatot, és gyorsan megtaláltuk a borjút.",
+    "paragraph3": "Ez volt az egyik első alkalom, amikor az eszközünk segített a gazdáknak elveszett állataik megtalálásában. Szerencsére a legtöbb esetben erre nincs szükség, a GPS-sel ellátott fül jelzőket a legeltetés menedzsmentjének támogatására használják. Ezekkel az eszközökkel ellenőrizhető, hogy az állatok valóban a kijelölt területen vannak-e, és minden rendben van-e velük. A legeltetési módszerek országonként, kontinensenként és állatonként is eltérhetnek, néha jelentősen. Külföldi partnereink teljesen eltérő felhasználási eseteket jelentenek; például egyes helyeken az érzékelőinket arra használják, hogy figyeljék, vannak-e farkasok az állatok körül. De ez már egy másik történet."
   }
-
 }

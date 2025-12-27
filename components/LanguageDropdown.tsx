@@ -19,20 +19,21 @@ export default function LanguageDropdown() {
     { code: "hu", icon: "/hu.png" },
   ];
 
-  // Filter out current language from dropdown
+  // Current language
+  const currentLang = languages.find((l) => l.code === lang);
+
+  // Other languages
   const otherLanguages = languages.filter((l) => l.code !== lang);
 
   return (
-    <DropdownMenu
-      onCloseAutoFocus={(e) => e.preventDefault()}
-    >
+    <DropdownMenu onCloseAutoFocus={(e) => e.preventDefault()}>
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
           className="w-10 h-10 p-1 rounded-full flex items-center justify-center"
         >
           <img
-            src={languages.find((l) => l.code === lang)?.icon}
+            src={currentLang?.icon}
             alt={lang}
             className="w-8 h-8 rounded-full"
           />
@@ -43,14 +44,10 @@ export default function LanguageDropdown() {
         {otherLanguages.map((l) => (
           <DropdownMenuItem
             key={l.code}
-            onClick={() => setLang(l.code)}
+            onClick={() => setLang(l.code as "en" | "hu")}
             className="flex items-center justify-center p-1 cursor-pointer"
           >
-            <img
-              src={l.icon}
-              alt={l.code}
-              className="w-6 h-6 rounded-full"
-            />
+            <img src={l.icon} alt={l.code} className="w-6 h-6 rounded-full" />
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

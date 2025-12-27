@@ -283,6 +283,7 @@ export default function ProductBlog() {
                         className="w-full bg-[#d7f448] text-black hover:bg-[#c3e13f] font-bold rounded-full h-12 border-none flex items-center justify-center gap-2"
                       >
                         {loading ? <Spinner className="w-5 h-5 border-black/20 border-t-black" /> : t("quoteForm.submit")}
+                        
                       </Button>
                     </form>
                   </>
@@ -300,6 +301,13 @@ export default function ProductBlog() {
                       className="mt-4 rounded-full px-8 bg-black text-white hover:bg-neutral-800"
                     >
                       Close
+                      <span className="p-1.5 rounded-full bg-neutral-900 flex items-center justify-center">
+                    <ArrowRight
+                      size={48}
+                      strokeWidth={1.75}
+                      className="w-3 h-4 text-neutral-200 transition-transform duration-300 group-hover:-rotate-45"
+                    />
+                  </span>
                     </Button>
                   </div>
                 )}

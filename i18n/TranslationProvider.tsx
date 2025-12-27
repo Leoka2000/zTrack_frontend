@@ -1,8 +1,8 @@
 "use client";
 
-import React, { createContext, useContext, useState } from "react";
-import en from "../public/locales/en.json"
-import hu from "../public/locales/hu.json"
+import React, { createContext, useContext, useState, useEffect } from "react";
+import en from "../public/locales/en.json";
+import hu from "../public/locales/hu.json";
 
 type Lang = "en" | "hu";
 
@@ -16,12 +16,10 @@ type TranslationContextType = {
 
 const TranslationContext = createContext<TranslationContextType | null>(null);
 
-// ✅ DOT-NOTATION RESOLVER
+// Dot-notation resolver
 function getNestedValue(obj: any, path: string): string | undefined {
   return path.split(".").reduce((acc, key) => {
-    if (acc && typeof acc === "object") {
-      return acc[key];
-    }
+    if (acc && typeof acc === "object") return acc[key];
     return undefined;
   }, obj);
 }
@@ -31,7 +29,21 @@ export function TranslationProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [lang, setLang] = useState<Lang>("en");
+  const [lang, setLang] = useState<Lang>("hu"); // default to Hungarian
+
+  // Optional: load saved language from localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem("lang") as Lang | null;
+    if (saved && (saved === "en" || saved === "hu")) {
+      setLang(saved);
+    }
+  }, []);
+
+  // Optional: save selection to localStorage
+  const setLanguage = (newLang: Lang) => {
+    setLang(newLang);
+    localStorage.setItem("lang", newLang);
+  };
 
   const t = (key: string): string => {
     const value = getNestedValue(translations[lang], key);
@@ -39,7 +51,7 @@ export function TranslationProvider({
   };
 
   return (
-    <TranslationContext.Provider value={{ lang, setLang, t }}>
+    <TranslationContext.Provider value={{ lang, setLang: setLanguage, t }}>
       {children}
     </TranslationContext.Provider>
   );
@@ -47,8 +59,6 @@ export function TranslationProvider({
 
 export function useTranslation() {
   const ctx = useContext(TranslationContext);
-  if (!ctx) {
-    throw new Error("useTranslation must be used within TranslationProvider");
-  }
+  if (!ctx) throw new Error("useTranslation must be used within TranslationProvider");
   return ctx;
 }

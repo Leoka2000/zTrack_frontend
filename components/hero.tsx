@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
@@ -7,27 +8,61 @@ import { useTranslation } from "@/i18n/TranslationProvider";
 
 export default function Hero() {
   const { t } = useTranslation();
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   const handleScrollToAbout = () => {
     const el = document.getElementById("products");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+
+  useEffect(() => {
+    const checkScreen = () => setIsDesktop(window.innerWidth >= 1024);
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
+  useEffect(() => {
+    if (isDesktop && videoRef.current) {
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          console.log("Autoplay blocked, fallback to poster.");
+        });
+      }
+    }
+  }, [isDesktop]);
 
   return (
     <section className="relative w-full h-screen flex items-end overflow-hidden">
-      {/* Background video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
-      >
-        <source src="/hero-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {/* Desktop video */}
+      {isDesktop ? (
+        <video
+          ref={videoRef}
+          muted
+          playsInline
+          loop
+          autoPlay
+          poster="/hero-poster.png"
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+          <source src="/hero-video.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+      ) : (
+        // Mobile fallback image
+        <div className="absolute top-0 left-0 w-full h-full">
+          <Image
+            src="/hero-img.png"
+            alt="Hero background"
+            fill
+            style={{ objectFit: "cover" }}
+            priority
+          />
+        </div>
+      )}
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/50" />
@@ -35,7 +70,7 @@ export default function Hero() {
       {/* Content */}
       <div className="container py-12 px-6 md:px-12 relative z-10">
         <div className="max-w-3xl">
-          <div className="text-5xl md:text-6xl grotesk lg:text-8xl font-bold text-white mb-6 md:leading-24">
+          <div className="text-5xl md:text-6xl lg:text-8xl font-bold text-white mb-6 md:leading-24 grotesk">
             {t("hero.title_line_1")}
             <br />
             {t("hero.title_line_2")}
@@ -73,9 +108,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl">
-            {t("hero.description")}
-          </p>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl">{t("hero.description")}</p>
 
           <div className="flex items-center gap-6 flex-wrap">
             <Button
