@@ -85,7 +85,7 @@ const Team = () => {
               rel="noopener noreferrer"
               className="group block"
             >
-              <Card className="border-none p-8 bg-neutral-100 overflow-visible cursor-pointer isolate relative">
+              <Card className="border-none p-8 bg-transparent overflow-visible cursor-pointer isolate relative">
                 <div className="relative overflow-hidden rounded-[2rem] mb-6 aspect-[4/5] bg-neutral-900 shadow-xl shadow-neutral-200/50">
                   <span className="absolute top-6 right-6 z-20 bg-white/20 backdrop-blur-md text-white p-2 rounded-full border border-white/30">
                     <Plus size={18} strokeWidth={3} />

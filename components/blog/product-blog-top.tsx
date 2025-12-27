@@ -33,21 +33,10 @@ export default function ProductBlogTop() {
           <BackgroundShades />
           <p className="text-gray-600 md:text-right text-left max-w-md leading-relaxed">
             {t("productBlogTop.description")}
+            
           </p>
 
-          <Button
-            variant={"outline"}
-            className="text-lg h-12 font-semibold rounded-full transition-colors"
-          >
-            <span className="mx-6">{t("productBlogTop.cta")}</span>
-            <span className="p-1 rounded-full bg-neutral-900 flex items-center justify-center">
-              <ArrowRight
-                size={48}
-                strokeWidth={1.75}
-                className="w-3 h-4 text-neutral-200 transition-transform duration-300 group-hover:-rotate-45"
-              />
-            </span>
-          </Button>
+          
         </div>
       </div>
     </section>

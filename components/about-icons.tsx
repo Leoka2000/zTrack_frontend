@@ -15,7 +15,9 @@ export function AboutIcons() {
 
   return (
     <section className="w-full mb-3 flex flex-col md:flex-row gap-3">
-      <Card className="flex-1 rounded-3xl bg-gray-50">
+      <Card className="flex-1 rounded-3xl  bg-gray-50 overflow-hidden">
+       
+
         <CardHeader className="items-center space-y-4">
           <div className="relative w-full h-52">
             <Image

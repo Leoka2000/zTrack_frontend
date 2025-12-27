@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -100,7 +100,7 @@ export default function ContactForm() {
         id="contact"
         className="min-h-screen shadow-sm bg-transparent py-2 flex items-center justify-center"
       >
-        <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-4 md:px-0">
           <div className="isolate relative">
             <BackgroundShades />
             <h1 className="text-4xl md:text-6xl font-medium grotesk text-gray-800">
@@ -120,7 +120,7 @@ export default function ContactForm() {
               {t("contactForm.description")}
             </p>
 
-            <div className="w-72 md:flex hidden h-72">
+            <div className="w-52 md:flex hidden h-72">
               <Image
                 src="/undraw-email.svg"
                 alt={t("contactForm.imageAlt")}
@@ -145,7 +145,7 @@ export default function ContactForm() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="grotesk"
+                className={`grotesk ${errors.name ? "border-red-500 focus-visible:ring-red-500" : ""}`}
               />
               {errors.name && (
                 <p className="text-sm grotesk text-red-500 mt-1">
@@ -164,7 +164,7 @@ export default function ContactForm() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="grotesk"
+                className={`grotesk ${errors.email ? "border-red-500 focus-visible:ring-red-500" : ""}`}
               />
               {errors.email && (
                 <p className="text-sm grotesk text-red-500 mt-1">
@@ -183,7 +183,7 @@ export default function ContactForm() {
                 rows={5}
                 value={formData.message}
                 onChange={handleChange}
-                className="resize-none grotesk"
+                className={`resize-none grotesk ${errors.message ? "border-red-500 focus-visible:ring-red-500" : ""}`}
               />
               {errors.message && (
                 <p className="text-sm grotesk text-red-500 mt-1">
@@ -194,20 +194,20 @@ export default function ContactForm() {
 
             <Button
               type="submit"
-              className="group text-lg text-slate-900 h-10 w-36 font-semibold rounded-full flex items-center justify-center"
+              className="group text-lg text-slate-900 h-12 w-44 font-semibold rounded-full flex items-center justify-center transition-all bg-[#d7f448] hover:bg-[#c3e13f] border-none"
               disabled={loading}
             >
-              <span className="mx-4.5">
+              <span className="mx-2">
                 {t("contactForm.sendButton")}
               </span>
-              <span className="p-1 rounded-full bg-neutral-900 flex items-center justify-center">
+              <span className="p-1 rounded-full bg-neutral-900 flex items-center justify-center shrink-0">
                 {loading ? (
-                  <Spinner className="w-4 h-4 text-white animate-spin" />
+                  <Spinner className="w-4 h-4 text-white" />
                 ) : (
                   <ArrowRight
-                    size={48}
-                    strokeWidth={1.75}
-                    className="w-3 h-4 text-neutral-200 group-hover:-rotate-45 transition-transform"
+                    size={16}
+                    strokeWidth={2.5}
+                    className="text-neutral-200 group-hover:-rotate-45 transition-transform"
                   />
                 )}
               </span>
@@ -217,13 +217,32 @@ export default function ContactForm() {
       </div>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>{t("contactForm.dialog.title")}</DialogTitle>
-            <DialogDescription>
-              {t("contactForm.dialog.description")}
-            </DialogDescription>
-          </DialogHeader>
+        <DialogContent className="sm:max-w-[450px] rounded-3xl bg-white border-none shadow-2xl p-0 overflow-hidden">
+          <div className="flex flex-col items-center justify-center py-12 px-8 text-center space-y-5">
+            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+              <CheckCircle2 className="w-12 h-12 text-green-600" />
+            </div>
+            
+            <div className="space-y-2">
+              <DialogTitle className="text-3xl font-bold grotesk text-gray-900">
+                {t("contactForm.dialog.title")}
+              </DialogTitle>
+              <DialogDescription className="text-lg text-gray-600 leading-relaxed">
+                {t("contactForm.dialog.description")}
+              </DialogDescription>
+            </div>
+
+            <Button 
+              onClick={() => setOpen(false)}
+              className="mt-4 w-full rounded-full h-12 text-lg bg-bla text-neutral-800 bg-neutral-800 border-none transition-colors"
+            >
+              <span className="mx-3 grotesk">Close</span>
+              <span className="p-1.5 rounded-full bg-neutral-900 flex items-center justify-center">
+                <ArrowRight className="w-3 h-4 text-neutral-200" />
+              </span>
+           
+            </Button>
+          </div>
         </DialogContent>
       </Dialog>
     </>

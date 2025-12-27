@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import React from "react";
-
 import { ArrowRight } from "lucide-react";
 import {
   Tooltip,
@@ -16,25 +15,30 @@ export default function ElveszettBorju() {
   return (
     <section className="bg-gray-50 flex items-center justify-center my-5 mt-3">
       <div className="w-full bg-neutral-50 rounded-2xl shadow-sm overflow-hidden flex flex-col md:flex-row">
-        
+
         {/* Image Section */}
-        <div className="md:w-5/6 relative flex items-center justify-center min-h-[300px]">
+        <div className="md:w-5/6 relative flex items-center justify-center min-h-[300px] overflow-hidden rounded-2xl shadow-xl shadow-neutral-200/50">
+          {/* Date Badge */}
           <div className="absolute top-6 left-3 z-10 bg-black/70 text-white px-3 py-1.5 rounded-lg text-sm font-medium">
             Oct 26, 2023
           </div>
+
+          {/* Fading Black Overlay */}
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/40 to-transparent" />
 
           <Image
             src="/elveszett-borju.png"
             alt="Lost Calf Found with ZTrack"
             fill
-            className="object-cover"
+            className="object-cover transition-all duration-700
+                       brightness-[0.8] grayscale-[0.3] 
+                     "
             priority
           />
         </div>
 
         {/* Content Section */}
         <div className="md:w-5/6 p-8 md:p-12 flex flex-col justify-between">
-          
           <div className="flex items-start justify-between mb-8">
             <div className="flex items-center gap-10">
               <div className="ms-10">
@@ -59,7 +63,7 @@ export default function ElveszettBorju() {
           </div>
 
           <div className="flex-grow">
-            <h1 className="text-3xl grotesk md:text-4xl  text-neutral-800 mb-4 leading-tight">
+            <h1 className="text-3xl grotesk md:text-4xl text-neutral-800 mb-4 leading-tight">
               A Lost Calf, a Farmer's Fear, and the ZTrack Rescue
             </h1>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">

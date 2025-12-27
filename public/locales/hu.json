@@ -227,9 +227,38 @@
     }
   },
   
+  
   "aboutMission": {
     "title": "Küldetésünk a ZTracknél",
     "description": "Hisszük, hogy a technológia a földet és azt szolgálja, aki gondját viseli. A mezőgazdaság létünk alapja, ugyanakkor az egyik legkimerítőbb szakma a világon. Küldetésünk, hogy hidat építsünk a hagyományos tudás és a modern hatékonyság között. Valós idejű adatokkal és intelligens nyomkövetéssel lehetővé tesszük a gazdák számára, hogy ne kelljen folyamatosan manuálisan ellenőrizni a területet, hanem a nagyobb képre koncentrálhassanak. Nem csupán szoftvert fejlesztünk, hanem fenntarthatóbb és kiszámíthatóbb jövőt teremtünk a globális élelmiszertermelés számára. Minden érzékelőnk és térképünk a felhasználó igényeihez igazodik. Egyszerűséget prioritizálunk, mert tudjuk, hogy a terepen az eszközöknek komplikációk nélkül kell működniük. Elkötelezettek vagyunk az őszinteség, az innováció és minden farm hosszú távú sikere iránt. Köszönjük, hogy része vagy ennek az okosabb és harmonikusabb gazdálkodást támogató utazásnak."
+  },
+  "productBlog": {
+    "date": "2025. December",
+    "image_alt": "ZTrack okos füljelző szarvasmarhákhoz",
+    "logo_alt": "ZTrack Logó",
+    "product_name": "ZTrack G-100",
+    "product_subtitle": "Okos Állatállomány Felügyelet",
+    "stock_status": "Készleten",
+    "heading": "A legeltetéskezelés jövője",
+    "description": "A G-100 okos füljelzőink valós idejű GPS-követést és egészségügyi felügyeletet biztosítanak állatállománya számára. A legkeményebb mezőgazdasági körülményekre tervezve.",
+    "cta": "Ajánlatkérés",
+    "tooltip": "Kattintson az egyedi gazdasági csomag összeállításához"
+  },
+  "quoteForm": {
+    "title": "Egyedi árajánlat kérése",
+    "subtitle": "Meséljen gazdaságáról, és mi személyre szabott megoldással jelentkezünk.",
+    "label_name": "Teljes név",
+    "label_email": "E-mail cím",
+    "label_livestock": "Állatállomány típusa",
+    "select_placeholder": "Válasszon típust",
+    "option_cattle": "Szarvasmarha",
+    "option_sheep": "Juh / Kecske",
+    "option_other": "Egyéb",
+    "label_quantity": "Füljelzők száma",
+    "label_area": "Legelőterület mérete",
+    "label_notes": "További igények",
+    "notes_placeholder": "Meséljen a terepviszonyokról vagy speciális igényeiről...",
+    "submit": "Ajánlatkérés küldése"
   }
 
 }

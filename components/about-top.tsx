@@ -64,11 +64,11 @@ export default function AboutTop() {
 
             <DialogContent className="sm:max-w-2xl max-h-[80vh] overflow-y-auto bg-white rounded-3xl border-none p-8">
               <DialogHeader>
-                <DialogTitle className="text-3xl font-bold grotesk text-green-950 mb-4">
+                <DialogTitle className="text-3xl font-bold grotesk text-neutral-950 mb-4">
                    {t("aboutMission.title")}
                 </DialogTitle>
                 <DialogDescription
-                  className="text-lg text-gray-700 leading-relaxed space-y-4"
+                  className="text-sm text-neutral-700 leading-relaxed space-y-4"
                   
                 >
                   {t(`aboutMission.description`)}

@@ -51,7 +51,7 @@ export default function SocialConnect() {
                     alt="Facebook"
                     width={90}
                     height={90}
-                    className="object-contain "
+                    className="object-contain ml-5 "
                   />
                 </div>
               </Button>

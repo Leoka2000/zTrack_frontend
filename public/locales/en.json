@@ -129,28 +129,7 @@
     "website": "Zane Systems Website",
     "imageAlt": "Workspace setup"
   },
-  "contactForm": {
-    "title": "Send Us",
-    "subtitle": "a Message",
-    "description": "Fill out the form below<br/>and our team will get back to you as soon as possible.",
-    "imageAlt": "Send us a message illustration",
-    "labels": {
-      "name": "Name",
-      "email": "Email",
-      "message": "Message"
-    },
-    "sendButton": "Send",
-    "errors": {
-      "name": "Name is required",
-      "emailRequired": "Email is required",
-      "emailInvalid": "Invalid email address",
-      "message": "Message is required"
-    },
-    "dialog": {
-      "title": "Done!",
-      "description": "Message successfully sent."
-    }
-  },
+  
   "footer": {
     "headline": "Power Up Your Farm Experience with ZTrack",
     "description": "Monitor your agricultural machines, track sensor data in real-time, and access smart diagnostics all in one app. Download now and take control of your farm operations.",
@@ -249,6 +228,35 @@
    "aboutMission": {
     "title": "Our Mission at ZTrack",
     "description": "We started with a simple belief that technology should serve the earth and those who tend to it. Agriculture is the backbone of our existence, yet it remains one of the most demanding professions on the planet. Our mission is to bridge the gap between traditional wisdom and modern efficiency. By providing real time insights and intelligent tracking, we allow farmers to step away from constant manual oversight and focus on the bigger picture. We are not just building software, we are creating a more sustainable and predictable future for global food production. Every sensor we deploy and every map we generate is designed with the user in mind. We prioritize simplicity because we know that out in the field, tools need to work without complications. We are committed to honesty, innovation, and the long term success of every farm that joins our network. Thank you for being part of this journey toward a smarter and more harmonious farming experience."
+  },
+  "productBlog": {
+    "date": "December 2025",
+    "image_alt": "ZTrack Smart Ear Tag for Cattle",
+    "logo_alt": "ZTrack Logo",
+    "product_name": "ZTrack G-100",
+    "product_subtitle": "Smart Livestock Monitoring",
+    "stock_status": "In Stock",
+    "heading": "The Future of Grazing Management",
+    "description": "Our G-100 Smart Ear Tags provide real-time GPS tracking and health monitoring for your herd. Built to withstand the harshest farm conditions, ensuring your livestock is always safe and accounted for.",
+    "cta": "Request Quote",
+    "tooltip": "Click to customize your farm package"
+  },
+  "quoteForm": {
+    "title": "Request a Custom Quote",
+    "subtitle": "Tell us about your farm setup and we will get back to you with a tailored solution.",
+    "label_name": "Full Name",
+    "label_email": "Email Address",
+    "label_livestock": "Livestock Type",
+    "select_placeholder": "Select type",
+    "option_cattle": "Cattle / Cows",
+    "option_sheep": "Sheep / Goats",
+    "option_other": "Other",
+    "label_quantity": "Number of Ear Tags",
+    "label_area": "Grazing Area Size",
+    "label_notes": "Additional Requirements",
+    "notes_placeholder": "Tell us about your terrain or specific monitoring needs...",
+    "submit": "Send Quote Request"
   }
+  
   
 }
