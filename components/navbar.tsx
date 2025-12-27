@@ -93,9 +93,10 @@ export default function Navbar() {
             <span className="text-neutral-50 text-xl font-semibold hidden sm:block">
               ZtrackMap
             </span>
-                  <div className="block ml-10"><LanguageDropdown /></div> 
+            <div className="block ml-10" onClick={(e) => e.stopPropagation()}>
+              <LanguageDropdown />
+            </div>
           </div>
-      
 
           {/* Desktop nav items */}
           <div className="hidden md:flex items-center gap-8">
@@ -129,7 +130,6 @@ export default function Navbar() {
                 />
               </span>
             </Button>
-      
           </div>
 
           {/* Mobile drawer */}
@@ -161,8 +161,12 @@ export default function Navbar() {
                       className="group grotesk rounded-full shadow-sm text-neutral-950 bg-gradient-to-r from-[#2af78a] to-[#defe3e] h-14 w-full font-bold transition-all flex items-center justify-center border-none"
                       onClick={() => handleScroll("contact")}
                     >
-                      <span className="text-xl grotesk
-                      ">{t("navbar.contact")}</span>
+                      <span
+                        className="text-xl grotesk
+                      "
+                      >
+                        {t("navbar.contact")}
+                      </span>
                       <span className="ml-3 p-1.5 rounded-full bg-neutral-950 flex items-center justify-center shrink-0">
                         <ArrowRight
                           size={16}
@@ -172,8 +176,6 @@ export default function Navbar() {
                       </span>
                     </Button>
                   </DrawerClose>
-
-                
                 </div>
               </DrawerContent>
             </Drawer>

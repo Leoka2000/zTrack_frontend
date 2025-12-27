@@ -23,7 +23,9 @@ export default function LanguageDropdown() {
   const otherLanguages = languages.filter((l) => l.code !== lang);
 
   return (
-    <DropdownMenu>
+    <DropdownMenu
+      onCloseAutoFocus={(e) => e.preventDefault()}
+    >
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
@@ -42,9 +44,13 @@ export default function LanguageDropdown() {
           <DropdownMenuItem
             key={l.code}
             onClick={() => setLang(l.code)}
-            className="flex items-center justify-center p-1"
+            className="flex items-center justify-center p-1 cursor-pointer"
           >
-            <img src={l.icon} alt={l.code} className="w-6 h-6 rounded-full" />
+            <img
+              src={l.icon}
+              alt={l.code}
+              className="w-6 h-6 rounded-full"
+            />
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

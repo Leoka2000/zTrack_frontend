@@ -133,7 +133,7 @@
    "contactForm": {
     "title": "Send Us",
     "subtitle": "a Message",
-    "description": "Fill out the form below and our team will get back to you as soon as possible.",
+ "description": "Fill out the form below<br/>and our team will get back to you as soon as possible.",
     "imageAlt": "Send us a message illustration",
     "labels": {
       "name": "Name",

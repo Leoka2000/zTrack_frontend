@@ -31,9 +31,11 @@ export default function SocialConnect() {
             </span>
           </div>
 
-          <p className="text-neutral-500 text-lg md:text-xl max-w-lg leading-relaxed">
-            {t("socialConnect.description")}
-          </p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t("contactForm.description"),
+            }}
+          />
 
           <div className="flex flex-col gap-4 pt-4">
             <a
