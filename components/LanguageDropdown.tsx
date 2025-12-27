@@ -32,7 +32,7 @@ export default function LanguageDropdown() {
           <img
             src={languages.find((l) => l.code === lang)?.icon}
             alt={lang}
-            className="w-6 h-6 rounded-full"
+            className="w-8 h-8 rounded-full"
           />
         </Button>
       </DropdownMenuTrigger>

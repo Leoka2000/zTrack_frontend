@@ -5,17 +5,19 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import BackgroundShades from "../utils/background-shades";
+import { useTranslation } from "../../i18n/TranslationProvider";
 
 export default function SocialConnect() {
+  const { t } = useTranslation();
+
   return (
     <section className="w-full py-16">
-      <div className=" mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-        {/* Left Side: Content */}
+      <div className="mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
         <div className="flex-1 space-y-6 isolate relative text-left">
           <BackgroundShades />
           <div className="space-y-2">
             <h2 className="text-4xl md:text-6xl font-medium tracking-tight text-neutral-900 grotesk">
-              Connect with Us
+              {t("socialConnect.title")}
             </h2>
             <span
               className="grotesk font-medium md:text-6xl text-4xl
@@ -25,40 +27,45 @@ export default function SocialConnect() {
              background-clip:text
              [-webkit-text-fill-color:transparent]"
             >
-              Stay Updated!
+              {t("socialConnect.subtitle")}
             </span>
           </div>
 
           <p className="text-neutral-500 text-lg md:text-xl max-w-lg leading-relaxed">
-            Follow our social media channels to get the latest news, updates,
-            and community highlights.
+            {t("socialConnect.description")}
           </p>
 
           <div className="flex flex-col gap-4 pt-4">
-            {/* Facebook Button */}
-            <a href="https://www.facebook.com/ZaneSystems" target="_blank">
-              <Button className=" grotesk text-black px-40 py-6 h-16 transition-all duration-300 flex items-center gap-3 text-lg">
-                Follow on Facebook
-                <div className="w-24 h-24 relative">
+            <a
+              href="https://www.facebook.com/ZaneSystems"
+              target="_blank"
+              className="w-full max-w-72"
+            >
+              <Button className="grotesk text-black w-full h-16 py-6 transition-all duration-300 flex items-center justify-between px-6 text-lg border-none">
+                {t("socialConnect.facebook")}
+                <div className="w-14 h-10 relative flex items-center justify-center shrink-0">
                   <Image
                     src="/facebook-logo.png"
                     alt="Facebook"
-                    width={60}
-                    height={60}
-                    className="object-cover absolute top-4 right-[1.4rem]"
+                    width={90}
+                    height={90}
+                    className="object-contain "
                   />
                 </div>
               </Button>
             </a>
 
-            {/* Website Button */}
-            <a href="https://zane.hu/" target="_blank" >
+            <a
+              href="https://zane.hu/"
+              target="_blank"
+              className="w-full max-w-72"
+            >
               <Button
                 variant="outline"
-                className="group h-16 text-lg transition-colors flex items-center px-[172px] grotesk"
+                className="group w-full h-16 text-lg transition-colors flex items-center justify-between px-6 grotesk"
               >
-                <span className="grotesk">Zane Systems Website</span>
-                <span className="ml-4 p-2 rounded-full bg-neutral-900 flex items-center justify-center">
+                <span className="grotesk">{t("socialConnect.website")}</span>
+                <span className="p-1.5 rounded-full bg-neutral-900 flex items-center justify-center shrink-0">
                   <ArrowRight
                     size={16}
                     strokeWidth={2.5}
@@ -70,11 +77,10 @@ export default function SocialConnect() {
           </div>
         </div>
 
-        {/* Right Side: Visual Image */}
         <div className="flex-1 w-full md:h-[590px] h-[400px] relative isolate rounded-[2.5rem] overflow-hidden">
           <Image
             src="/facebook-undraw.svg"
-            alt="Workspace setup"
+            alt={t("socialConnect.imageAlt")}
             fill
             className="object-cover"
             priority

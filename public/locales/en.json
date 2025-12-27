@@ -1,9 +1,206 @@
 {
-  "home": "Home",
-  "about_us": "About Us",
-  "products": "Products",
-  "team": "Team",
-  "faq": "FAQ",
-  "blog": "Blog",
-  "contact": "Contact"
+  "navbar": {
+    "home": "Home",
+    "about_us": "About Us",
+    "products": "Products",
+    "team": "Team",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title_line_1": "CONSTANTLY",
+    "title_line_2": "MONITORING",
+    "highlight": "CATTLES",
+    "description": "Technology shouldn't pull us away from the earth. It should lead us back. Protect your livestock and simplify your work with smart trackers designed for the rhythm of the land.",
+    "cta_primary": "Get Started",
+    "stats_title": "Securing 30,000+",
+    "stats_subtitle": "animals worldwide",
+    "live_map": "Live Map",
+    "dashboard": "View Dashboard"
+  },
+  "about": {
+    "title_line_1": "Nature's Rhythm",
+    "title_line_2": "Smart Tracking",
+    "description": "Bridging the gap between ancient traditions and modern electronics. We design hardware that supports grazing, free-range farming, and true harmony with the land.",
+    "cta_primary": "Our Mission"
+  },
+  "aboutIcons": {
+    "card1": {
+      "alt": "solar-charging-icon",
+      "value": "+2 MO",
+      "title": "SOLAR ENDURANCE",
+      "description": "Advanced NB-IoT communication coupled with solar charging for extended, worry-free pasture seasons."
+    },
+    "card2": {
+      "alt": "herd-safety-icon",
+      "value": "100%",
+      "title": "FLOCK SECURITY",
+      "description": "Real-time alerts for straying or theft, ensuring every cow, sheep, and goat is exactly where they belong."
+    }
+  },
+  "aboutIcons2": {
+    "card1": {
+      "alt": "Smart farming illustration",
+      "title": "HARMONIOUS GRAZING GOAL",
+      "description": "Transforming exhausting labor into effortless management through intelligent activity sensors and GPS tracking."
+    },
+    "card2": {
+      "alt": "Smart Tracker Icon",
+      "title": "THE LIGHT OF YAKAMOZ",
+      "description": "Our technology doesn't pull you away from the earth; it gently guides you back to the natural life of your animals."
+    }
+  },
+  "dashboard": {
+    "cards": {
+      "card1": {
+        "title": "Fleet Overview",
+        "description": "Active units and status",
+        "content": "Real-time visibility into all connected vehicles."
+      },
+      "card2": {
+        "title": "Live Monitoring",
+        "description": "Sensor & telemetry data",
+        "content": "Temperature, battery, network, and system health."
+      },
+      "card3": {
+        "title": "Alerts",
+        "description": "Critical notifications",
+        "content": "Immediate warnings for anomalies and failures."
+      },
+      "card4": {
+        "title": "Diagnostics",
+        "description": "System performance",
+        "content": "CPU load, network stability, and uptime metrics."
+      }
+    }
+  },
+  "productBlogTop": {
+    "intro": "Introducing",
+    "product_name": "ZTrack G-100",
+    "description": "Smart grazing hardware designed to bridge the gap between tradition and technology, ensuring herd safety while reconnecting us with the natural rhythm of the land.",
+    "cta": "Get a quote"
+  },
+  "productBlog": {
+    "date": "Dec 20, 2025",
+    "image_alt": "ZTrack Smart Grazing Sensor",
+    "logo_alt": "ZTrack Logo",
+    "product_name": "ZTrack G-100",
+    "product_subtitle": "Solar-powered with rugged mounting",
+    "stock_status": "In stock",
+    "heading": "How does the ZTrack Smart Monitoring System help?",
+    "description": "The core of the ZTrack system is a smart activity sensor designed to bring harmony to modern grazing. It continuously monitors the location and behavior of your livestock, sending immediate alerts if it detects theft, straying, or abnormal inactivity. Using ultra-low power NB-IoT technology and integrated solar charging, the sensor operates for months without maintenance. Every data point is saved to the cloud, allowing you to review herd movements and pasture pressure through our dedicated map application. Housed in a robust IP6X casing, it withstands the harshest field conditions while keeping you connected to the rhythm of your land.",
+    "cta": "Add to cart",
+    "tooltip": "Product under construction"
+  },
+  "team": {
+    "title": "The Team Behind",
+    "subtitle": "Smarter Charging",
+    "description": "Meet the minds driving innovation at ZTrack: engineers, agtech specialists, and visionaries united by a shared mission to redefine the future of livestock monitoring and sustainable grazing.",
+    "members": {
+      "member-1": {
+        "name": "Erdei Zoltán",
+        "title": "Chief Executive Officer (CEO)"
+      },
+      "member-2": {
+        "name": "Leo Reus",
+        "title": "Software Developer"
+      },
+      "member-3": {
+        "name": "Kevin Rácz",
+        "title": "Electrical Engineer"
+      },
+      "member-4": {
+        "name": "Viktor Ádori",
+        "title": "Electrical Engineer"
+      },
+      "member-5": {
+        "name": "Dávid Munkácsi",
+        "title": "Electrical Engineer"
+      }
+    }
+    
+  },
+  
+  "socialConnect": {
+    "title": "Connect with Us",
+    "subtitle": "Stay Updated!",
+    "description": "Follow our social media channels to get the latest news, updates, and community highlights.",
+    "facebook": "Follow on Facebook",
+    "website": "Zane Systems Website",
+    "imageAlt": "Workspace setup"
+  },
+   "contactForm": {
+    "title": "Send Us",
+    "subtitle": "a Message",
+    "description": "Fill out the form below and our team will get back to you as soon as possible.",
+    "imageAlt": "Send us a message illustration",
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    },
+    "sendButton": "Send",
+    "errors": {
+      "name": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "message": "Message is required"
+    },
+    "dialog": {
+      "title": "Done!",
+      "description": "Message successfully sent."
+    }
+  },
+  "footer": {
+    "headline": "Power Up Your Farm Experience with ZTrack",
+    "description": "Monitor your agricultural machines, track sensor data in real-time, and access smart diagnostics all in one app. Download now and take control of your farm operations.",
+    "rating": "Rating on stores",
+    "activeUsers": "Active users",
+    "navigation": "Navigation",
+    "nav": {
+      "home": "Home",
+      "about_us": "About Us",
+      "products": "Products",
+      "faq": "FAQ",
+      "team": "Team",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "legal": "Legal & Policies",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "social": "Social",
+    "linkedin": "LinkedIn",
+    "youtube": "YouTube",
+    "copyright": "2025 © All rights reserved",
+    "developedBy": "Developed by Leo Reus"
+  },
+  "faq": {
+    "title_line_1": "Smart Grazing",
+    "title_line_2": "Basics: FAQs",
+    "description": "Explore our FAQs to discover how we secure your herd with precision, rugged durability, and real-time intelligence. Find the answers for your pasture below!",
+    "items": [
+      {
+        "question": "How does the ZTrack G-100 maintain power in remote areas?",
+        "answer": "The G-100 features high-efficiency solar harvesting. With just 3 hours of direct daily sunlight, the device stays fully charged, ensuring continuous monitoring without manual intervention."
+      },
+      {
+        "question": "What happens if an animal moves out of cellular range?",
+        "answer": "Our devices utilize NB-IoT and LTE-M for deep rural penetration. If cellular signals fail, the G-100 can store location data internally and sync once a connection is re-established."
+      },
+      {
+        "question": "How accurate is the GPS tracking for individual animals?",
+        "answer": "The ZTrack G-100 uses a multi-constellation GNSS receiver (GPS, GLONASS, Galileo) providing pinpoint accuracy within 2.5 meters under clear sky conditions."
+      },
+      {
+        "question": "Can I set up virtual boundaries for my herd?",
+        "answer": "Yes! Through our mobile app, you can create custom Geofences. If any animal crosses these boundaries, you will receive an instant push notification or SMS alert."
+      },
+      {
+        "question": "Is the hardware durable enough for harsh weather?",
+        "answer": "Absolutely. The G-100 is IP67-rated, making it fully waterproof and dustproof. It is tested to operate in extreme temperatures ranging from -20°C to +60°C."
+      }
+    ]
+  }
 }

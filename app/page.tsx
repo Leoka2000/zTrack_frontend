@@ -2,7 +2,7 @@ import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
 import AboutTop from "@/components/about-top";
 import { AboutIcons } from "@/components/about-icons";
-import { AboutIcons2 } from "@/components/about-icons2";
+
 
 import ProductBlog from "@/components/blog/product-blog";
 import ProductBlogTop from "@/components/blog/product-blog-top";
@@ -14,6 +14,7 @@ import SocialConnect from "@/components/blog/follow-facebook";
 import ContactForm from "@/components/contact-form";
 import FooterTop from "@/components/footer/footer";
 import Footer from "@/components/footer/footer-bottom";
+import { AboutIcons2 } from "@/components/about-icons2";
 
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
         <div id="about" className="md:px-12 px-4">
           <AboutTop />
           <AboutIcons />
-          <AboutIcons2 />
+      <AboutIcons2/>
         </div>
 
         <div id="products" className="md:px-12 px-4">

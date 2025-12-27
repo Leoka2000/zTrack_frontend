@@ -1,22 +1,23 @@
+"use client";
+
 import * as React from "react";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 import BackgroundShades from "./utils/background-shades";
 import BgBelowShade from "./utils/bg-below-shade";
 import LanguageButton from "./language-btn";
+import { useTranslation } from "../i18n/TranslationProvider";
 
 export default function AboutTop() {
-  return (
-    // 1️⃣ OUTER WRAPPER — allows visual overflow
-    <section id="about" className="relative w-full py-24 isolate overflow-hidden">
-      {/* 2️⃣ GLOW LAYER — NOT CLIPPED */}
-      <BgBelowShade />
+  const { t } = useTranslation();
 
-      {/* 3️⃣ CONTENT CONTAINER — layout only */}
+  return (
+    <section id="about" className="relative w-full py-24 isolate overflow-hidden">
+      <BgBelowShade />
       <div className="relative mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 overflow-hidden z-10">
         <div className="flex-1">
           <h1 className="text-4xl md:text-6xl font-medium leading-tight">
-            <span className="text-green-950 grotesk">Nature's Rhythm</span>
+            <span className="text-green-950 grotesk">{t("about.title_line_1")}</span>
             <br />
             <span
               className="grotesk font-medium md:text-6xl text-4xl
@@ -26,24 +27,21 @@ export default function AboutTop() {
              background-clip:text
              [-webkit-text-fill-color:transparent]"
             >
-              Smart Tracking
+              {t("about.title_line_2")}
             </span>{" "}
           </h1>
         </div>
 
         <div className="flex-1 flex flex-col items-start md:items-end gap-6">
           <p className="text-gray-600 text-left md:text-right max-w-md leading-relaxed">
-            Bridging the gap between ancient traditions and modern electronics.
-            We design hardware that supports grazing, free-range farming, and
-            true harmony with the land.
+            {t("about.description")}
           </p>
-<LanguageButton />
+     
           <Button
             variant="outline"
             className="text-lg h-12 font-semibold rounded-full transition-colors group"
           >
-            <span className="mx-6">Our Mission</span>
-
+            <span className="mx-6">{t("about.cta_primary")}</span>
             <span className="p-1 rounded-full bg-neutral-900 flex items-center justify-center">
               <ArrowRight
                 size={48}

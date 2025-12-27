@@ -17,13 +17,14 @@ export default function Navbar() {
   const { t } = useTranslation();
   const [activeSection, setActiveSection] = React.useState("home");
 
+  // Accessing the nested 'navbar' object from your JSON
   const navItems = [
-    { id: "home", label: t("home") },
-    { id: "about", label: t("about_us") },
-    { id: "products", label: t("products") },
-    { id: "team", label: t("team") },
-    { id: "faq", label: t("faq") },
-    { id: "blog", label: t("blog") },
+    { id: "home", label: t("navbar.home") },
+    { id: "about", label: t("navbar.about_us") },
+    { id: "products", label: t("navbar.products") },
+    { id: "team", label: t("navbar.team") },
+    { id: "faq", label: t("navbar.faq") },
+    { id: "blog", label: t("navbar.blog") },
   ];
 
   const NAVBAR_HEIGHT = 80;
@@ -72,7 +73,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 inset-x-0 z-50 w-full flex justify-center">
-      <div className="w-full max-w-7xl md:mx-0 mx-4 md:my-4 bg-neutral-950/40 backdrop-blur-lg rounded-full border border-neutral-800/40 overflow-hidden">
+      <div className="w-full max-w-7xl md:mx-0 mx-4 mt-4 md:my-4 bg-neutral-950/40 backdrop-blur-lg rounded-full border border-neutral-800/40 overflow-hidden">
         <div className="flex items-center justify-between p-2">
           {/* Logo */}
           <div
@@ -92,7 +93,9 @@ export default function Navbar() {
             <span className="text-neutral-50 text-xl font-semibold hidden sm:block">
               ZtrackMap
             </span>
+                  <div className="block ml-10"><LanguageDropdown /></div> 
           </div>
+      
 
           {/* Desktop nav items */}
           <div className="hidden md:flex items-center gap-8">
@@ -102,8 +105,8 @@ export default function Navbar() {
                 onClick={() => handleScroll(item.id)}
                 className={`text-lg grotesk font-medium transition-colors cursor-pointer ${
                   activeSection === item.id
-                    ? "text-[#d7f448] cursor-pointer font-bold"
-                    : "text-neutral-50 cursor-pointer hover:text-[#d7f448]"
+                    ? "text-[#d7f448] font-bold"
+                    : "text-neutral-50 hover:text-[#d7f448]"
                 }`}
               >
                 {item.label}
@@ -117,7 +120,7 @@ export default function Navbar() {
               className="group grotesk rounded-full shadow-sm text-neutral-950 bg-gradient-to-r from-[#2af78a] to-[#defe3e] h-10 px-6 font-bold transition-all flex items-center justify-center border-none hover:opacity-90"
               onClick={() => handleScroll("contact")}
             >
-              <span className="text-lg">{t("contact")}</span>
+              <span className="text-lg">{t("navbar.contact")}</span>
               <span className="ml-2 p-1 rounded-full bg-neutral-950 flex items-center justify-center shrink-0">
                 <ArrowRight
                   size={12}
@@ -126,7 +129,7 @@ export default function Navbar() {
                 />
               </span>
             </Button>
-            <LanguageDropdown />
+      
           </div>
 
           {/* Mobile drawer */}
@@ -142,7 +145,7 @@ export default function Navbar() {
                     <DrawerClose asChild key={item.id}>
                       <button
                         onClick={() => handleScroll(item.id)}
-                        className={`text-2xl font-bold text-left transition-colors ${
+                        className={`text-2xl font-bold grotesk text-left transition-colors ${
                           activeSection === item.id
                             ? "text-[#d7f448]"
                             : "text-neutral-50 active:text-[#d7f448]"
@@ -155,22 +158,22 @@ export default function Navbar() {
 
                   <DrawerClose asChild>
                     <Button
-                      variant="outline"
-                      className="text-lg h-12 font-semibold rounded-full transition-colors group"
+                      className="group grotesk rounded-full shadow-sm text-neutral-950 bg-gradient-to-r from-[#2af78a] to-[#defe3e] h-14 w-full font-bold transition-all flex items-center justify-center border-none"
                       onClick={() => handleScroll("contact")}
                     >
-                      <span className="mx-6">{t("contact")}</span>
-                      <span className="p-1 rounded-full bg-neutral-900 flex items-center justify-center">
+                      <span className="text-xl grotesk
+                      ">{t("navbar.contact")}</span>
+                      <span className="ml-3 p-1.5 rounded-full bg-neutral-950 flex items-center justify-center shrink-0">
                         <ArrowRight
-                          size={48}
-                          strokeWidth={1.75}
-                          className="w-3 h-4 text-neutral-200 transition-transform duration-300 group-hover:-rotate-45"
+                          size={16}
+                          strokeWidth={3}
+                          className="text-white"
                         />
                       </span>
                     </Button>
                   </DrawerClose>
 
-                  <LanguageDropdown />
+                
                 </div>
               </DrawerContent>
             </Drawer>

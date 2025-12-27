@@ -11,35 +11,36 @@ import {
 import { Badge } from "@/components/ui/badge";
 import WebDashboardMockup_DualScreen from "../../components/mockups/web-dashboard-mockup2";
 import BackgroundShades from "@/components/utils/background-shades";
-
-// Lucide Icons
 import { Truck, Activity, Bell, Cpu } from "lucide-react";
+import { useTranslation } from "../../i18n/TranslationProvider";
 
 export default function DashboardWithCardsAndMockup() {
+  const { t } = useTranslation();
+
   const cards = [
     {
       icon: Truck,
-      title: "Fleet Overview",
-      description: "Active units and status",
-      content: "Real-time visibility into all connected vehicles.",
+      title: t("dashboard.cards.card1.title"),
+      description: t("dashboard.cards.card1.description"),
+      content: t("dashboard.cards.card1.content"),
     },
     {
       icon: Activity,
-      title: "Live Monitoring",
-      description: "Sensor & telemetry data",
-      content: "Temperature, battery, network, and system health.",
+      title: t("dashboard.cards.card2.title"),
+      description: t("dashboard.cards.card2.description"),
+      content: t("dashboard.cards.card2.content"),
     },
     {
       icon: Bell,
-      title: "Alerts",
-      description: "Critical notifications",
-      content: "Immediate warnings for anomalies and failures.",
+      title: t("dashboard.cards.card3.title"),
+      description: t("dashboard.cards.card3.description"),
+      content: t("dashboard.cards.card3.content"),
     },
     {
       icon: Cpu,
-      title: "Diagnostics",
-      description: "System performance",
-      content: "CPU load, network stability, and uptime metrics.",
+      title: t("dashboard.cards.card4.title"),
+      description: t("dashboard.cards.card4.description"),
+      content: t("dashboard.cards.card4.content"),
     },
   ];
 
@@ -54,25 +55,15 @@ export default function DashboardWithCardsAndMockup() {
             return (
               <Card key={idx} className="bg-white border-neutral-200 shadow-sm">
                 <CardHeader className="flex items-center gap-3">
-                   <div className="relative bg-[#d7f448] p-2 rounded-xl text-neutral-900 shadow-md border border-[#d7f448]/20">
-                 <Icon size={20} className="text-lg h- text-neutral-900" />
+                  <div className="relative bg-[#d7f448] p-2 rounded-xl text-neutral-900 shadow-md border border-[#d7f448]/20">
+                    <Icon size={20} className="text-neutral-900" />
                   </div>
-
-                   
-             
-                  
                   <div>
-                    <CardTitle className="text-neutral-900 grotesk">
-                      {card.title}
-                    </CardTitle>
-                    <CardDescription className="text-neutral-500">
-                      {card.description}
-                    </CardDescription>
+                    <CardTitle className="text-neutral-900 grotesk">{card.title}</CardTitle>
+                    <CardDescription className="text-neutral-500">{card.description}</CardDescription>
                   </div>
                 </CardHeader>
-                <CardContent className="text-sm text-neutral-600">
-                  {card.content}
-                </CardContent>
+                <CardContent className="text-sm text-neutral-600">{card.content}</CardContent>
               </Card>
             );
           })}

@@ -1,9 +1,211 @@
 {
-  "home": "Főoldal",
-  "about_us": "Rólunk",
-  "products": "Termékek",
-  "team": "Csapat",
-  "faq": "GYIK",
-  "blog": "Blog",
-  "contact": "Kapcsolat"
+  "navbar": {
+    "home": "Főoldal",
+    "about_us": "Rólunk",
+    "products": "Termékek",
+    "team": "Csapat",
+    "faq": "GYIK",
+    "blog": "Blog",
+    "contact": "Kapcsolat"
+  },
+  "hero": {
+    "title_line_1": "FOLYAMATOS",
+    "title_line_2": "MEGFIGYELÉS",
+    "highlight": "ÁLLATOK",
+    "description": "A technológia nem eltávolít minket a természettől, hanem visszavezet hozzá. Védd meg az állataidat és egyszerűsítsd a munkád intelligens nyomkövetőkkel, amelyek a föld ritmusához igazodnak.",
+    "cta_primary": "Kezdjük el",
+    "stats_title": "30 000+ állat",
+    "stats_subtitle": "világszerte biztonságban",
+    "live_map": "Élő térkép",
+    "dashboard": "Vezérlőpult"
+  },
+  "about": {
+    "title_line_1": "A természet ritmusa",
+    "title_line_2": "Intelligens nyomkövetés",
+    "description": "Összekapcsoljuk az ősi hagyományokat a modern elektronikával. Olyan hardvert tervezünk, amely támogatja a legelőt, a szabad tartást és a valódi harmóniát a természettel.",
+    "cta_primary": "Küldetésünk"
+  },
+  "aboutIcons": {
+    "card1": {
+      "alt": "napelemes töltés ikon",
+      "value": "+2 MO",
+      "title": "NAPELEMES TARTÓSSÁG",
+      "description": "Fejlett NB-IoT kommunikáció napelemes töltéssel a hosszabb, gondtalan legeltetési szezonokhoz."
+    },
+    "card2": {
+      "alt": "állománybiztonság ikon",
+      "value": "100%",
+      "title": "ÁLLATCSOPORT BIZTONSÁG",
+      "description": "Valós idejű riasztások a kóborló vagy eltulajdonított állatokért, biztosítva, hogy minden tehén, juh és kecske pontosan ott legyen, ahol lennie kell."
+    }
+  },
+  "aboutIcons2": {
+    "card1": {
+      "alt": "okos gazdálkodás illusztráció",
+      "title": "HARMONIKUS LEGELTETÉSI CÉL",
+      "description": "A kimerítő munkát könnyed kezeléssé alakítjuk intelligens aktivitásérzékelőkkel és GPS nyomkövetéssel."
+    },
+    "card2": {
+      "alt": "okos nyomkövető ikon",
+      "title": "A YAKAMOZ FÉNYE",
+      "description": "Technológiánk nem távolít el a természettől; finoman visszavezet az állataid természetes életéhez."
+    }
+  },
+  "dashboard": {
+    "cards": {
+      "card1": {
+        "title": "Járműpark áttekintés",
+        "description": "Aktív egységek és státusz",
+        "content": "Valós idejű áttekintés az összes csatlakoztatott járműről."
+      },
+      "card2": {
+        "title": "Élő monitorozás",
+        "description": "Érzékelő és telemetriai adatok",
+        "content": "Hőmérséklet, akkumulátor, hálózat és rendszer állapota."
+      },
+      "card3": {
+        "title": "Riasztások",
+        "description": "Kritikus értesítések",
+        "content": "Azonnali figyelmeztetések rendellenességek és hibák esetén."
+      },
+      "card4": {
+        "title": "Diagnosztika",
+        "description": "Rendszer teljesítmény",
+        "content": "CPU terhelés, hálózati stabilitás és rendelkezésre állási mutatók."
+      }
+    }
+  },
+  "productBlogTop": {
+    "intro": "Bemutatjuk",
+    "product_name": "ZTrack G-100",
+    "description": "Okos legeltető hardver, amely hidat képez a hagyomány és a technológia között, biztosítva az állomány biztonságát, miközben visszakapcsol minket a föld természetes ritmusához.",
+    "cta": "Árajánlat kérése"
+  },
+  "productBlog": {
+    "date": "2025. dec. 20.",
+    "image_alt": "ZTrack okos legeltető érzékelő",
+    "logo_alt": "ZTrack logó",
+    "product_name": "ZTrack G-100",
+    "product_subtitle": "Napelemmel működik, masszív rögzítéssel",
+    "stock_status": "Készleten",
+    "heading": "Hogyan segíti a ZTrack okos megfigyelő rendszer?",
+    "description": "A ZTrack rendszer magja egy okos aktivitásérzékelő, amely harmóniát teremt a modern legeltetésben. Folyamatosan figyeli az állatok helyzetét és viselkedését, azonnali riasztásokat küldve lopás, kóborlás vagy rendellenes inaktivitás esetén. Ultra alacsony fogyasztású NB-IoT technológiával és integrált napelemes töltéssel hónapokig karbantartás nélkül működik. Minden adatpont a felhőbe kerül, így áttekintheted az állomány mozgását és a legelő terhelését dedikált térkép alkalmazásunkban. Robusztus IP6X házban elhelyezve a legzordabb körülményeknek is ellenáll, miközben kapcsolatban maradsz a föld ritmusával.",
+    "cta": "Kosárba",
+    "tooltip": "A termék fejlesztés alatt áll"
+  },
+
+  "team": {
+    "title": "A csapat mögött",
+    "subtitle": "Intelligensebb töltés",
+    "description": "Ismerd meg az innovációt vezető elmék: a ZTrack mérnökei, agrotechnológiai szakértői és látomásosai, akik egy közös küldetéshez csatlakoztak: újradefiniálni az állatállomány megfigyelésének és a fenntartható legeltetés jövőjét.",
+    "members": {
+      "member-1": {
+        "name": "Erdei Zoltán",
+        "title": "Vezérigazgató (CEO)"
+      },
+      "member-2": {
+        "name": "Reus Leo",
+        "title": "Szoftverfejlesztő"
+      },
+      "member-3": {
+        "name": "Kevin Rácz",
+        "title": "Villamosmérnök"
+      },
+      "member-4": {
+        "name": "Viktor Ádori",
+        "title": "Villamosmérnök"
+      },
+      "member-5": {
+        "name": "Dávid Munkácsi",
+        "title": "Villamosmérnök"
+      }
+    }
+  },
+
+  "socialConnect": {
+    "title": "Lépj kapcsolatba velünk",
+    "subtitle": "Maradj naprakész!",
+    "description": "Kövess minket a közösségi médiában a legfrissebb hírek, frissítések és közösségi események érdekében.",
+    "facebook": "Kövess a Facebookon",
+    "website": "Zane Systems Weboldal",
+    "imageAlt": "Munkahelyi beállítás"
+  },
+  "contactForm": {
+    "title": "Küldjön nekünk",
+    "subtitle": "üzenetet",
+    "description": "Töltse ki az alábbi űrlapot, és csapatunk a lehető leghamarabb visszajelzést ad.",
+    "imageAlt": "Küldjön üzenetet illusztráció",
+    "labels": {
+      "name": "Név",
+      "email": "Email",
+      "message": "Üzenet"
+    },
+    "sendButton": "Küldés",
+    "errors": {
+      "name": "A név megadása kötelező",
+      "emailRequired": "Az email megadása kötelező",
+      "emailInvalid": "Érvénytelen email cím",
+      "message": "Az üzenet megadása kötelező"
+    },
+    "dialog": {
+      "title": "Kész!",
+      "description": "Az üzenet sikeresen elküldve."
+    }
+  },
+  "footer": {
+    "headline": "Turbózd fel a farmélményt a ZTrack segítségével",
+    "description": "Kövesd mezőgazdasági gépeidet, valós idejű szenzoradatokat, és férj hozzá okos diagnosztikákhoz egyetlen alkalmazásban. Töltsd le most, és vedd át az irányítást a farmműveletek felett.",
+    "rating": "Értékelés az áruházakban",
+    "activeUsers": "Aktív felhasználók",
+    "navigation": "Navigáció",
+    "nav": {
+      "home": "Kezdőlap",
+      "about_us": "Rólunk",
+      "products": "Termékek",
+      "faq": "GYIK",
+      "team": "Csapat",
+      "blog": "Blog",
+      "contact": "Kapcsolat"
+    },
+    "legal": "Jogi & Szabályzat",
+    "terms": "Felhasználási feltételek",
+    "privacy": "Adatvédelmi szabályzat",
+    "social": "Közösségi média",
+    "linkedin": "LinkedIn",
+    "youtube": "YouTube",
+    "copyright": "2025 © Minden jog fenntartva",
+    "developedBy": "Fejlesztette: Leo Reus"
+  },
+  
+  "faq": {
+    "title_line_1": "Okos legeltetés",
+    "title_line_2": "Alapok: GYIK",
+    "description": "Fedezd fel a GYIK-et, hogy megtudd, hogyan biztosítjuk állományodat precízen, tartósan és valós idejű intelligenciával. Találd meg a válaszokat legelődre vonatkozóan!",
+    "items": [
+      {
+        "question": "Hogyan tartja fenn a ZTrack G-100 az áramellátást távoli területeken?",
+        "answer": "A G-100 nagy hatékonyságú napelemes töltéssel rendelkezik. Napi 3 óra közvetlen napfény elegendő, hogy a készülék teljesen feltöltött maradjon, biztosítva a folyamatos megfigyelést manuális beavatkozás nélkül."
+      },
+      {
+        "question": "Mi történik, ha egy állat elhagyja a mobilhálózat hatókörét?",
+        "answer": "Eszközeink NB-IoT és LTE-M technológiát használnak a mély vidéki lefedettséghez. Ha a hálózati jel megszűnik, a G-100 belső memóriában tárolja a helyadatokat, és szinkronizál, amikor újra van kapcsolat."
+      },
+      {
+        "question": "Mennyire pontos a GPS követés az egyes állatoknál?",
+        "answer": "A ZTrack G-100 többkonstellációs GNSS vevőt használ (GPS, GLONASS, Galileo), amely 2,5 méteren belüli pontosságot biztosít tiszta ég alatt."
+      },
+      {
+        "question": "Be tudok állítani virtuális határokat az állományomnak?",
+        "answer": "Igen! Mobilalkalmazásunk segítségével egyedi Geofence-eket hozhatsz létre. Ha egy állat átlépi ezeket a határokat, azonnali push értesítést vagy SMS-t kapsz."
+      },
+      {
+        "question": "Elég tartós a hardver a zord időjárási körülményekhez?",
+        "answer": "Teljesen. A G-100 IP67 besorolású, teljesen víz- és porálló. Tesztelve van szélsőséges hőmérsékleteken, -20°C-tól +60°C-ig."
+      }
+    ]
+  }
 }
+
+
+
+

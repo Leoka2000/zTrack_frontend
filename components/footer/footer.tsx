@@ -3,17 +3,20 @@
 import React from "react";
 import Image from "next/image";
 import WebDashboardMockup from "../mockups/web-dashboard-mockup";
-import { Instagram, Link, Youtube } from "lucide-react";
+import { Link, Youtube } from "lucide-react";
+import { useTranslation } from "../../i18n/TranslationProvider";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   const navItems = [
-    { id: "home", label: "Home" },
-    { id: "about", label: "About Us" },
-    { id: "products", label: "Products" },
-    { id: "faq", label: "FAQ" },
-    { id: "team", label: "Team" },
-    { id: "blog", label: "Blog" },
-    { id: "contact", label: "Contact" },
+    { id: "home", key: "home" },
+    { id: "about", key: "about_us" },
+    { id: "products", key: "products" },
+    { id: "faq", key: "faq" },
+    { id: "team", key: "team" },
+    { id: "blog", key: "blog" },
+    { id: "contact", key: "contact" },
   ];
 
   const NAVBAR_HEIGHT = 80;
@@ -34,15 +37,12 @@ export default function Footer() {
       <div className="p-4 md:p-8">
         <div className="bg-[#CDFF4D] rounded-3xl p-8 md:p-12 lg:p-16 overflow-hidden">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
-            {/* Left Side: Content */}
             <div className="flex-1 w-full z-10">
               <h1 className="text-3xl lg:text-3xl font-bold text-black leading-tight mb-6 grotesk">
-                Power Up Your Farm Experience with ZTrack
+                {t("footer.headline")}
               </h1>
-              <p className="text-gray-700 text-lg md:text-xl mb-8 max-w-xl leading-relaxed">
-                Monitor your agricultural machines, track sensor data in
-                real-time, and access smart diagnostics all in one app. Download
-                now and take control of your farm operations.
+              <p className="text-neutral-700 text-lg md:text-xl mb-8 max-w-xl leading-relaxed">
+                {t("footer.description")}
               </p>
 
               <div className="flex items-center gap-8 mb-8 md:gap-12">
@@ -51,7 +51,7 @@ export default function Footer() {
                     4.8
                   </div>
                   <div className="text-sm font-semibold text-gray-700 uppercase tracking-wider">
-                    Rating on stores
+                    {t("footer.rating")}
                   </div>
                 </div>
                 <div>
@@ -59,13 +59,12 @@ export default function Footer() {
                     500k+
                   </div>
                   <div className="text-sm font-semibold text-gray-700 uppercase tracking-wider">
-                    Active users
+                    {t("footer.activeUsers")}
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Right Side: Mockup */}
             <div className="flex-1 w-full flex justify-center lg:justify-end items-center overflow-visible">
               <div className="w-full scale-125 md:mt-0 mt-10 md:scale-120 lg:max-w-none">
                 <WebDashboardMockup />
@@ -93,7 +92,7 @@ export default function Footer() {
             {/* Navigation */}
             <div>
               <h3 className="text-white text-lg font-medium mb-6">
-                Navigation
+                {t("footer.navigation")}
               </h3>
               <nav className="flex flex-col gap-3">
                 {navItems.map((item) => (
@@ -102,7 +101,7 @@ export default function Footer() {
                     onClick={() => handleScroll(item.id)}
                     className="text-gray-400 hover:text-white transition-colors text-left cursor-pointer"
                   >
-                    {item.label}
+                    {t(`footer.nav.${item.key}`)}
                   </button>
                 ))}
               </nav>
@@ -111,21 +110,21 @@ export default function Footer() {
             {/* Legal */}
             <div>
               <h3 className="text-white text-lg font-medium mb-6">
-                Legal & Policies
+                {t("footer.legal")}
               </h3>
               <nav className="flex flex-col gap-3">
                 <p className="text-gray-400 hover:text-white transition-colors cursor-pointer">
-                  Terms & Conditions
+                  {t("footer.terms")}
                 </p>
                 <p className="text-gray-400 hover:text-white transition-colors cursor-pointer">
-                  Privacy Policy
+                  {t("footer.privacy")}
                 </p>
               </nav>
             </div>
 
             {/* Social */}
             <div>
-              <h3 className="text-white text-lg font-medium mb-6">Social</h3>
+              <h3 className="text-white text-lg font-medium mb-6">{t("footer.social")}</h3>
               <nav className="flex flex-col gap-3">
                 <a
                   target="_blank"
@@ -133,7 +132,7 @@ export default function Footer() {
                   className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
                 >
                   <Link size={18} />
-                  LinkedIn
+                  {t("footer.linkedin")}
                 </a>
                 <a
                   href="https://www.youtube.com/@zanesystemskft5905"
@@ -141,7 +140,7 @@ export default function Footer() {
                   className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
                 >
                   <Youtube size={18} />
-                  YouTube
+                  {t("footer.youtube")}
                 </a>
               </nav>
             </div>
@@ -150,14 +149,14 @@ export default function Footer() {
           {/* Bottom */}
           <div className="border-t flex flex-col gap-4 justify-center border-gray-800 pt-8 items-center">
             <p className="text-gray-100 grotesk text-sm tracking-wide">
-              2025 © All rights reserved
+              {t("footer.copyright")}
             </p>
             <a
               href="https://www.linkedin.com/in/leoreus"
               target="_blank"
               className="grotesk text-[#CDFF4D] text-sm font-medium hover:underline transition-all"
             >
-              Developed by Leo Reus
+              {t("footer.developedBy")}
             </a>
           </div>
         </div>

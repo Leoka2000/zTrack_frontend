@@ -1,62 +1,54 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import React, { createContext, useContext, useState } from "react";
+import en from "../public/locales/en.json"
+import hu from "../public/locales/hu.json"
 
-type Translations = Record<string, string>;
+type Lang = "en" | "hu";
 
-interface TranslationContextType {
+const translations: Record<Lang, any> = { en, hu };
+
+type TranslationContextType = {
+  lang: Lang;
+  setLang: (lang: Lang) => void;
   t: (key: string) => string;
-  lang: string;
-  setLang: (lang: string) => void;
+};
+
+const TranslationContext = createContext<TranslationContextType | null>(null);
+
+// ✅ DOT-NOTATION RESOLVER
+function getNestedValue(obj: any, path: string): string | undefined {
+  return path.split(".").reduce((acc, key) => {
+    if (acc && typeof acc === "object") {
+      return acc[key];
+    }
+    return undefined;
+  }, obj);
 }
 
-const TranslationContext = createContext<TranslationContextType>({
-  t: (key) => key,
-  lang: "en",
-  setLang: () => {},
-});
+export function TranslationProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const [lang, setLang] = useState<Lang>("en");
 
-interface TranslationProviderProps {
-  children: ReactNode;
-}
-
-export function TranslationProvider({ children }: TranslationProviderProps) {
-  const [lang, setLang] = useState("en");
-  const [translations, setTranslations] = useState<Translations>({});
-
-  useEffect(() => {
-    let canceled = false;
-
-    const loadTranslations = async () => {
-      try {
-        const res = await fetch(`/locales/${lang}.json`);
-        if (!res.ok) throw new Error(`Failed to fetch /locales/${lang}.json`);
-        const data: Translations = await res.json();
-
-        if (!canceled) {
-          setTranslations(data);
-          console.log("✅ Loaded translations for", lang, data);
-        }
-      } catch (err) {
-        console.error("❌ Error loading translations:", err);
-        if (!canceled) setTranslations({});
-      }
-    };
-
-    loadTranslations();
-
-    return () => {
-      canceled = true; // prevent state updates if unmounted
-    };
-  }, [lang]);
-
-  const t = (key: string) => translations[key] || key;
+  const t = (key: string): string => {
+    const value = getNestedValue(translations[lang], key);
+    return value ?? key;
+  };
 
   return (
-    <TranslationContext.Provider value={{ t, lang, setLang }}>
+    <TranslationContext.Provider value={{ lang, setLang, t }}>
       {children}
     </TranslationContext.Provider>
   );
 }
 
-export const useTranslation = () => useContext(TranslationContext);
+export function useTranslation() {
+  const ctx = useContext(TranslationContext);
+  if (!ctx) {
+    throw new Error("useTranslation must be used within TranslationProvider");
+  }
+  return ctx;
+}
