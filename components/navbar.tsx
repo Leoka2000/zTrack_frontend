@@ -120,15 +120,15 @@ export default function Navbar() {
 
             <div className="hidden md:flex gap-2 pr-2">
               <Button
-                className="group grotesk rounded-full shadow-sm text-neutral-950 bg-gradient-to-r from-[#2af78a] to-[#defe3e] h-10 px-6 font-medium transition-all flex items-center justify-center border-none hover:opacity-90"
+                className="group grotesk w-32 rounded-full shadow-sm text-neutral-950 bg-gradient-to-r from-[#2af78a] to-[#defe3e] h-8.5 px-6 font-medium transition-all flex items-center justify-center border-none hover:opacity-90"
                 onClick={() => handleScroll("contact")}
               >
-                <span className="text-lg">{t("navbar.contact")}</span>
-                <span className="ml-2 p-1 rounded-full bg-neutral-950 flex items-center justify-center shrink-0">
+                <span className="text-lg  grotek ">{t("navbar.contact")}</span>
+                <span className=" p-1 ml-1 rounded-full bg-neutral-950 flex items-center justify-center shrink-0">
                   <ArrowRight
                     size={12}
                     strokeWidth={1.5}
-                    className="text-white transition-transform duration-300 group-hover:-rotate-45"
+                    className="text-white  transition-transform duration-300 group-hover:-rotate-45"
                   />
                 </span>
               </Button>

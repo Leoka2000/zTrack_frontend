@@ -224,7 +224,7 @@ export default function ContactForm() {
             </div>
             
             <div className="space-y-2">
-              <DialogTitle className="text-3xl font-bold grotesk text-gray-900">
+              <DialogTitle className="text-2xl font-bold grotesk text-gray-900">
                 {t("contactForm.dialog.title")}
               </DialogTitle>
               <DialogDescription className="text-lg text-gray-600 leading-relaxed">

@@ -30,7 +30,7 @@ export default function LanguageDropdown() {
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
-          className="w-10 h-10 p-1 rounded-full flex items-center justify-center"
+          className="w-9x h-9 p-0.5 rounded-full flex items-center justify-center"
         >
           <img
             src={currentLang?.icon}

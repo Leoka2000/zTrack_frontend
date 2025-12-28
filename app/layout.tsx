@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { TranslationProvider } from "../i18n/TranslationProvider";
+import { Geist, Geist_Mono } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Agrosentinels Diagnostic Measuring System",
   description: "We take care of your machines",
 };
+
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
