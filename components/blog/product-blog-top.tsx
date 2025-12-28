@@ -31,7 +31,7 @@ export default function ProductBlogTop() {
 
         <div className="flex-1 flex flex-col isolate relative items-start md:items-end gap-6">
           <BackgroundShades />
-          <p className="text-gray-600 md:text-right text-left max-w-md leading-relaxed">
+          <p className="text-gray-600 md:text-right 2xl:text-lg text-left max-w-md leading-relaxed">
             {t("productBlogTop.description")}
             
           </p>

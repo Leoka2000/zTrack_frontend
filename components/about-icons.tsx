@@ -14,18 +14,18 @@ export function AboutIcons() {
   const { t } = useTranslation();
 
   return (
-    <section className="w-full mb-3 flex flex-col md:flex-row gap-3">
+    <section className="w-full  flex flex-col md:flex-row gap-3">
       <Card className="flex-1 rounded-3xl  bg-gray-50 overflow-hidden">
-       
-
         <CardHeader className="items-center space-y-4">
           <div className="relative w-full h-52">
-            <Image
-              src="/about-card-img1.avif"
-              alt={t("aboutIcons.card1.alt")}
-              fill
-              className="w-full md:px-32"
-            />
+            <div className="relative w-full max-w-96 h-52">
+              <Image
+                src="/about-card-img1.avif"
+                alt={t("aboutIcons.card1.alt")}
+                fill
+                className="w-full"
+              />
+            </div>
           </div>
         </CardHeader>
         <CardContent className="text-start md:pl-10 md:pb-0 pl-10 pb-10 flex flex-col items-start">
@@ -37,7 +37,7 @@ export function AboutIcons() {
               {t("aboutIcons.card1.title")}
             </CardTitle>
           </div>
-          <CardDescription className="text-lg w-[15rem]">
+          <CardDescription className="text-lg max-w-[30rem]">
             {t("aboutIcons.card1.description")}
           </CardDescription>
         </CardContent>
@@ -45,12 +45,12 @@ export function AboutIcons() {
 
       <Card className="flex-1 rounded-3xl bg-gray-50">
         <CardHeader className="items-center">
-          <div className="relative w-full h-52">
+          <div className="relative w-full max-w-96  h-52">
             <Image
               src="/about-card-img2.avif"
               alt={t("aboutIcons.card2.alt")}
               fill
-              className="w-full md:px-32"
+              className="w-full "
             />
           </div>
         </CardHeader>
@@ -63,7 +63,7 @@ export function AboutIcons() {
               {t("aboutIcons.card2.title")}
             </CardTitle>
           </div>
-          <CardDescription className="text-lg w-[15rem]">
+          <CardDescription className="text-lg  max-w-[30rem]">
             {t("aboutIcons.card2.description")}
           </CardDescription>
         </CardContent>

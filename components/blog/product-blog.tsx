@@ -162,7 +162,7 @@ export default function ProductBlog() {
             <h1 className="text-3xl grotesk md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
               {t("productBlog.heading")}
             </h1>
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-gray-600 2xl:text-lg text-sm leading-relaxed">
               {t("productBlog.description")}
             </p>
           </div>

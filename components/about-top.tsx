@@ -41,7 +41,7 @@ export default function AboutTop() {
 
         {/* Description + Dialog */}
         <div className="flex-1 flex flex-col items-start md:items-end gap-6">
-          <p className="text-gray-600 text-left md:text-right max-w-md leading-relaxed">
+          <p className="text-gray-600 text-left 2xl:text-lg md:text-right max-w-md leading-relaxed">
             {t("about.description")}
           </p>
 

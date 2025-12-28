@@ -32,10 +32,10 @@ export default function Footer() {
   };
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a] overflow-x-hidden">
+    <div className="min-h-screen bg-[#1a1a1a] 2xl:px-5 2xl:pt-7 overflow-x-hidden">
       {/* Mockup Section */}
       <div className="p-4 md:p-8">
-        <div className="bg-[#CDFF4D] rounded-3xl p-8 md:p-12 lg:p-16 overflow-hidden">
+        <div className="bg-[#CDFF4D] rounded-3xl p-8 md:p-12 lg:p-16  overflow-hidden">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
             <div className="flex-1 w-full z-10">
               <h1 className="text-3xl lg:text-3xl font-bold text-black leading-tight mb-6 grotesk">
