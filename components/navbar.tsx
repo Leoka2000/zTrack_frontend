@@ -118,12 +118,12 @@ export default function Navbar() {
               <LanguageDropdown />
             </div>
 
-            <div className="hidden md:flex gap-2 pr-2">
+            <div className="hidden ml-6 md:flex gap-2 pr-2">
               <Button
-                className="group grotesk w-32 rounded-full shadow-sm text-neutral-950 bg-gradient-to-r from-[#2af78a] to-[#defe3e] h-8.5 px-6 font-medium transition-all flex items-center justify-center border-none hover:opacity-90"
+                className="group h-10 grotesk w-32 rounded-full shadow-sm text-neutral-950 bg-gradient-to-r from-[#2af78a] to-[#defe3e]  px-6 font-medium transition-all flex items-center justify-center border-none hover:opacity-90"
                 onClick={() => handleScroll("contact")}
               >
-                <span className="text-lg  grotek ">{t("navbar.contact")}</span>
+                <span className="text-md  grotesk ">{t("navbar.contact")}</span>
                 <span className=" p-1 ml-1 rounded-full bg-neutral-950 flex items-center justify-center shrink-0">
                   <ArrowRight
                     size={12}

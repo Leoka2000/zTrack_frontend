@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
@@ -8,66 +7,33 @@ import { useTranslation } from "@/i18n/TranslationProvider";
 
 export default function Hero() {
   const { t } = useTranslation();
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  const handleScrollToAbout = () => {
-    const el = document.getElementById("products");
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
-  useEffect(() => {
-    const checkScreen = () => setIsDesktop(window.innerWidth >= 1024);
-    checkScreen();
-    window.addEventListener("resize", checkScreen);
-    return () => window.removeEventListener("resize", checkScreen);
-  }, []);
-
-  useEffect(() => {
-    if (isDesktop && videoRef.current) {
-      const playPromise = videoRef.current.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          console.log("Autoplay blocked, fallback to poster.");
-        });
-      }
-    }
-  }, [isDesktop]);
 
   return (
     <section className="relative w-full h-screen flex items-end overflow-hidden">
-      {/* Desktop video */}
-      {isDesktop ? (
-        <video
-          ref={videoRef}
-          muted
-          playsInline
-          loop
-          autoPlay
-          poster="/hero-poster.png"
-          className="absolute top-0 left-0 w-full h-full object-cover"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-          <source src="/hero-video.webm" type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
-      ) : (
-        // Mobile fallback image
-        <div className="absolute top-0 left-0 w-full h-full">
-          <Image
-            src="/hero-img.png"
-            alt="Hero background"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
-        </div>
-      )}
+      <video
+        muted
+        playsInline
+        loop
+        autoPlay
+        poster="/hero-poster.png"
+        className="hidden lg:block absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/hero-video.mp4" type="video/mp4" />
+        <source src="/hero-video.webm" type="video/webm" />
+      </video>
 
-      {/* Dark overlay */}
+      <div className="block lg:hidden absolute inset-0">
+        <Image
+          src="/hero-img.png"
+          alt="Hero background"
+          fill
+          priority
+          className="object-cover"
+        />
+      </div>
+
       <div className="absolute inset-0 bg-black/50" />
 
-      {/* Content */}
       <div className="container py-12 px-6 md:px-12 relative z-10">
         <div className="max-w-3xl">
           <div className="text-5xl md:text-6xl lg:text-8xl font-bold text-white mb-6 md:leading-24 grotesk">
@@ -126,9 +92,15 @@ export default function Hero() {
           <div className="flex items-center gap-6 flex-wrap">
             <Button
               className="text-lg h-12 w-48 font-semibold rounded-full"
-              onClick={handleScrollToAbout}
+              onClick={() => {
+                document
+                  .getElementById("products")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
-              <span className="mx-3 grotesk">{t("hero.cta_primary")}</span>
+              <span className="mx-3 grotesk">
+                {t("hero.cta_primary")}
+              </span>
               <span className="p-1.5 rounded-full bg-neutral-900 flex items-center justify-center">
                 <ArrowRight className="w-3 h-4 text-neutral-200" />
               </span>
@@ -136,34 +108,29 @@ export default function Hero() {
 
             <div className="flex items-center gap-3">
               <div className="flex -space-x-2">
-                <div className="w-10 h-10 rounded-full border-2 border-slate-800 overflow-hidden relative">
-                  <Image
-                    src="/hero-photo1.png"
-                    alt="Hero 1"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="w-10 h-10 rounded-full border-2 border-slate-800 overflow-hidden relative">
-                  <Image
-                    src="/hero-photo2.png"
-                    alt="Hero 2"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="w-10 h-10 rounded-full border-2 border-slate-800 overflow-hidden relative">
-                  <Image
-                    src="/hero-photo3.png"
-                    alt="Hero 3"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+                {["hero-photo1.png", "hero-photo2.png", "hero-photo3.png"].map(
+                  (img) => (
+                    <div
+                      key={img}
+                      className="w-10 h-10 rounded-full border-2 border-slate-800 overflow-hidden relative"
+                    >
+                      <Image
+                        src={`/${img}`}
+                        alt=""
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  )
+                )}
               </div>
               <div className="text-sm text-gray-300">
-                <div className="font-semibold">{t("hero.stats_title")}</div>
-                <div className="text-gray-400">{t("hero.stats_subtitle")}</div>
+                <div className="font-semibold">
+                  {t("hero.stats_title")}
+                </div>
+                <div className="text-gray-400">
+                  {t("hero.stats_subtitle")}
+                </div>
               </div>
             </div>
           </div>

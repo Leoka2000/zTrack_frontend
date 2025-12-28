@@ -4,8 +4,8 @@ import { TranslationProvider } from "../i18n/TranslationProvider";
 import { Geist, Geist_Mono } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Agrosentinels Diagnostic Measuring System",
-  description: "We take care of your machines",
+  title: "ZTrack",
+  description: "Cattle diagnostics and tracking system",
 };
 
 

@@ -200,7 +200,7 @@ export default function ContactForm() {
               <span className="mx-2">
                 {t("contactForm.sendButton")}
               </span>
-              <span className="p-1 rounded-full bg-neutral-900 flex items-center justify-center shrink-0">
+              <span className="p-1.5 rounded-full ml-12 bg-neutral-900 flex items-center justify-center shrink-0">
                 {loading ? (
                   <Spinner className="w-4 h-4 text-white" />
                 ) : (
@@ -224,7 +224,7 @@ export default function ContactForm() {
             </div>
             
             <div className="space-y-2">
-              <DialogTitle className="text-2xl font-bold grotesk text-gray-900">
+              <DialogTitle className="text-xl font-bold grotesk text-gray-900">
                 {t("contactForm.dialog.title")}
               </DialogTitle>
               <DialogDescription className="text-lg text-gray-600 leading-relaxed">
