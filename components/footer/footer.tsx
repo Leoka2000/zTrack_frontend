@@ -66,7 +66,7 @@ export default function Footer() {
             </div>
 
             <div className="flex-1 w-full flex justify-center lg:justify-end items-center overflow-visible">
-              <div className="w-full scale-125 md:mt-0 mt-10 md:scale-120 lg:max-w-none">
+              <div className="w-full md:block hidden scale-125 md:mt-0 mt-10 md:scale-120 lg:max-w-none">
                 <WebDashboardMockup />
               </div>
             </div>
@@ -122,7 +122,7 @@ export default function Footer() {
               </nav>
             </div>
 
-            {/* Social */}
+      
             <div>
               <h3 className="text-white text-lg font-medium mb-6">{t("footer.social")}</h3>
               <nav className="flex flex-col gap-3">

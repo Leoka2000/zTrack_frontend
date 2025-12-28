@@ -17,10 +17,37 @@ import { useTranslation } from "../i18n/TranslationProvider";
 export default function AboutTop() {
   const { t } = useTranslation();
 
+  /**
+   * Automatically breaks long translation strings into paragraphs.
+   * It splits by the period (full stop) and groups sentences.
+   */
+  const renderFormattedDescription = (text) => {
+    if (!text) return null;
+    
+ 
+    const sentences = text.split(". ");
+    
+    const paragraphs = [];
+
+    for (let i = 0; i < sentences.length; i += 2) {
+      const chunk = sentences.slice(i, i + 2).join(". ");
+   
+      const formattedChunk = chunk.endsWith(".") ? chunk : `${chunk}.`;
+      paragraphs.push(formattedChunk);
+    }
+
+    return paragraphs.map((para, index) => (
+      <p key={index} className="mb-4 last:mb-0">
+        {para}
+      </p>
+    ));
+  };
+
   return (
     <section id="about" className="relative w-full py-24 isolate overflow-hidden">
       <BgBelowShade />
       <div className="relative mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 overflow-hidden z-10 px-4 md:px-0">
+        
         {/* Titles */}
         <div className="flex-1">
           <h1 className="text-4xl md:text-6xl font-medium leading-tight">
@@ -67,12 +94,11 @@ export default function AboutTop() {
                 <DialogTitle className="text-3xl font-bold grotesk text-neutral-950 mb-4">
                    {t("aboutMission.title")}
                 </DialogTitle>
-                <DialogDescription
-                  className="text-sm text-neutral-700 leading-relaxed space-y-4"
-                  
-                >
-                  {t(`aboutMission.description`)}
-                </DialogDescription>
+                
+              
+                <div className="text-sm text-neutral-700 leading-relaxed">
+                  {renderFormattedDescription(t("aboutMission.description"))}
+                </div>
               </DialogHeader>
             </DialogContent>
           </Dialog>
@@ -80,4 +106,3 @@ export default function AboutTop() {
       </div>
     </section>
   );
-}

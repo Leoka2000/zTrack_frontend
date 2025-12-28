@@ -5,13 +5,13 @@ import React, { useState, useEffect } from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
-import { 
-  Dialog, 
-  DialogContent, 
-  DialogHeader, 
-  DialogTitle, 
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
   DialogTrigger,
-  DialogDescription 
+  DialogDescription,
 } from "@/components/ui/dialog";
 import {
   Select,
@@ -40,7 +40,7 @@ export default function ProductBlog() {
     livestock: "",
     quantity: "",
     area: "",
-    notes: ""
+    notes: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -52,11 +52,14 @@ export default function ProductBlog() {
   const validate = () => {
     const newErrors = {};
     if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.email.match(/^\S+@\S+\.\S+$/)) newErrors.email = "Valid email required";
-    if (!formData.livestock) newErrors.livestock = "Please select livestock type";
-    if (!formData.quantity || formData.quantity <= 0) newErrors.quantity = "Enter a valid amount";
+    if (!formData.email.match(/^\S+@\S+\.\S+$/))
+      newErrors.email = "Valid email required";
+    if (!formData.livestock)
+      newErrors.livestock = "Please select livestock type";
+    if (!formData.quantity || formData.quantity <= 0)
+      newErrors.quantity = "Enter a valid amount";
     if (!formData.area.trim()) newErrors.area = "Area size is required";
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -70,8 +73,8 @@ export default function ProductBlog() {
     try {
       // Using your provided credentials
       const result = await emailjs.send(
-        "service_fqiwyki",     // Service ID
-        "template_x3agq24",    // Template ID
+        "service_fqiwyki", // Service ID
+        "template_x3agq24", // Template ID
         {
           name: formData.name,
           email: formData.email,
@@ -80,12 +83,12 @@ export default function ProductBlog() {
           area: formData.area,
           notes: formData.notes || "No additional notes provided.",
         },
-        "AuIf7jwhK_BBNJSFs"    // Public Key
+        "AuIf7jwhK_BBNJSFs" // Public Key
       );
 
       console.log("🚀 EmailJS Result:", result.text);
       setIsSuccess(true);
-      
+
       // Reset form on success
       setFormData({
         name: "",
@@ -93,12 +96,14 @@ export default function ProductBlog() {
         livestock: "",
         quantity: "",
         area: "",
-        notes: ""
+        notes: "",
       });
       setErrors({});
     } catch (error) {
       console.error("❌ EmailJS Error:", error);
-      alert("Something went wrong while sending the request. Please check your connection and try again.");
+      alert(
+        "Something went wrong while sending the request. Please check your connection and try again."
+      );
     } finally {
       setLoading(false);
     }
@@ -150,7 +155,9 @@ export default function ProductBlog() {
                 <h3 className="font-semibold text-sm grotesk text-gray-900">
                   {t("productBlog.product_name")}
                 </h3>
-                <p className="text-xs text-gray-500">{t("productBlog.product_subtitle")}</p>
+                <p className="text-xs text-gray-500">
+                  {t("productBlog.product_subtitle")}
+                </p>
               </div>
             </div>
             <span className="bg-black text-[#c3e13f] md:flex hidden px-4 py-2 rounded-full text-sm font-medium">
@@ -186,9 +193,13 @@ export default function ProductBlog() {
                 {!isSuccess ? (
                   <>
                     <DialogHeader>
-                      <DialogTitle className="text-2xl font-bold grotesk">{t("quoteForm.title")}</DialogTitle>
-                      <DialogDescription>
-                        {t("quoteForm.subtitle")}
+                      <DialogTitle className="text-3xl font-bold grotesk text-neutral-950 mb-4">
+                        {t("aboutMission.title")}
+                      </DialogTitle>
+
+                      {/* The magic happens here with whitespace-pre-line */}
+                      <DialogDescription className="text-sm text-neutral-700 leading-relaxed whitespace-pre-line">
+                        {t("aboutMission.description")}
                       </DialogDescription>
                     </DialogHeader>
 
@@ -196,26 +207,51 @@ export default function ProductBlog() {
                       {/* Name & Email Row */}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-1 min-w-0">
-                          <Label htmlFor="name" className={errors.name ? "text-red-500" : ""}>{t("quoteForm.label_name")}</Label>
-                          <Input 
-                            id="name" 
+                          <Label
+                            htmlFor="name"
+                            className={errors.name ? "text-red-500" : ""}
+                          >
+                            {t("quoteForm.label_name")}
+                          </Label>
+                          <Input
+                            id="name"
                             disabled={loading}
-                            className={`w-full ${errors.name ? "border-red-500 focus-visible:ring-red-500" : ""}`}
+                            className={`w-full ${
+                              errors.name
+                                ? "border-red-500 focus-visible:ring-red-500"
+                                : ""
+                            }`}
                             value={formData.name}
-                            onChange={(e) => setFormData({...formData, name: e.target.value})}
-                            placeholder="John Doe" 
+                            onChange={(e) =>
+                              setFormData({ ...formData, name: e.target.value })
+                            }
+                            placeholder="John Doe"
                           />
                         </div>
                         <div className="space-y-1 min-w-0">
-                          <Label htmlFor="email" className={errors.email ? "text-red-500" : ""}>{t("quoteForm.label_email")}</Label>
-                          <Input 
-                            id="email" 
+                          <Label
+                            htmlFor="email"
+                            className={errors.email ? "text-red-500" : ""}
+                          >
+                            {t("quoteForm.label_email")}
+                          </Label>
+                          <Input
+                            id="email"
                             disabled={loading}
-                            className={`w-full ${errors.email ? "border-red-500 focus-visible:ring-red-500" : ""}`}
+                            className={`w-full ${
+                              errors.email
+                                ? "border-red-500 focus-visible:ring-red-500"
+                                : ""
+                            }`}
                             value={formData.email}
-                            onChange={(e) => setFormData({...formData, email: e.target.value})}
-                            type="email" 
-                            placeholder="john@farm.com" 
+                            onChange={(e) =>
+                              setFormData({
+                                ...formData,
+                                email: e.target.value,
+                              })
+                            }
+                            type="email"
+                            placeholder="john@farm.com"
                           />
                         </div>
                       </div>
@@ -223,67 +259,117 @@ export default function ProductBlog() {
                       {/* Livestock & Quantity Row */}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-1 min-w-0">
-                          <Label className={errors.livestock ? "text-red-500" : ""}>{t("quoteForm.label_livestock")}</Label>
-                          <Select 
-                            disabled={loading}
-                            value={formData.livestock} 
-                            onValueChange={(val) => setFormData({...formData, livestock: val})}
+                          <Label
+                            className={errors.livestock ? "text-red-500" : ""}
                           >
-                            <SelectTrigger className={`w-full ${errors.livestock ? "border-red-500" : ""}`}>
-                              <SelectValue placeholder={t("quoteForm.select_placeholder")} />
+                            {t("quoteForm.label_livestock")}
+                          </Label>
+                          <Select
+                            disabled={loading}
+                            value={formData.livestock}
+                            onValueChange={(val) =>
+                              setFormData({ ...formData, livestock: val })
+                            }
+                          >
+                            <SelectTrigger
+                              className={`w-full ${
+                                errors.livestock ? "border-red-500" : ""
+                              }`}
+                            >
+                              <SelectValue
+                                placeholder={t("quoteForm.select_placeholder")}
+                              />
                             </SelectTrigger>
                             <SelectContent>
-                              <SelectItem value="cattle">{t("quoteForm.option_cattle")}</SelectItem>
-                              <SelectItem value="sheep">{t("quoteForm.option_sheep")}</SelectItem>
-                              <SelectItem value="other">{t("quoteForm.option_other")}</SelectItem>
+                              <SelectItem value="cattle">
+                                {t("quoteForm.option_cattle")}
+                              </SelectItem>
+                              <SelectItem value="sheep">
+                                {t("quoteForm.option_sheep")}
+                              </SelectItem>
+                              <SelectItem value="other">
+                                {t("quoteForm.option_other")}
+                              </SelectItem>
                             </SelectContent>
                           </Select>
                         </div>
                         <div className="space-y-1 min-w-0">
-                          <Label htmlFor="quantity" className={errors.quantity ? "text-red-500" : ""}>{t("quoteForm.label_quantity")}</Label>
-                          <Input 
-                            id="quantity" 
+                          <Label
+                            htmlFor="quantity"
+                            className={errors.quantity ? "text-red-500" : ""}
+                          >
+                            {t("quoteForm.label_quantity")}
+                          </Label>
+                          <Input
+                            id="quantity"
                             disabled={loading}
-                            type="number" 
-                            className={`w-full ${errors.quantity ? "border-red-500 focus-visible:ring-red-500" : ""}`}
+                            type="number"
+                            className={`w-full ${
+                              errors.quantity
+                                ? "border-red-500 focus-visible:ring-red-500"
+                                : ""
+                            }`}
                             value={formData.quantity}
-                            onChange={(e) => setFormData({...formData, quantity: e.target.value})}
-                            placeholder="50" 
+                            onChange={(e) =>
+                              setFormData({
+                                ...formData,
+                                quantity: e.target.value,
+                              })
+                            }
+                            placeholder="50"
                           />
                         </div>
                       </div>
 
                       <div className="space-y-1">
-                        <Label htmlFor="area" className={errors.area ? "text-red-500" : ""}>{t("quoteForm.label_area")}</Label>
-                        <Input 
-                          id="area" 
+                        <Label
+                          htmlFor="area"
+                          className={errors.area ? "text-red-500" : ""}
+                        >
+                          {t("quoteForm.label_area")}
+                        </Label>
+                        <Input
+                          id="area"
                           disabled={loading}
-                          className={`w-full ${errors.area ? "border-red-500 focus-visible:ring-red-500" : ""}`}
+                          className={`w-full ${
+                            errors.area
+                              ? "border-red-500 focus-visible:ring-red-500"
+                              : ""
+                          }`}
                           value={formData.area}
-                          onChange={(e) => setFormData({...formData, area: e.target.value})}
-                          placeholder="e.g. 200 Acres" 
+                          onChange={(e) =>
+                            setFormData({ ...formData, area: e.target.value })
+                          }
+                          placeholder="e.g. 200 Acres"
                         />
                       </div>
 
                       <div className="space-y-1">
-                        <Label htmlFor="notes">{t("quoteForm.label_notes")}</Label>
-                        <Textarea 
-                          id="notes" 
+                        <Label htmlFor="notes">
+                          {t("quoteForm.label_notes")}
+                        </Label>
+                        <Textarea
+                          id="notes"
                           disabled={loading}
-                          className="resize-none w-full" 
+                          className="resize-none w-full"
                           value={formData.notes}
-                          onChange={(e) => setFormData({...formData, notes: e.target.value})}
-                          placeholder={t("quoteForm.notes_placeholder")} 
+                          onChange={(e) =>
+                            setFormData({ ...formData, notes: e.target.value })
+                          }
+                          placeholder={t("quoteForm.notes_placeholder")}
                         />
                       </div>
 
-                      <Button 
-                        type="submit" 
+                      <Button
+                        type="submit"
                         disabled={loading}
                         className="w-full bg-[#d7f448] text-black hover:bg-[#c3e13f] font-bold rounded-full h-12 border-none flex items-center justify-center gap-2"
                       >
-                        {loading ? <Spinner className="w-5 h-5 border-black/20 border-t-black" /> : t("quoteForm.submit")}
-                        
+                        {loading ? (
+                          <Spinner className="w-5 h-5 border-black/20 border-t-black" />
+                        ) : (
+                          t("quoteForm.submit")
+                        )}
                       </Button>
                     </form>
                   </>
@@ -292,22 +378,25 @@ export default function ProductBlog() {
                     <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
                       <CheckCircle2 className="w-12 h-12 text-green-600" />
                     </div>
-                    <h2 className="text-3xl font-bold grotesk text-gray-900">Thank You!</h2>
+                    <h2 className="text-3xl font-bold grotesk text-gray-900">
+                      Thank You!
+                    </h2>
                     <p className="text-gray-600 max-w-xs">
-                      Your quote request for ZTrack has been sent successfully. Our team will contact you shortly.
+                      Your quote request for ZTrack has been sent successfully.
+                      Our team will contact you shortly.
                     </p>
-                    <Button 
+                    <Button
                       onClick={() => setOpen(false)}
                       className="mt-4 rounded-full px-8 bg-black text-white hover:bg-neutral-800"
                     >
                       Close
                       <span className="p-1.5 rounded-full bg-neutral-900 flex items-center justify-center">
-                    <ArrowRight
-                      size={48}
-                      strokeWidth={1.75}
-                      className="w-3 h-4 text-neutral-200 transition-transform duration-300 group-hover:-rotate-45"
-                    />
-                  </span>
+                        <ArrowRight
+                          size={48}
+                          strokeWidth={1.75}
+                          className="w-3 h-4 text-neutral-200 transition-transform duration-300 group-hover:-rotate-45"
+                        />
+                      </span>
                     </Button>
                   </div>
                 )}
