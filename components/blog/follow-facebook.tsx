@@ -13,19 +13,24 @@ export default function SocialConnect() {
   return (
     <section className="w-full py-16">
       <div className="mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+       
         <div className="flex-1 space-y-6 isolate relative text-left">
           <BackgroundShades />
+
           <div className="space-y-2">
             <h2 className="text-4xl md:text-6xl font-medium tracking-tight text-neutral-900 grotesk">
               {t("socialConnect.title")}
             </h2>
+
             <span
-              className="grotesk font-medium md:text-6xl text-4xl
-             text-[#428354]
-             [background-image:linear-gradient(90deg,#428354,#defe3e)]
-             [-webkit-background-clip:text]
-             background-clip:text
-             [-webkit-text-fill-color:transparent]"
+              className="
+                grotesk font-medium text-4xl md:text-6xl
+                text-[#428354]
+                [background-image:linear-gradient(90deg,#428354,#defe3e)]
+                [-webkit-background-clip:text]
+                background-clip:text
+                [-webkit-text-fill-color:transparent]
+              "
             >
               {t("socialConnect.subtitle")}
             </span>
@@ -51,7 +56,7 @@ export default function SocialConnect() {
                     alt="Facebook"
                     width={90}
                     height={90}
-                    className="object-contain ml-5 "
+                    className="object-contain ml-5"
                   />
                 </div>
               </Button>
@@ -66,7 +71,7 @@ export default function SocialConnect() {
                 variant="outline"
                 className="group w-full h-16 text-lg transition-colors flex items-center justify-between px-6 grotesk"
               >
-                <span className="grotesk">{t("socialConnect.website")}</span>
+                <span>{t("socialConnect.website")}</span>
                 <span className="p-1.5 rounded-full bg-neutral-900 flex items-center justify-center shrink-0">
                   <ArrowRight
                     size={16}
@@ -79,12 +84,22 @@ export default function SocialConnect() {
           </div>
         </div>
 
-        <div className="flex-1 w-full md:h-[590px] h-[400px] relative isolate rounded-[2.5rem] overflow-hidden">
+ 
+        <div
+          className="
+            flex-1 shrink-0 w-full
+            aspect-[4/3]
+            md:aspect-[16/10]
+            relative isolate
+            rounded-[2.5rem]
+            overflow-hidden
+          "
+        >
           <Image
             src="/facebook-undraw.svg"
             alt={t("socialConnect.imageAlt")}
             fill
-            className="object-cover"
+            className="object-contain"
             priority
           />
         </div>

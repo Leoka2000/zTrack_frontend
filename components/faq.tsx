@@ -51,7 +51,7 @@ export default function FAQ() {
                   value={`item-${idx}`}
                   className="rounded-[11px] bg-white border-none"
                 >
-                  <AccordionTrigger className="text-left cursor-pointer grotesk font-semibold text-neutral-900 hover:no-underline py-6 px-6">
+                  <AccordionTrigger className="text-left text-lg cursor-pointer grotesk font-semibold text-neutral-900 hover:no-underline py-6 px-6">
                     {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-gray-600 pb-6 pt-2 px-6">
