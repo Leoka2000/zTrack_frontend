@@ -41,7 +41,7 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-7xl 2xl:pt-[20rem] 2xl:max-w-[1800px] mx-auto py-12 px-6 md:px-12 2xl:px-20">
         <div className="max-w-3xl 2xl:max-w-5xl">
 
-          <div className="text-5xl md:text-6xl lg:text-8xl 2xl:text-[6.5rem] font-bold text-white mb-6 leading-[1] 2xl:leading-[0.9] grotesk">
+          <div className="text-4xl md:text-6xl lg:text-8xl 2xl:text-[6.5rem] font-bold text-white mb-6 leading-[1] 2xl:leading-[0.9] grotesk">
             {t("hero.title_line_1")}
             <br />
             {t("hero.title_line_2")}
@@ -86,7 +86,7 @@ export default function Hero() {
           </div>
 
       
-          <p className="text-lg 2xl:text-2xl text-gray-300 mb-10 max-w-2xl 2xl:max-w-3xl">
+          <p className="text-sm lg:text-lg 2xl:text-2xl text-gray-300 mb-10 max-w-2xl 2xl:max-w-3xl">
             {t("hero.description")}
           </p>
 
