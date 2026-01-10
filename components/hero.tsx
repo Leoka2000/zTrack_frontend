@@ -9,7 +9,7 @@ export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative w-full h-screen flex items-end 2xl:items-center overflow-hidden px-4 md:px-3 2xl:px-14">
+    <section className="relative w-full min-h-screen flex items-end 2xl:items-center overflow-hidden px-0 md:px-3 2xl:px-14">
 
       <video
         muted

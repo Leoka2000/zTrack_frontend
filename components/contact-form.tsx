@@ -216,7 +216,7 @@ export default function ContactForm() {
         </div>
       </div>
 
-      {/* Success Dialog matches the new large scale */}
+  
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="sm:max-w-[450px] 2xl:max-w-[700px] rounded-3xl bg-white border-none shadow-2xl p-0 overflow-hidden">
           <div className="flex flex-col items-center justify-center py-12 2xl:py-20 px-8 2xl:px-16 text-center space-y-5 2xl:space-y-10">
