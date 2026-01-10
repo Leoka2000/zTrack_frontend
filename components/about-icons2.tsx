@@ -37,10 +37,10 @@ export function AboutIcons2() {
             className="relative h-full flex flex-col justify-end p-8 md:p-12 text-white"
             style={{ zIndex: 2 }}
           >
-            <h2 className="text-4xl md:text-6xl grotesk font-bold mb-4 text-balance">
+            <h2 className="text-4xl md:text-6xl  grotesk font-bold mb-4 text-balance">
               {t("aboutIcons2.card1.title")}
             </h2>
-            <p className="text-lg md:text-xl max-w-2xl opacity-90">
+            <p className="text-lg md:text-xl max-w-2xl 2xl:text-2xl opacity-90">
               {t("aboutIcons2.card1.description")}
             </p>
           </div>
@@ -50,7 +50,7 @@ export function AboutIcons2() {
           <h2 className="text-2xl md:text-4xl font-bold grotesk md:mt-0 mt-8 mb-3 md:mb-6 text-gray-900">
             {t("aboutIcons2.card2.title")}
           </h2>
-          <p className="text-base md:text-lg mb-0 md:mb-8 text-gray-800">
+          <p className="text-base md:text-lg mb-0 2xl:text-2xl md:mb-8 text-gray-800">
             {t("aboutIcons2.card2.description")}
           </p>
           <div className="mt-auto">

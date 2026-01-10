@@ -36,7 +36,7 @@ export default function FAQ() {
               {t("faq.title_line_2")}
             </span>
           </h1>
-          <p className="text-gray-600 max-w-md text-lg">{t("faq.description")}</p>
+          <p className="text-gray-600 max-w-md 2xl:text-2xl text-lg">{t("faq.description")}</p>
         </div>
 
         {/* Right Section: Accordion */}
@@ -51,10 +51,10 @@ export default function FAQ() {
                   value={`item-${idx}`}
                   className="rounded-[11px] bg-white border-none"
                 >
-                  <AccordionTrigger className="text-left text-lg cursor-pointer grotesk font-semibold text-neutral-900 hover:no-underline py-6 px-6">
+                  <AccordionTrigger className="text-left 2xl:text-2xl text-lg cursor-pointer grotesk font-semibold text-neutral-900 hover:no-underline py-6 px-6">
                     {item.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 pb-6 pt-2 px-6">
+                  <AccordionContent className="text-gray-600 pb-6 2xl:text-xl text-base  pt-2 px-6">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>

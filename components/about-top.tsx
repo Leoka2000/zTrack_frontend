@@ -65,7 +65,7 @@ export default function AboutTop() {
 
 
         <div className="flex-1 flex flex-col items-start md:items-end gap-6">
-          <p className="text-gray-600 text-left 2xl:text-2xl md:text-right max-w-md leading-[1.5]">
+          <p className="text-gray-600 text-left text-lg 2xl:text-2xl md:text-right max-w-md leading-[1.5]">
             {t("about.description")}
           </p>
 

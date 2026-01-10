@@ -53,17 +53,17 @@ export default function DashboardWithCardsAndMockup() {
           {cards.map((card, idx) => {
             const Icon = card.icon;
             return (
-              <Card key={idx} className="bg-white border-neutral-200 shadow-sm">
-                <CardHeader className="flex items-center gap-3">
+              <Card key={idx} className="bg-white border-neutral-200 2xl:p-4  shadow-sm">
+                <CardHeader className="flex items-start justify-start gap-3">
                   <div className="relative bg-[#d7f448] p-2 rounded-xl text-neutral-900 shadow-md border border-[#d7f448]/20">
                     <Icon size={20} className="text-neutral-900" />
                   </div>
                   <div>
-                    <CardTitle className="text-neutral-900 grotesk">{card.title}</CardTitle>
-                    <CardDescription className="text-neutral-500">{card.description}</CardDescription>
+                    <CardTitle className="text-neutral-900 2xl:text-xl grotesk">{card.title}</CardTitle>
+                    <CardDescription className="text-neutral-500 2xl:text-xl">{card.description}</CardDescription>
                   </div>
                 </CardHeader>
-                <CardContent className="text-sm text-neutral-600">{card.content}</CardContent>
+                <CardContent className="text-sm text-neutral-600 2xl:text-xl">{card.content}</CardContent>
               </Card>
             );
           })}

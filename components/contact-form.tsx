@@ -134,10 +134,10 @@ export default function ContactForm() {
 
           <form
             onSubmit={handleSubmit}
-            className="bg-white rounded-2xl shadow-sm p-8 space-y-6"
+            className="bg-white rounded-2xl shadow-sm p-8 2xl:p-12 space-y-6 2xl:space-y-10"
           >
             <div>
-              <label className="block grotesk text-neutral-700 font-semibold mb-2">
+              <label className="block text-base 2xl:text-2xl grotesk text-neutral-700 font-semibold mb-2 2xl:mb-4">
                 {t("contactForm.labels.name")}{" "}
                 <span className="text-lime-600">*</span>
               </label>
@@ -145,17 +145,17 @@ export default function ContactForm() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className={`grotesk ${errors.name ? "border-red-500 focus-visible:ring-red-500" : ""}`}
+                className={`grotesk 2xl:h-16 2xl:text-xl ${errors.name ? "border-red-500 focus-visible:ring-red-500" : ""}`}
               />
               {errors.name && (
-                <p className="text-sm grotesk text-red-500 mt-1">
+                <p className="text-base 2xl:text-xl grotesk text-red-500 mt-1">
                   {errors.name}
                 </p>
               )}
             </div>
 
             <div>
-              <label className="block grotesk text-neutral-700 font-semibold mb-2">
+              <label className="block text-base 2xl:text-2xl grotesk text-neutral-700 font-semibold mb-2 2xl:mb-4">
                 {t("contactForm.labels.email")}{" "}
                 <span className="text-lime-600">*</span>
               </label>
@@ -164,17 +164,17 @@ export default function ContactForm() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`grotesk ${errors.email ? "border-red-500 focus-visible:ring-red-500" : ""}`}
+                className={`grotesk text-base 2xl:h-16 2xl:text-xl ${errors.email ? "border-red-500 focus-visible:ring-red-500" : ""}`}
               />
               {errors.email && (
-                <p className="text-sm grotesk text-red-500 mt-1">
+                <p className="text-base 2xl:text-xl grotesk text-red-500 mt-1">
                   {errors.email}
                 </p>
               )}
             </div>
 
             <div>
-              <label className="block grotesk text-neutral-700 font-semibold mb-2">
+              <label className="block grotesk text-base 2xl:text-2xl text-neutral-700 font-semibold mb-2 2xl:mb-4">
                 {t("contactForm.labels.message")}{" "}
                 <span className="text-lime-600">*</span>
               </label>
@@ -183,10 +183,10 @@ export default function ContactForm() {
                 rows={5}
                 value={formData.message}
                 onChange={handleChange}
-                className={`resize-none grotesk ${errors.message ? "border-red-500 focus-visible:ring-red-500" : ""}`}
+                className={`resize-none text-base 2xl:text-xl grotesk ${errors.message ? "border-red-500 focus-visible:ring-red-500" : ""}`}
               />
               {errors.message && (
-                <p className="text-sm grotesk text-red-500 mt-1">
+                <p className="text-base 2xl:text-xl grotesk text-red-500 mt-1">
                   {errors.message}
                 </p>
               )}
@@ -194,20 +194,20 @@ export default function ContactForm() {
 
             <Button
               type="submit"
-              className="group text-lg text-slate-900 h-12 w-44 font-semibold rounded-full flex items-center justify-center transition-all bg-[#d7f448] hover:bg-[#c3e13f] border-none"
+              className="group text-lg 2xl:text-2xl text-slate-900 h-12 2xl:h-16 w-44 2xl:w-64 font-semibold rounded-full flex items-center justify-center transition-all bg-[#d7f448] hover:bg-[#c3e13f] border-none"
               disabled={loading}
             >
               <span className="mx-2">
                 {t("contactForm.sendButton")}
               </span>
-              <span className="p-1.5 rounded-full ml-12 bg-neutral-900 flex items-center justify-center shrink-0">
+              <span className="p-1.5 2xl:p-2 rounded-full ml-12 bg-neutral-900 flex items-center justify-center shrink-0">
                 {loading ? (
-                  <Spinner className="w-4 h-4 text-white" />
+                  <Spinner className="w-4 h-4 2xl:w-6 2xl:h-6 text-white" />
                 ) : (
                   <ArrowRight
                     size={16}
                     strokeWidth={2.5}
-                    className="text-neutral-200 group-hover:-rotate-45 transition-transform"
+                    className="text-neutral-200 2xl:w-5 2xl:h-5 group-hover:-rotate-45 transition-transform"
                   />
                 )}
               </span>
@@ -216,31 +216,31 @@ export default function ContactForm() {
         </div>
       </div>
 
+      {/* Success Dialog matches the new large scale */}
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="sm:max-w-[450px] rounded-3xl bg-white border-none shadow-2xl p-0 overflow-hidden">
-          <div className="flex flex-col items-center justify-center py-12 px-8 text-center space-y-5">
-            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
-              <CheckCircle2 className="w-12 h-12 text-green-600" />
+        <DialogContent className="sm:max-w-[450px] 2xl:max-w-[700px] rounded-3xl bg-white border-none shadow-2xl p-0 overflow-hidden">
+          <div className="flex flex-col items-center justify-center py-12 2xl:py-20 px-8 2xl:px-16 text-center space-y-5 2xl:space-y-10">
+            <div className="w-20 h-20 2xl:w-32 2xl:h-32 bg-green-100 rounded-full flex items-center justify-center">
+              <CheckCircle2 className="w-12 h-12 2xl:w-20 2xl:h-20 text-green-600" />
             </div>
             
             <div className="space-y-2">
-              <DialogTitle className="text-xl font-bold grotesk text-gray-900">
+              <DialogTitle className="text-xl 2xl:text-4xl font-bold grotesk text-gray-900">
                 {t("contactForm.dialog.title")}
               </DialogTitle>
-              <DialogDescription className="text-lg text-gray-600 leading-relaxed">
+              <DialogDescription className="text-lg 2xl:text-2xl text-gray-600 leading-relaxed">
                 {t("contactForm.dialog.description")}
               </DialogDescription>
             </div>
 
             <Button 
               onClick={() => setOpen(false)}
-              className="mt-4 w-full rounded-full h-12 text-lg  text-neutral-800 bg-neutral-800 border-none transition-colors"
+              className="mt-4 w-full rounded-full h-12 2xl:h-16 text-lg 2xl:text-2xl text-neutral-200 bg-neutral-800 border-none transition-colors"
             >
               <span className="mx-3 grotesk">Close</span>
               <span className="p-1.5 rounded-full bg-neutral-900 flex items-center justify-center">
-                <ArrowRight className="w-3 h-4 text-neutral-200" />
+                <ArrowRight className="w-3 h-4 2xl:w-5 2xl:h-5 text-neutral-200" />
               </span>
-           
             </Button>
           </div>
         </DialogContent>

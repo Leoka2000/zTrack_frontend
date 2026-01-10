@@ -37,7 +37,7 @@ export function AboutIcons() {
               {t("aboutIcons.card1.title")}
             </CardTitle>
           </div>
-          <CardDescription className="text-lg max-w-[30rem]">
+          <CardDescription className="text-lg 2xl:text-2xl max-w-[30rem]">
             {t("aboutIcons.card1.description")}
           </CardDescription>
         </CardContent>
@@ -63,7 +63,7 @@ export function AboutIcons() {
               {t("aboutIcons.card2.title")}
             </CardTitle>
           </div>
-          <CardDescription className="text-lg  max-w-[30rem]">
+          <CardDescription className="text-lg 2xl:text-2xl max-w-[30rem]">
             {t("aboutIcons.card2.description")}
           </CardDescription>
         </CardContent>

@@ -49,7 +49,7 @@ const Team = () => {
           </div>
 
           <div className="max-w-md lg:text-right">
-            <p className="text-neutral-600 leading-relaxed text-lg">
+            <p className="text-neutral-600 leading-relaxed 2xl:text-2xl text-lg">
               {t("team.description")}
             </p>
           </div>
@@ -82,7 +82,7 @@ const Team = () => {
                 </div>
 
                 <div className="px-2 space-y-1">
-                  <p className="text-[#428354] text-xs font-bold grotesk uppercase tracking-[0.15em]">
+                  <p className="text-[#428354] text-base font-bold grotesk uppercase tracking-[0.15em]">
                     {t(`team.members.${member.id}.title`)}
                   </p>
                   <h3 className="text-2xl grotesk font-bold text-lime-950 tracking-tight transition-colors duration-300">

@@ -71,10 +71,9 @@ export default function ProductBlog() {
     setLoading(true);
 
     try {
-      // Using your provided credentials
       const result = await emailjs.send(
-        "service_fqiwyki", // Service ID
-        "template_x3agq24", // Template ID
+        "service_fqiwyki",
+        "template_x3agq24",
         {
           name: formData.name,
           email: formData.email,
@@ -83,13 +82,12 @@ export default function ProductBlog() {
           area: formData.area,
           notes: formData.notes || "No additional notes provided.",
         },
-        "AuIf7jwhK_BBNJSFs" // Public Key
+        "AuIf7jwhK_BBNJSFs"
       );
 
       console.log("🚀 EmailJS Result:", result.text);
       setIsSuccess(true);
 
-      // Reset form on success
       setFormData({
         name: "",
         email: "",
@@ -112,7 +110,6 @@ export default function ProductBlog() {
   const handleOpenChange = (newOpen) => {
     setOpen(newOpen);
     if (!newOpen) {
-      // Small timeout to allow the dialog exit animation to finish before switching view
       setTimeout(() => setIsSuccess(false), 300);
     }
   };
@@ -122,7 +119,7 @@ export default function ProductBlog() {
   return (
     <section className="bg-gray-50 flex items-center justify-center my-5 mt-3">
       <div className="w-full bg-neutral-100 rounded-2xl shadow-sm overflow-hidden flex flex-col md:flex-row">
-        {/* Product Image Section */}
+
         <div className="md:w-5/6 relative flex items-center justify-center min-h-[300px]">
           <div className="absolute top-3 left-3 md:top-6 md:left-6 z-10 bg-black/70 text-white px-3 py-1.5 rounded-lg text-sm font-medium">
             {t("productBlog.date")}
@@ -137,7 +134,6 @@ export default function ProductBlog() {
           />
         </div>
 
-        {/* Product Details Section */}
         <div className="md:w-5/4 p-8 md:p-12 flex flex-col justify-between">
           <div className="flex items-start justify-between mb-8">
             <div className="flex items-center md:gap-3 gap-14">
@@ -152,10 +148,10 @@ export default function ProductBlog() {
                 />
               </div>
               <div>
-                <h3 className="font-semibold text-sm grotesk text-gray-900">
+                <h3 className="font-semibold text-base grotesk text-gray-900">
                   {t("productBlog.product_name")}
                 </h3>
-                <p className="text-xs text-gray-500">
+                <p className="text-sm text-gray-500">
                   {t("productBlog.product_subtitle")}
                 </p>
               </div>
@@ -189,25 +185,24 @@ export default function ProductBlog() {
                 </Button>
               </DialogTrigger>
 
-              <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto rounded-3xl bg-white border-none shadow-2xl">
+             
+              <DialogContent className="sm:max-w-[500px] 2xl:max-w-[1000px] 2xl:p-16 max-h-[90vh] overflow-y-auto rounded-3xl bg-white border-none shadow-2xl">
                 {!isSuccess ? (
                   <>
-                   
-
-                    <form onSubmit={handleSubmit} className="space-y-5 py-4">
+                    <form onSubmit={handleSubmit} className="space-y-5 2xl:space-y-8 py-4">
                       {/* Name & Email Row */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="space-y-1 min-w-0">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 2xl:gap-8">
+                        <div className="space-y-1 2xl:space-y-3 min-w-0">
                           <Label
                             htmlFor="name"
-                            className={errors.name ? "text-red-500" : ""}
+                            className={`2xl:text-xl ${errors.name ? "text-red-500" : ""}`}
                           >
                             {t("quoteForm.label_name")}
                           </Label>
                           <Input
                             id="name"
                             disabled={loading}
-                            className={`w-full ${
+                            className={`w-full 2xl:h-14 2xl:text-lg ${
                               errors.name
                                 ? "border-red-500 focus-visible:ring-red-500"
                                 : ""
@@ -219,17 +214,17 @@ export default function ProductBlog() {
                             placeholder="John Doe"
                           />
                         </div>
-                        <div className="space-y-1 min-w-0">
+                        <div className="space-y-1 2xl:space-y-3 min-w-0">
                           <Label
                             htmlFor="email"
-                            className={errors.email ? "text-red-500" : ""}
+                            className={`2xl:text-xl ${errors.email ? "text-red-500" : ""}`}
                           >
                             {t("quoteForm.label_email")}
                           </Label>
                           <Input
                             id="email"
                             disabled={loading}
-                            className={`w-full ${
+                            className={`w-full 2xl:h-14 2xl:text-lg ${
                               errors.email
                                 ? "border-red-500 focus-visible:ring-red-500"
                                 : ""
@@ -248,10 +243,10 @@ export default function ProductBlog() {
                       </div>
 
                       {/* Livestock & Quantity Row */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="space-y-1 min-w-0">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 2xl:gap-8">
+                        <div className="space-y-1 2xl:space-y-3 min-w-0">
                           <Label
-                            className={errors.livestock ? "text-red-500" : ""}
+                            className={`2xl:text-xl ${errors.livestock ? "text-red-500" : ""}`}
                           >
                             {t("quoteForm.label_livestock")}
                           </Label>
@@ -263,7 +258,7 @@ export default function ProductBlog() {
                             }
                           >
                             <SelectTrigger
-                              className={`w-full ${
+                              className={`w-full 2xl:h-14 2xl:text-lg ${
                                 errors.livestock ? "border-red-500" : ""
                               }`}
                             >
@@ -284,10 +279,10 @@ export default function ProductBlog() {
                             </SelectContent>
                           </Select>
                         </div>
-                        <div className="space-y-1 min-w-0">
+                        <div className="space-y-1 2xl:space-y-3 min-w-0">
                           <Label
                             htmlFor="quantity"
-                            className={errors.quantity ? "text-red-500" : ""}
+                            className={`2xl:text-xl ${errors.quantity ? "text-red-500" : ""}`}
                           >
                             {t("quoteForm.label_quantity")}
                           </Label>
@@ -295,7 +290,7 @@ export default function ProductBlog() {
                             id="quantity"
                             disabled={loading}
                             type="number"
-                            className={`w-full ${
+                            className={`w-full 2xl:h-14 2xl:text-lg ${
                               errors.quantity
                                 ? "border-red-500 focus-visible:ring-red-500"
                                 : ""
@@ -312,17 +307,17 @@ export default function ProductBlog() {
                         </div>
                       </div>
 
-                      <div className="space-y-1">
+                      <div className="space-y-1 2xl:space-y-3">
                         <Label
                           htmlFor="area"
-                          className={errors.area ? "text-red-500" : ""}
+                          className={`2xl:text-xl ${errors.area ? "text-red-500" : ""}`}
                         >
                           {t("quoteForm.label_area")}
                         </Label>
                         <Input
                           id="area"
                           disabled={loading}
-                          className={`w-full ${
+                          className={`w-full 2xl:h-14 2xl:text-lg ${
                             errors.area
                               ? "border-red-500 focus-visible:ring-red-500"
                               : ""
@@ -335,14 +330,14 @@ export default function ProductBlog() {
                         />
                       </div>
 
-                      <div className="space-y-1">
-                        <Label htmlFor="notes">
+                      <div className="space-y-1 2xl:space-y-3">
+                        <Label htmlFor="notes" className="2xl:text-xl">
                           {t("quoteForm.label_notes")}
                         </Label>
                         <Textarea
                           id="notes"
                           disabled={loading}
-                          className="resize-none w-full"
+                          className="resize-none w-full 2xl:text-lg 2xl:min-h-[150px]"
                           value={formData.notes}
                           onChange={(e) =>
                             setFormData({ ...formData, notes: e.target.value })
@@ -354,10 +349,10 @@ export default function ProductBlog() {
                       <Button
                         type="submit"
                         disabled={loading}
-                        className="w-full bg-[#d7f448] text-black hover:bg-[#c3e13f] font-bold rounded-full h-12 border-none flex items-center justify-center gap-2"
+                        className="w-full bg-[#d7f448] text-black hover:bg-[#c3e13f] font-bold rounded-full h-12 2xl:h-16 2xl:text-xl border-none flex items-center justify-center gap-2"
                       >
                         {loading ? (
-                          <Spinner className="w-5 h-5 border-black/20 border-t-black" />
+                          <Spinner className="w-5 h-5 2xl:w-7 2xl:h-7 border-black/20 border-t-black" />
                         ) : (
                           t("quoteForm.submit")
                         )}
@@ -365,23 +360,23 @@ export default function ProductBlog() {
                     </form>
                   </>
                 ) : (
-                  <div className="flex flex-col items-center justify-center py-12 text-center space-y-4">
-                    <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
-                      <CheckCircle2 className="w-12 h-12 text-green-600" />
+                  <div className="flex flex-col items-center justify-center py-12 2xl:py-20 text-center space-y-4 2xl:space-y-8">
+                    <div className="w-20 h-20 2xl:w-32 2xl:h-32 bg-green-100 rounded-full flex items-center justify-center">
+                      <CheckCircle2 className="w-12 h-12 2xl:w-20 2xl:h-20 text-green-600" />
                     </div>
-                    <h2 className="text-3xl font-bold grotesk text-gray-900">
+                    <h2 className="text-3xl 2xl:text-5xl font-bold grotesk text-gray-900">
                       Thank You!
                     </h2>
-                    <p className="text-gray-600 max-w-xs">
+                    <p className="text-gray-600 max-w-xs 2xl:max-w-md 2xl:text-xl">
                       Your quote request for ZTrack has been sent successfully.
                       Our team will contact you shortly.
                     </p>
                     <Button
                       onClick={() => setOpen(false)}
-                      className="mt-4 rounded-full px-8 bg-black text-white hover:bg-neutral-800"
+                      className="mt-4 rounded-full px-8 2xl:px-12 h-12 2xl:h-16 2xl:text-xl bg-black text-white hover:bg-neutral-800"
                     >
                       Close
-                      <span className="p-1.5 rounded-full bg-neutral-900 flex items-center justify-center">
+                      <span className="p-1.5 ml-2 rounded-full bg-neutral-900 flex items-center justify-center">
                         <ArrowRight
                           size={48}
                           strokeWidth={1.75}
