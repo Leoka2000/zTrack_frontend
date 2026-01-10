@@ -45,7 +45,7 @@ export default function FAQ() {
             {faqItems.map((item: { question: string; answer: string }, idx: number) => (
               <div
                 key={idx}
-                className="border-1 shadow-md group isolate relative rounded-xl p-[2px]"
+                className=" bg-neutral-100 shadow-xs group isolate relative rounded-xl p-[2px]"
               >
                 <AccordionItem
                   value={`item-${idx}`}
