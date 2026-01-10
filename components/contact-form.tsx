@@ -98,7 +98,7 @@ export default function ContactForm() {
     <>
       <div
         id="contact"
-        className="min-h-screen  bg-transparent py-2 flex items-center justify-center"
+        className=" bg-transparent py-10 flex items-center justify-center"
       >
         <div className="w-full  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-4 md:px-0">
           <div className="isolate relative">

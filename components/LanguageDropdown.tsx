@@ -2,55 +2,40 @@
 
 import * as React from "react";
 import { useTranslation } from "../i18n/TranslationProvider";
-
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 export default function LanguageDropdown() {
   const { lang, setLang } = useTranslation();
 
   const languages = [
-    { code: "en", icon: "/uk.png" },
-    { code: "hu", icon: "/hu.png" },
+    { code: "en", icon: "/uk.png", alt: "English" },
+    { code: "hu", icon: "/hu.png", alt: "Magyar" },
   ];
 
-  // Current language
-  const currentLang = languages.find((l) => l.code === lang);
-
-  // Other languages
-  const otherLanguages = languages.filter((l) => l.code !== lang);
-
   return (
-    <DropdownMenu onCloseAutoFocus={(e) => e.preventDefault()}>
-      <DropdownMenuTrigger asChild>
-        <Button
-          variant="outline"
-          className="w-9x h-9 p-0.5 rounded-full flex items-center justify-center"
-        >
-          <img
-            src={currentLang?.icon}
-            alt={lang}
-            className="w-8 h-8 rounded-full"
-          />
-        </Button>
-      </DropdownMenuTrigger>
-
-      <DropdownMenuContent className="w-12 p-1">
-        {otherLanguages.map((l) => (
-          <DropdownMenuItem
+    <div className="flex items-center gap-2">
+      {languages.map((l) => {
+        const isActive = lang === l.code;
+        return (
+          <Button
             key={l.code}
+            variant="ghost"
+            size="icon"
             onClick={() => setLang(l.code as "en" | "hu")}
-            className="flex items-center justify-center p-1 cursor-pointer"
+            className={`w-9 h-9 2xl:w-12 2xl:h-12 p-0 rounded-full overflow-hidden transition-all border-2 ${
+              isActive 
+                ? "border-[#d7f448] opacity-100" 
+                : "border-transparent opacity-50 hover:opacity-100"
+            }`}
           >
-            <img src={l.icon} alt={l.code} className="w-6 h-6 rounded-full" />
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+            <img
+              src={l.icon}
+              alt={l.alt}
+              className="w-full h-full object-cover"
+            />
+          </Button>
+        );
+      })}
+    </div>
   );
 }

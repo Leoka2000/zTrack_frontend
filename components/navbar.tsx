@@ -17,7 +17,6 @@ export default function Navbar() {
   const { t } = useTranslation();
   const [activeSection, setActiveSection] = React.useState("home");
 
-  // Accessing the nested 'navbar' object from your JSON
   const navItems = [
     { id: "home", label: t("navbar.home") },
     { id: "about", label: t("navbar.about_us") },
@@ -73,35 +72,36 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 inset-x-0 z-50 w-full flex justify-center">
-      <div className="w-full max-w-7xl md:mx-0 mx-4 mt-4 md:my-4 bg-neutral-950/40 backdrop-blur-lg rounded-full border border-neutral-600/40 overflow-hidden">
-        <div className="flex items-center justify-between p-2">
-          {/* Logo */}
+     
+      <div className="w-full max-w-7xl 2xl:max-w-[90rem] md:mx-0 mx-4 mt-4 md:my-4 bg-neutral-950/40 backdrop-blur-lg rounded-full border border-neutral-600/40 overflow-hidden">
+        <div className="flex items-center justify-between p-2 2xl:p-4">
+ 
           <div
-            className="flex items-center gap-2 pl-2 cursor-pointer"
+            className="flex items-center gap-2 2xl:gap-4 pl-2 cursor-pointer"
             onClick={() => handleScroll("home")}
           >
-            <div className="w-12 h-10 bg-[#d7f448] text-neutral-900 rounded-full flex items-center justify-center shrink-0">
+            <div className="w-12 h-10 2xl:w-16 2xl:h-14 bg-[#d7f448] text-neutral-900 rounded-full flex items-center justify-center shrink-0">
               <Image
                 src="/zane-logo-small.png"
                 alt="Logo"
                 width={32}
                 height={32}
-                className="brightness-0 object-contain"
+                className="brightness-0 object-contain 2xl:scale-125"
                 priority
               />
             </div>
-            <span className="text-neutral-50 text-xl font-semibold hidden sm:block">
+            <span className="text-neutral-50 text-xl 2xl:text-3xl font-semibold hidden sm:block">
               ZtrackMap
             </span>
           </div>
 
-          {/* Desktop nav items */}
-          <div className="hidden md:flex items-center gap-8">
+        
+          <div className="hidden md:flex items-center gap-8 2xl:gap-12">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleScroll(item.id)}
-                className={`text-lg grotesk font-medium transition-colors cursor-pointer ${
+                className={`text-lg 2xl:text-2xl grotesk font-medium transition-colors cursor-pointer ${
                   activeSection === item.id
                     ? "text-[#d7f448] font-bold"
                     : "text-neutral-50 hover:text-[#d7f448]"
@@ -112,30 +112,31 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Contact & Language */}
+     
           <div className="flex justify-center gap-2 items-center">
             <div className="block ml-5" onClick={(e) => e.stopPropagation()}>
               <LanguageDropdown />
             </div>
 
             <div className="hidden ml-6 md:flex gap-2 pr-2">
+
               <Button
-                className="group h-10 grotesk w-32 rounded-full shadow-sm text-neutral-950 bg-gradient-to-r from-[#2af78a] to-[#defe3e]  px-6 font-medium transition-all flex items-center justify-center border-none hover:opacity-90"
+                className="group h-10 2xl:h-14 grotesk w-32 2xl:w-44 rounded-full shadow-sm text-neutral-950 bg-gradient-to-r from-[#2af78a] to-[#defe3e] px-6 font-medium transition-all flex items-center justify-center border-none hover:opacity-90"
                 onClick={() => handleScroll("contact")}
               >
-                <span className="text-md  grotesk ">{t("navbar.contact")}</span>
-                <span className=" p-1 ml-1 rounded-full bg-neutral-950 flex items-center justify-center shrink-0">
+                <span className="text-md 2xl:text-xl grotesk ">{t("navbar.contact")}</span>
+                <span className="p-1 ml-1 2xl:ml-2 rounded-full bg-neutral-950 flex items-center justify-center shrink-0">
                   <ArrowRight
                     size={12}
                     strokeWidth={1.5}
-                    className="text-white  transition-transform duration-300 group-hover:-rotate-45"
+                    className="text-white 2xl:w-4 2xl:h-4 transition-transform duration-300 group-hover:-rotate-45"
                   />
                 </span>
               </Button>
             </div>
           </div>
 
-          {/* Mobile drawer */}
+    
           <div className="md:hidden pr-2">
             <Drawer>
               <DrawerTrigger className="flex items-center justify-center w-10 h-10 rounded-full text-neutral-50 bg-transparent border-none outline-none cursor-pointer">
@@ -164,10 +165,7 @@ export default function Navbar() {
                       className="group grotesk rounded-full shadow-sm text-neutral-950 bg-gradient-to-r from-[#2af78a] to-[#defe3e] h-14 w-full grotesk font-semibold transition-all flex items-center justify-center border-none"
                       onClick={() => handleScroll("contact")}
                     >
-                      <span
-                        className="text-xl grotesk
-                      "
-                      >
+                      <span className="text-xl grotesk">
                         {t("navbar.contact")}
                       </span>
                       <span className="ml-3 p-1.5 rounded-full bg-neutral-950 flex items-center justify-center shrink-0">

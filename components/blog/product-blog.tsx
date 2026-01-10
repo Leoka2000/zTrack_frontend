@@ -192,16 +192,7 @@ export default function ProductBlog() {
               <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto rounded-3xl bg-white border-none shadow-2xl">
                 {!isSuccess ? (
                   <>
-                    <DialogHeader>
-                      <DialogTitle className="text-3xl font-bold grotesk text-neutral-950 mb-4">
-                        {t("aboutMission.title")}
-                      </DialogTitle>
-
-                      {/* The magic happens here with whitespace-pre-line */}
-                      <DialogDescription className="text-sm text-neutral-700 leading-relaxed whitespace-pre-line">
-                        {t("aboutMission.description")}
-                      </DialogDescription>
-                    </DialogHeader>
+                   
 
                     <form onSubmit={handleSubmit} className="space-y-5 py-4">
                       {/* Name & Email Row */}

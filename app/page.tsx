@@ -25,31 +25,31 @@ export default function Home() {
           <Hero />
         </div>
 
-        <div id="about" className="2xl:px-20 md:px-14 px-4">
+        <div id="about" className="2xl:px-40 md:px-28 px-4">
           <AboutTop />
           <AboutIcons />
           <AboutIcons2 />
         </div>
 
-        <div id="products" className="2xl:px-20 md:px-14 px-4">
+        <div id="products" className="2xl:px-40 md:px-28 px-4">
           <DashboardWithCardsAndMockup />
           <ProductBlogTop />
           <ProductBlog />
         </div>
 
-        <div id="team" className="2xl:px-20 md:px-14 px-4">
+        <div id="team" className="2xl:px-40 md:px-28 px-4">
           <Team />
         </div>
 
-        <div id="faq" className="2xl:px-20 md:px-14 px-4">
+        <div id="faq" className="2xl:px-40 md:px-28 px-4">
           <FAQ />
         </div>
 
-        <div id="blog" className="2xl:px-20 md:px-14 px-4">
+        <div id="blog" className="2xl:px-40 md:px-28 px-4">
           <ElveszettBorju />
         </div>
 
-        <div className="2xl:px-20 md:px-14 px-4">
+        <div className="2xl:px-40 md:px-28 px-4">
           <SocialConnect />
           <ContactForm />
         </div>

@@ -11,7 +11,7 @@ export default function SocialConnect() {
   const { t } = useTranslation();
 
   return (
-    <section className="w-full py-16">
+    <section className="w-full py-12">
       <div className="mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
        
         <div className="flex-1 space-y-6 isolate relative text-left">

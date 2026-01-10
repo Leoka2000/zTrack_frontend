@@ -17,10 +17,7 @@ import { useTranslation } from "../i18n/TranslationProvider";
 export default function AboutTop() {
   const { t } = useTranslation();
 
-  /**
-   * Automatically breaks long translation strings into paragraphs.
-   * It splits by the period (full stop) and groups sentences.
-   */
+ 
   const renderFormattedDescription = (text) => {
     if (!text) return null;
     
@@ -66,9 +63,9 @@ export default function AboutTop() {
           </h1>
         </div>
 
-        {/* Description + Dialog */}
+
         <div className="flex-1 flex flex-col items-start md:items-end gap-6">
-          <p className="text-gray-600 text-left 2xl:text-lg md:text-right max-w-md leading-relaxed">
+          <p className="text-gray-600 text-left 2xl:text-2xl md:text-right max-w-md leading-[1.5]">
             {t("about.description")}
           </p>
 
@@ -76,12 +73,12 @@ export default function AboutTop() {
             <DialogTrigger asChild>
               <Button
                 variant="outline"
-                className="text-lg h-12 font-semibold rounded-full transition-colors group"
+                className="text-lg h-12  2xl:text-2xl 2xl:h-16 2xl:px-12 font-semibold rounded-full transition-colors group"
               >
-                <span className="mx-6">{t("about.cta_primary")}</span>
-                <span className="p-1 rounded-full bg-neutral-900 flex items-center justify-center">
+                <span className="mx-6 grotesk">{t("about.cta_primary")}</span>
+                <span className="p-1.5 rounded-full bg-neutral-900 flex items-center justify-center">
                   <ArrowRight
-                    size={48}
+                    size={70}
                     strokeWidth={1.75}
                     className="w-3 h-4 text-neutral-200 transition-transform duration-300 group-hover:-rotate-45"
                   />
@@ -96,7 +93,7 @@ export default function AboutTop() {
                 </DialogTitle>
                 
               
-                <div className="text-sm text-neutral-700 leading-relaxed">
+                <div className="text-sm 2xl:text-2xl text-neutral-700 leading-relaxed">
                   {renderFormattedDescription(t("aboutMission.description"))}
                 </div>
               </DialogHeader>

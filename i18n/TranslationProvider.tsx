@@ -16,7 +16,7 @@ type TranslationContextType = {
 
 const TranslationContext = createContext<TranslationContextType | null>(null);
 
-// Dot-notation resolver
+
 function getNestedValue(obj: any, path: string): string | undefined {
   return path.split(".").reduce((acc, key) => {
     if (acc && typeof acc === "object") return acc[key];
@@ -29,9 +29,9 @@ export function TranslationProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [lang, setLang] = useState<Lang>("hu"); // default to Hungarian
+  const [lang, setLang] = useState<Lang>("hu"); 
 
-  // Optional: load saved language from localStorage
+
   useEffect(() => {
     const saved = localStorage.getItem("lang") as Lang | null;
     if (saved && (saved === "en" || saved === "hu")) {
@@ -39,7 +39,7 @@ export function TranslationProvider({
     }
   }, []);
 
-  // Optional: save selection to localStorage
+  
   const setLanguage = (newLang: Lang) => {
     setLang(newLang);
     localStorage.setItem("lang", newLang);

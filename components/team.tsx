@@ -20,35 +20,14 @@ const TEAM_MEMBERS = [
     title: "Software Developer",
     image: "/leo.jpeg",
     linkedin: "https://www.linkedin.com/in/leoreus",
-  },
-  {
-    id: "member-3",
-    name: "Kevin Rácz",
-    title: "Electrical Engineer",
-    image: "/kevin.jpeg",
-    linkedin: "https://www.linkedin.com/in/kevin-archibald-r%C3%A1cz-843021326/",
-  },
-  {
-    id: "member-4",
-    name: "Viktor Ádori",
-    title: "Electrical Engineer",
-    image: "/viktor.png",
-    linkedin: "https://www.linkedin.com/in/viktor-%C3%A1dori-384306391/",
-  },
-  {
-    id: "member-5",
-    name: "Dávid Munkácsi",
-    title: "Electrical Engineer",
-    image: "/david.jpg",
-    linkedin: "https://www.linkedin.com/in/d%C3%A1vid-munk%C3%A1csi-2b6178291/",
-  },
+  }
 ];
 
 const Team = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="team" className="min-h-screen py-16 bg-transparent">
+    <section id="team" className="py-16 bg-transparent">
       <div className="mx-auto">
         <div className="flex flex-col lg:flex-row justify-between isolate relative items-start mb-16 gap-2">
           <BackgroundShades />
